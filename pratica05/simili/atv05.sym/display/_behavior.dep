@@ -1,0 +1,7 @@
+ieeevarnumeric_stdieee.sym/numeric_std/prim.var
+ieeesrcnumeric_stdnumstd.vhd
+ieeevarstd_logic_1164ieee.sym/std_logic_1164/prim.var
+ieeesrcstd_logic_1164stdlogic.vhd
+.vardisplay(behavior)atv05.sym/display/_behavior.var
+.srcdisplay(behavior)display.vhdl
+.vardisplayatv05.sym/display/prim.var
