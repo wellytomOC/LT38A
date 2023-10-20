@@ -1,5 +1,5 @@
 Analysis & Synthesis report for atv05
-Fri Oct 20 00:56:45 2023
+Fri Oct 20 14:21:19 2023
 Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 
 
@@ -51,13 +51,13 @@ agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Fri Oct 20 00:56:45 2023       ;
+; Analysis & Synthesis Status        ; Successful - Fri Oct 20 14:21:19 2023       ;
 ; Quartus Prime Version              ; 17.0.0 Build 595 04/25/2017 SJ Lite Edition ;
 ; Revision Name                      ; atv05                                       ;
 ; Top-level Entity Name              ; atv05                                       ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 314                                         ;
-;     Total combinational functions  ; 314                                         ;
+; Total logic elements               ; 315                                         ;
+;     Total combinational functions  ; 315                                         ;
 ;     Dedicated logic registers      ; 0                                           ;
 ; Total registers                    ; 0                                           ;
 ; Total pins                         ; 45                                          ;
@@ -220,16 +220,16 @@ agreement for further details.
 +---------------------------------------------+----------------+
 ; Resource                                    ; Usage          ;
 +---------------------------------------------+----------------+
-; Estimated Total logic elements              ; 314            ;
+; Estimated Total logic elements              ; 315            ;
 ;                                             ;                ;
-; Total combinational functions               ; 314            ;
+; Total combinational functions               ; 315            ;
 ; Logic element usage by number of LUT inputs ;                ;
-;     -- 4 input functions                    ; 110            ;
+;     -- 4 input functions                    ; 111            ;
 ;     -- 3 input functions                    ; 91             ;
 ;     -- <=2 input functions                  ; 113            ;
 ;                                             ;                ;
 ; Logic elements by mode                      ;                ;
-;     -- normal mode                          ; 247            ;
+;     -- normal mode                          ; 248            ;
 ;     -- arithmetic mode                      ; 67             ;
 ;                                             ;                ;
 ; Total registers                             ; 0              ;
@@ -241,9 +241,9 @@ agreement for further details.
 ; Embedded Multiplier 9-bit elements          ; 0              ;
 ;                                             ;                ;
 ; Maximum fan-out node                        ; inibicao~input ;
-; Maximum fan-out                             ; 35             ;
-; Total fan-out                               ; 991            ;
-; Average fan-out                             ; 2.45           ;
+; Maximum fan-out                             ; 34             ;
+; Total fan-out                               ; 995            ;
+; Average fan-out                             ; 2.46           ;
 +---------------------------------------------+----------------+
 
 
@@ -252,9 +252,9 @@ agreement for further details.
 +----------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
 ; Compilation Hierarchy Node                   ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                      ; Entity Name         ; Library Name ;
 +----------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
-; |atv05                                       ; 314 (0)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 45   ; 0            ; |atv05                                                                                                                                   ; atv05               ; work         ;
-;    |arquitetura:inst|                        ; 314 (0)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |atv05|arquitetura:inst                                                                                                                  ; arquitetura         ; work         ;
-;       |display:display0|                     ; 237 (60)            ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |atv05|arquitetura:inst|display:display0                                                                                                 ; display             ; work         ;
+; |atv05                                       ; 315 (0)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 45   ; 0            ; |atv05                                                                                                                                   ; atv05               ; work         ;
+;    |arquitetura:inst|                        ; 315 (0)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |atv05|arquitetura:inst                                                                                                                  ; arquitetura         ; work         ;
+;       |display:display0|                     ; 239 (58)            ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |atv05|arquitetura:inst|display:display0                                                                                                 ; display             ; work         ;
 ;          |lpm_divide:Div0|                   ; 26 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |atv05|arquitetura:inst|display:display0|lpm_divide:Div0                                                                                 ; lpm_divide          ; work         ;
 ;             |lpm_divide_mhm:auto_generated|  ; 26 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |atv05|arquitetura:inst|display:display0|lpm_divide:Div0|lpm_divide_mhm:auto_generated                                                   ; lpm_divide_mhm      ; work         ;
 ;                |sign_div_unsign_ekh:divider| ; 26 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |atv05|arquitetura:inst|display:display0|lpm_divide:Div0|lpm_divide_mhm:auto_generated|sign_div_unsign_ekh:divider                       ; sign_div_unsign_ekh ; work         ;
@@ -264,9 +264,13 @@ agreement for further details.
 ;                |abs_divider_jbg:divider|     ; 151 (8)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |atv05|arquitetura:inst|display:display0|lpm_divide:Div1|lpm_divide_o0p:auto_generated|abs_divider_jbg:divider                           ; abs_divider_jbg     ; work         ;
 ;                   |alt_u_div_47f:divider|    ; 132 (132)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |atv05|arquitetura:inst|display:display0|lpm_divide:Div1|lpm_divide_o0p:auto_generated|abs_divider_jbg:divider|alt_u_div_47f:divider     ; alt_u_div_47f       ; work         ;
 ;                   |lpm_abs_h0a:my_abs_num|   ; 11 (11)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |atv05|arquitetura:inst|display:display0|lpm_divide:Div1|lpm_divide_o0p:auto_generated|abs_divider_jbg:divider|lpm_abs_h0a:my_abs_num    ; lpm_abs_h0a         ; work         ;
+;          |lpm_mult:Mult0|                    ; 2 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |atv05|arquitetura:inst|display:display0|lpm_mult:Mult0                                                                                  ; lpm_mult            ; work         ;
+;             |multcore:mult_core|             ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |atv05|arquitetura:inst|display:display0|lpm_mult:Mult0|multcore:mult_core                                                               ; multcore            ; work         ;
+;          |sevenSegDecoder:ssdState|          ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |atv05|arquitetura:inst|display:display0|sevenSegDecoder:ssdState                                                                        ; sevenSegDecoder     ; work         ;
+;          |sevenSegDecoder:ssdTransition|     ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |atv05|arquitetura:inst|display:display0|sevenSegDecoder:ssdTransition                                                                   ; sevenSegDecoder     ; work         ;
 ;       |enable:enable0|                       ; 8 (8)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |atv05|arquitetura:inst|enable:enable0                                                                                                   ; enable              ; work         ;
-;       |inib:inib0|                           ; 34 (34)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |atv05|arquitetura:inst|inib:inib0                                                                                                       ; inib                ; work         ;
-;       |stateConverter:stateConverter0|       ; 35 (35)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |atv05|arquitetura:inst|stateConverter:stateConverter0                                                                                   ; stateConverter      ; work         ;
+;       |inib:inib0|                           ; 32 (32)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |atv05|arquitetura:inst|inib:inib0                                                                                                       ; inib                ; work         ;
+;       |stateConverter:stateConverter0|       ; 36 (36)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |atv05|arquitetura:inst|stateConverter:stateConverter0                                                                                   ; stateConverter      ; work         ;
 +----------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -318,11 +322,11 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                           ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------+
-; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |atv05|arquitetura:inst|stateConverter:stateConverter0|transition[1] ;
-; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |atv05|arquitetura:inst|stateConverter:stateConverter0|state[0]      ;
-; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; No         ; |atv05|arquitetura:inst|display:display0|ssTemp0[1]                  ;
-; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; No         ; |atv05|arquitetura:inst|display:display0|ssTemp1[1]                  ;
-; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; No         ; |atv05|arquitetura:inst|display:display0|ssTemp2[1]                  ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |atv05|arquitetura:inst|stateConverter:stateConverter0|transition[0] ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |atv05|arquitetura:inst|stateConverter:stateConverter0|state[1]      ;
+; 5:1                ; 3 bits    ; 9 LEs         ; 6 LEs                ; 3 LEs                  ; No         ; |atv05|arquitetura:inst|display:display0|ssTemp0[6]                  ;
+; 5:1                ; 3 bits    ; 9 LEs         ; 6 LEs                ; 3 LEs                  ; No         ; |atv05|arquitetura:inst|display:display0|ssTemp1[0]                  ;
+; 5:1                ; 3 bits    ; 9 LEs         ; 6 LEs                ; 3 LEs                  ; No         ; |atv05|arquitetura:inst|display:display0|ssTemp2[0]                  ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------+
 
 
@@ -458,13 +462,13 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;         3 data inputs ; 55                          ;
 ;     normal            ; 249                         ;
 ;         0 data inputs ; 12                          ;
-;         1 data inputs ; 3                           ;
+;         1 data inputs ; 2                           ;
 ;         2 data inputs ; 88                          ;
 ;         3 data inputs ; 36                          ;
-;         4 data inputs ; 110                         ;
+;         4 data inputs ; 111                         ;
 ;                       ;                             ;
 ; Max LUT depth         ; 39.10                       ;
-; Average LUT depth     ; 30.58                       ;
+; Average LUT depth     ; 30.51                       ;
 +-----------------------+-----------------------------+
 
 
@@ -483,7 +487,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
-    Info: Processing started: Fri Oct 20 00:56:37 2023
+    Info: Processing started: Fri Oct 20 14:21:11 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off atv05 -c atv05
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
@@ -594,13 +598,13 @@ Info (13014): Ignored 11 buffer(s)
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 359 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 360 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 10 input pins
     Info (21059): Implemented 35 output pins
-    Info (21061): Implemented 314 logic cells
+    Info (21061): Implemented 315 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 1 warning
     Info: Peak virtual memory: 4807 megabytes
-    Info: Processing ended: Fri Oct 20 00:56:45 2023
+    Info: Processing ended: Fri Oct 20 14:21:19 2023
     Info: Elapsed time: 00:00:08
     Info: Total CPU time (on all processors): 00:00:15
 
