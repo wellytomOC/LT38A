@@ -1,0 +1,189 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "outssState[6]",
+					"strict" : false
+				},
+				{
+					"name" : "outssState[5]",
+					"strict" : false
+				},
+				{
+					"name" : "outssState[4]",
+					"strict" : false
+				},
+				{
+					"name" : "outssState[3]",
+					"strict" : false
+				},
+				{
+					"name" : "outssState[2]",
+					"strict" : false
+				},
+				{
+					"name" : "outssState[1]",
+					"strict" : false
+				},
+				{
+					"name" : "outssState[0]",
+					"strict" : false
+				},
+				{
+					"name" : "outssTemp0[6]",
+					"strict" : false
+				},
+				{
+					"name" : "outssTemp0[5]",
+					"strict" : false
+				},
+				{
+					"name" : "outssTemp0[4]",
+					"strict" : false
+				},
+				{
+					"name" : "outssTemp0[3]",
+					"strict" : false
+				},
+				{
+					"name" : "outssTemp0[2]",
+					"strict" : false
+				},
+				{
+					"name" : "outssTemp0[1]",
+					"strict" : false
+				},
+				{
+					"name" : "outssTemp0[0]",
+					"strict" : false
+				},
+				{
+					"name" : "outssTemp1[6]",
+					"strict" : false
+				},
+				{
+					"name" : "outssTemp1[5]",
+					"strict" : false
+				},
+				{
+					"name" : "outssTemp1[4]",
+					"strict" : false
+				},
+				{
+					"name" : "outssTemp1[3]",
+					"strict" : false
+				},
+				{
+					"name" : "outssTemp1[2]",
+					"strict" : false
+				},
+				{
+					"name" : "outssTemp1[1]",
+					"strict" : false
+				},
+				{
+					"name" : "outssTemp1[0]",
+					"strict" : false
+				},
+				{
+					"name" : "outssTemp2[6]",
+					"strict" : false
+				},
+				{
+					"name" : "outssTemp2[5]",
+					"strict" : false
+				},
+				{
+					"name" : "outssTemp2[4]",
+					"strict" : false
+				},
+				{
+					"name" : "outssTemp2[3]",
+					"strict" : false
+				},
+				{
+					"name" : "outssTemp2[2]",
+					"strict" : false
+				},
+				{
+					"name" : "outssTemp2[1]",
+					"strict" : false
+				},
+				{
+					"name" : "outssTemp2[0]",
+					"strict" : false
+				},
+				{
+					"name" : "outssTransition[6]",
+					"strict" : false
+				},
+				{
+					"name" : "outssTransition[5]",
+					"strict" : false
+				},
+				{
+					"name" : "outssTransition[4]",
+					"strict" : false
+				},
+				{
+					"name" : "outssTransition[3]",
+					"strict" : false
+				},
+				{
+					"name" : "outssTransition[2]",
+					"strict" : false
+				},
+				{
+					"name" : "outssTransition[1]",
+					"strict" : false
+				},
+				{
+					"name" : "outssTransition[0]",
+					"strict" : false
+				},
+				{
+					"name" : "inibicao",
+					"strict" : false
+				},
+				{
+					"name" : "en",
+					"strict" : false
+				},
+				{
+					"name" : "temp[7]",
+					"strict" : false
+				},
+				{
+					"name" : "temp[6]",
+					"strict" : false
+				},
+				{
+					"name" : "temp[5]",
+					"strict" : false
+				},
+				{
+					"name" : "temp[4]",
+					"strict" : false
+				},
+				{
+					"name" : "temp[3]",
+					"strict" : false
+				},
+				{
+					"name" : "temp[2]",
+					"strict" : false
+				},
+				{
+					"name" : "temp[0]",
+					"strict" : false
+				},
+				{
+					"name" : "temp[1]",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

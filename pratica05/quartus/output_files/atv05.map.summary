@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Fri Oct 20 00:56:45 2023
+Quartus Prime Version : 17.0.0 Build 595 04/25/2017 SJ Lite Edition
+Revision Name : atv05
+Top-level Entity Name : atv05
+Family : Cyclone IV E
+Total logic elements : 314
+    Total combinational functions : 314
+    Dedicated logic registers : 0
+Total registers : 0
+Total pins : 45
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0

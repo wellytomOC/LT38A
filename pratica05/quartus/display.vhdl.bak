@@ -1,0 +1,126 @@
+library ieee;
+use ieee.numeric_std.all;
+use ieee.std_logic_1164.all;
+
+entity display is
+    port(
+        etemp: in bit_vector(7 downto 0);
+        state, transition: in bit_vector(2 downto 0);
+
+        ssState, ssTransition: out bit_vector(6 downto 0);
+        ssTemp0,ssTemp1,ssTemp2: out bit_vector(6 downto 0)
+    );
+end entity;
+
+architecture behavior of display is
+
+    -- decodificador de 4 bits para 7segs
+    component sevenSegDecoder is
+        port(
+            data: in bit_vector(3 downto 0);
+            ss: out bit_vector(6 downto 0)
+        );
+    end component;
+
+    signal data0,data1: bit_vector(3 downto 0);
+
+    signal stdLogicTemp: std_logic_vector(7 downto 0);
+
+    signal decimalTemp: integer range 0 to 255;
+    signal unidades, dezenas, centenas: integer range 0 to 9;
+
+begin
+
+    -- tratando do state e transition
+    data0 <= '0' & state;
+    data1 <= '0' & transition;
+    ssdState: sevenSegDecoder port map(data0,ssState);
+    ssdTransition: sevenSegDecoder port map(data1,ssTransition);
+
+    --tratanto da entrada de temperatura
+    stdLogicTemp <= to_stdlogicvector(etemp);
+    decimalTemp <= to_integer(unsigned(stdLogicTemp));
+    
+    process (decimalTemp)
+    begin
+        -- Divide o número decimal em unidades, dezenas e centenas
+        centenas <= decimalTemp / 100;
+        dezenas <= (decimalTemp - centenas * 100) / 10;
+        unidades <= decimalTemp - centenas * 100 - dezenas * 10;
+
+        -- Converte os valores em saídas para os displays de 7 segmentos
+        case centenas is
+            when 0 =>
+                ssTemp2 <= "0000001";
+            when 1 =>
+                ssTemp2 <= "0110000";
+            when 2 =>
+                ssTemp2 <= "0010010";
+            when 3 =>
+                ssTemp2 <= "0000110";
+            when 4 =>
+                ssTemp2 <= "1001011";
+            when 5 =>
+                ssTemp2 <= "0100100";
+            when 6 =>
+                ssTemp2 <= "0100000";
+            when 7 =>
+                ssTemp2 <= "0001111";
+            when 8 =>
+                ssTemp2 <= "0000000";
+            when 9 =>
+                ssTemp2 <= "0001100";
+        end case;
+
+        case dezenas is
+            when 0 =>
+                ssTemp1 <= "0000001";
+            when 1 =>
+                ssTemp1 <= "0110000";
+            when 2 =>
+                ssTemp1 <= "0010010";
+            when 3 =>
+                ssTemp1 <= "0000110";
+            when 4 =>
+                ssTemp1 <= "1001011";
+            when 5 =>
+                ssTemp1 <= "0100100";
+            when 6 =>
+                ssTemp1 <= "0100000";
+            when 7 =>
+                ssTemp1 <= "0001111";
+            when 8 =>
+                ssTemp1 <= "0000000";
+            when 9 =>
+                ssTemp1 <= "0001100";
+        end case;
+
+        case unidades is
+            when 0 =>
+                ssTemp0 <= "0000001";
+            when 1 =>
+                ssTemp0 <= "0110000";
+            when 2 =>
+                ssTemp0 <= "0010010";
+            when 3 =>
+                ssTemp0 <= "0000110";
+            when 4 =>
+                ssTemp0 <= "1001011";
+            when 5 =>
+                ssTemp0 <= "0100100";
+            when 6 =>
+                ssTemp0 <= "0100000";
+            when 7 =>
+                ssTemp0 <= "0001111";
+            when 8 =>
+                ssTemp0 <= "0000000";
+            when 9 =>
+                ssTemp0 <= "0001100";
+        end case;
+    end process;
+
+end architecture;
+
+
+
+

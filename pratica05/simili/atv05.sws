@@ -103,7 +103,7 @@
 # Begin description of library atv05
 [library]
  name = atv05
- toplevel = teststateconverter
+ toplevel = testarquitetura
   [options]
     [booloption]
      name	= -87
@@ -162,6 +162,11 @@
  []
  [file]
   name = arquitetura.vhdl
+  [options]
+  []
+ []
+ [file]
+  name = testArquitetura.vhdl
   [options]
   []
  []
