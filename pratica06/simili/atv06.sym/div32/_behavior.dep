@@ -1,0 +1,7 @@
+ieeevarnumeric_stdieee.sym/numeric_std/prim.var
+ieeesrcnumeric_stdnumstd.vhd
+ieeevarstd_logic_1164ieee.sym/std_logic_1164/prim.var
+ieeesrcstd_logic_1164stdlogic.vhd
+.vardiv32(behavior)atv06.sym/div32/_behavior.var
+.srcdiv32(behavior)div32.vhdl
+.vardiv32atv06.sym/div32/prim.var

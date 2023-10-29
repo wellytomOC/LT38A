@@ -103,6 +103,7 @@
 # Begin description of library atv06
 [library]
  name = atv06
+ toplevel = testdivisor
   [options]
     [booloption]
      name	= -87
@@ -134,6 +135,81 @@
      invert	= 0
     []
   []
+ [file]
+  name = div1.vhdl
+  [options]
+  []
+ []
+ [file]
+  name = div128.vhdl
+  [options]
+  []
+ []
+ [file]
+  name = div16.vhdl
+  [options]
+  []
+ []
+ [file]
+  name = div2.vhdl
+  [options]
+  []
+ []
+ [file]
+  name = div32.vhdl
+  [options]
+  []
+ []
+ [file]
+  name = div4.vhdl
+  [options]
+  []
+ []
+ [file]
+  name = div64.vhdl
+  [options]
+  []
+ []
+ [file]
+  name = div8.vhdl
+  [options]
+  []
+ []
+ [file]
+  name = divMux.vhdl
+  [options]
+  []
+ []
+ [file]
+  name = divisorShift.vhdl
+  [options]
+  []
+ []
+ [file]
+  name = divisorArith.vhdl
+  [options]
+  []
+ []
+ [file]
+  name = divisor.vhdl
+  [options]
+  []
+ []
+ [file]
+  name = magnitudeComparator.vhdl
+  [options]
+  []
+ []
+ [file]
+  name = testDivisor.vhdl
+  [options]
+  []
+ []
+ [file]
+  name = testDivisorShift.vhdl
+  [options]
+  []
+ []
 []
 # End description of library atv06
 # Begin various workspace properties
