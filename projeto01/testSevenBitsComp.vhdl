@@ -11,16 +11,16 @@ architecture behavior of testSevenBitsComp is
     component sevenBitsComp is
     port(
         A,B: in std_logic_vector(6 downto 0);
-        bigger,smaller,equal: out std_logic
+        BiggerOrEqual: out std_logic
     );
 end component;
 
     signal A,B: std_logic_vector(6 downto 0);
-    signal bigger,smaller,equal: std_logic;
+    signal BiggerOrEqual: std_logic;
 
 begin
 
-    comp: sevenBitsComp port map(A,B,bigger,smaller,equal);
+    comp: sevenBitsComp port map(A,B,BiggerOrEqual);
 
     process
     begin
@@ -32,4 +32,5 @@ begin
     end process;
 
 end architecture;
+
 

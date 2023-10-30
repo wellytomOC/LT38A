@@ -14,7 +14,7 @@ architecture behavior of successiveSubtraction is
     component sevenBitsComp is
         port(
             A,B: in std_logic_vector(6 downto 0);
-            bigger,smaller,equal: out std_logic
+            BiggerOrEqual: out std_logic
         );
     end component;
 
@@ -28,6 +28,6 @@ architecture behavior of successiveSubtraction is
 
 begin
 
-    
+    for 
 
 end architecture;
