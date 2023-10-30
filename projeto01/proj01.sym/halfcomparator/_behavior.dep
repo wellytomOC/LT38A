@@ -1,0 +1,7 @@
+ieeevarstd_logic_1164ieee.sym/std_logic_1164/prim.var
+ieeesrcstd_logic_1164stdlogic.vhd
+ieeevarnumeric_stdieee.sym/numeric_std/prim.var
+ieeesrcnumeric_stdnumstd.vhd
+.varhalfcomparator(behavior)proj01.sym/halfcomparator/_behavior.var
+.srchalfcomparator(behavior)halfcomparator.vhdl
+.varhalfcomparatorproj01.sym/halfcomparator/prim.var
