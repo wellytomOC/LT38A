@@ -5,6 +5,8 @@ use IEEE.numeric_std.ALL;
 entity sevenBitsComp is
     port(
         A,B: in std_logic_vector(6 downto 0);
+        En: in std_logic;
+
         BiggerOrEqual: out std_logic
     );
 end entity;
@@ -38,6 +40,8 @@ begin
 
     end generate G1;
 
-    BiggerOrEqual <= not lsbSmaller(6);
+    with En select
+    BiggerOrEqual <= not lsbSmaller(6) when '1', 
+                    'Z' when others;
 
 end architecture;
