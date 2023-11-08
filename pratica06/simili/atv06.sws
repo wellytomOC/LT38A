@@ -103,7 +103,7 @@
 # Begin description of library atv06
 [library]
  name = atv06
- toplevel = testdivisor
+ toplevel = arquitetura
   [options]
     [booloption]
      name	= -87
@@ -136,37 +136,7 @@
     []
   []
  [file]
-  name = div1.vhdl
-  [options]
-  []
- []
- [file]
-  name = div128.vhdl
-  [options]
-  []
- []
- [file]
-  name = div16.vhdl
-  [options]
-  []
- []
- [file]
-  name = div2.vhdl
-  [options]
-  []
- []
- [file]
-  name = div32.vhdl
-  [options]
-  []
- []
- [file]
-  name = div4.vhdl
-  [options]
-  []
- []
- [file]
-  name = div64.vhdl
+  name = divMux.vhdl
   [options]
   []
  []
@@ -176,7 +146,37 @@
   []
  []
  [file]
-  name = divMux.vhdl
+  name = div64.vhdl
+  [options]
+  []
+ []
+ [file]
+  name = div4.vhdl
+  [options]
+  []
+ []
+ [file]
+  name = div32.vhdl
+  [options]
+  []
+ []
+ [file]
+  name = div2.vhdl
+  [options]
+  []
+ []
+ [file]
+  name = div16.vhdl
+  [options]
+  []
+ []
+ [file]
+  name = div128.vhdl
+  [options]
+  []
+ []
+ [file]
+  name = div1.vhdl
   [options]
   []
  []
@@ -197,6 +197,51 @@
  []
  [file]
   name = magnitudeComparator.vhdl
+  [options]
+  []
+ []
+ [file]
+  name = zeroReject.vhdl
+  [options]
+  []
+ []
+ [file]
+  name = sistema.vhdl
+  [options]
+  []
+ []
+ [file]
+  name = sevenSeg8bitDec.vhdl
+  [options]
+  []
+ []
+ [file]
+  name = outputMultiplexer.vhdl
+  [options]
+  []
+ []
+ [file]
+  name = inib.vhdl
+  [options]
+  []
+ []
+ [file]
+  name = saida.vhdl
+  [options]
+  []
+ []
+ [file]
+  name = enabler.vhdl
+  [options]
+  []
+ []
+ [file]
+  name = entrada.vhdl
+  [options]
+  []
+ []
+ [file]
+  name = arquitetura.vhdl
   [options]
   []
  []

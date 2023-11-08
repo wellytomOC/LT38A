@@ -1,0 +1,7 @@
+ieeevarnumeric_stdieee.sym/numeric_std/prim.var
+ieeesrcnumeric_stdnumstd.vhd
+ieeevarstd_logic_1164ieee.sym/std_logic_1164/prim.var
+ieeesrcstd_logic_1164stdlogic.vhd
+.varinib(behavior)atv06.sym/inib/_behavior.var
+.srcinib(behavior)inib.vhdl
+.varinibatv06.sym/inib/prim.var

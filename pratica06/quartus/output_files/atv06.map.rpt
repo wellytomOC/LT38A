@@ -1,0 +1,1168 @@
+Analysis & Synthesis report for atv06
+Tue Nov 07 22:51:48 2023
+Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. User-Specified and Inferred Latches
+  9. General Register Statistics
+ 10. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 11. Parameter Settings for Inferred Entity Instance: arquitetura:inst|sistema:sistema01|zeroReject:zr|magnitudeComparator:mc|divisor:dv|divisorArith:da|lpm_divide:Div0
+ 12. Parameter Settings for Inferred Entity Instance: arquitetura:inst|saida:saida01|sevenSeg8bitDec:quocienteDecoder|lpm_divide:Div1
+ 13. Parameter Settings for Inferred Entity Instance: arquitetura:inst|saida:saida01|sevenSeg8bitDec:divisorDecoder|lpm_divide:Div1
+ 14. Parameter Settings for Inferred Entity Instance: arquitetura:inst|saida:saida01|sevenSeg8bitDec:dividendoDecoder|lpm_divide:Div1
+ 15. Parameter Settings for Inferred Entity Instance: arquitetura:inst|sistema:sistema01|zeroReject:zr|magnitudeComparator:mc|divisor:dv|divisorArith:da|lpm_divide:Mod0
+ 16. Parameter Settings for Inferred Entity Instance: arquitetura:inst|saida:saida01|sevenSeg8bitDec:restoDecoder|lpm_divide:Div1
+ 17. Parameter Settings for Inferred Entity Instance: arquitetura:inst|saida:saida01|sevenSeg8bitDec:quocienteDecoder|lpm_divide:Div0
+ 18. Parameter Settings for Inferred Entity Instance: arquitetura:inst|saida:saida01|sevenSeg8bitDec:divisorDecoder|lpm_divide:Div0
+ 19. Parameter Settings for Inferred Entity Instance: arquitetura:inst|saida:saida01|sevenSeg8bitDec:dividendoDecoder|lpm_divide:Div0
+ 20. Parameter Settings for Inferred Entity Instance: arquitetura:inst|saida:saida01|sevenSeg8bitDec:restoDecoder|lpm_divide:Div0
+ 21. Parameter Settings for Inferred Entity Instance: arquitetura:inst|saida:saida01|sevenSeg8bitDec:quocienteDecoder|lpm_mult:Mult0
+ 22. Parameter Settings for Inferred Entity Instance: arquitetura:inst|saida:saida01|sevenSeg8bitDec:divisorDecoder|lpm_mult:Mult0
+ 23. Parameter Settings for Inferred Entity Instance: arquitetura:inst|saida:saida01|sevenSeg8bitDec:dividendoDecoder|lpm_mult:Mult0
+ 24. Parameter Settings for Inferred Entity Instance: arquitetura:inst|saida:saida01|sevenSeg8bitDec:restoDecoder|lpm_mult:Mult0
+ 25. lpm_mult Parameter Settings by Entity Instance
+ 26. Post-Synthesis Netlist Statistics for Top Partition
+ 27. Elapsed Time Per Partition
+ 28. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2017  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel MegaCore Function License Agreement, or other 
+applicable license agreement, including, without limitation, 
+that your use is for the sole purpose of programming logic 
+devices manufactured by Intel and sold by Intel or its 
+authorized distributors.  Please refer to the applicable 
+agreement for further details.
+
+
+
++----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                     ;
++------------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Tue Nov 07 22:51:48 2023       ;
+; Quartus Prime Version              ; 17.0.0 Build 595 04/25/2017 SJ Lite Edition ;
+; Revision Name                      ; atv06                                       ;
+; Top-level Entity Name              ; atv06                                       ;
+; Family                             ; Cyclone IV E                                ;
+; Total logic elements               ; 1,280                                       ;
+;     Total combinational functions  ; 1,280                                       ;
+;     Dedicated logic registers      ; 0                                           ;
+; Total registers                    ; 0                                           ;
+; Total pins                         ; 41                                          ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 0                                           ;
+; Embedded Multiplier 9-bit elements ; 0                                           ;
+; Total PLLs                         ; 0                                           ;
++------------------------------------+---------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                        ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                     ; Setting            ; Default Value      ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                     ; EP4CE115F29C7      ;                    ;
+; Top-level entity name                                                      ; atv06              ; atv06              ;
+; Family name                                                                ; Cyclone IV E       ; Cyclone V          ;
+; Use smart compilation                                                      ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                                ; Off                ; Off                ;
+; Restructure Multiplexers                                                   ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                                        ; Off                ; Off                ;
+; Preserve fewer node names                                                  ; On                 ; On                 ;
+; OpenCore Plus hardware evaluation                                          ; Enable             ; Enable             ;
+; Verilog Version                                                            ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                               ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                   ; Auto               ; Auto               ;
+; Safe State Machine                                                         ; Off                ; Off                ;
+; Extract Verilog State Machines                                             ; On                 ; On                 ;
+; Extract VHDL State Machines                                                ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                          ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                 ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                             ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                  ; On                 ; On                 ;
+; Parallel Synthesis                                                         ; On                 ; On                 ;
+; DSP Block Balancing                                                        ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                         ; On                 ; On                 ;
+; Power-Up Don't Care                                                        ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                               ; Off                ; Off                ;
+; Remove Duplicate Registers                                                 ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                       ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                     ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                      ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                       ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                        ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                ; Off                ;
+; Optimization Technique                                                     ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                         ; 70                 ; 70                 ;
+; Auto Carry Chains                                                          ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                       ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                ; Off                ;
+; Auto ROM Replacement                                                       ; On                 ; On                 ;
+; Auto RAM Replacement                                                       ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                 ; On                 ; On                 ;
+; Auto Shift Register Replacement                                            ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                            ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                              ; On                 ; On                 ;
+; Strict RAM Replacement                                                     ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                          ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                     ; Off                ; Off                ;
+; Auto RAM Block Balancing                                                   ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                      ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                              ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                          ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                    ; On                 ; On                 ;
+; Report Parameter Settings                                                  ; On                 ; On                 ;
+; Report Source Assignments                                                  ; On                 ; On                 ;
+; Report Connectivity Checks                                                 ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                ; Off                ;
+; Synchronization Register Chain Length                                      ; 2                  ; 2                  ;
+; PowerPlay Power Optimization During Synthesis                              ; Normal compilation ; Normal compilation ;
+; HDL message level                                                          ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                            ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                         ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                ; 100                ;
+; Clock MUX Protection                                                       ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                ; Off                ; Off                ;
+; Block Design Naming                                                        ; Auto               ; Auto               ;
+; SDC constraint protection                                                  ; Off                ; Off                ;
+; Synthesis Effort                                                           ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                       ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                         ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                     ; On                 ; On                 ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 12          ;
+; Maximum allowed            ; 6           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
++----------------------------+-------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                 ;
++----------------------------------+-----------------+------------------------------------+------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                                       ; Library ;
++----------------------------------+-----------------+------------------------------------+------------------------------------------------------------------------------------+---------+
+; zeroReject.vhdl                  ; yes             ; User VHDL File                     ; C:/Users/welly/Documents/GitHub/LT38A/pratica06/quartus/zeroReject.vhdl            ;         ;
+; sistema.vhdl                     ; yes             ; User VHDL File                     ; C:/Users/welly/Documents/GitHub/LT38A/pratica06/quartus/sistema.vhdl               ;         ;
+; sevenSeg8bitDec.vhdl             ; yes             ; User VHDL File                     ; C:/Users/welly/Documents/GitHub/LT38A/pratica06/quartus/sevenSeg8bitDec.vhdl       ;         ;
+; saida.vhdl                       ; yes             ; User VHDL File                     ; C:/Users/welly/Documents/GitHub/LT38A/pratica06/quartus/saida.vhdl                 ;         ;
+; outputMultiplexer.vhdl           ; yes             ; User VHDL File                     ; C:/Users/welly/Documents/GitHub/LT38A/pratica06/quartus/outputMultiplexer.vhdl     ;         ;
+; magnitudeComparator.vhdl         ; yes             ; User VHDL File                     ; C:/Users/welly/Documents/GitHub/LT38A/pratica06/quartus/magnitudeComparator.vhdl   ;         ;
+; inib.vhdl                        ; yes             ; User VHDL File                     ; C:/Users/welly/Documents/GitHub/LT38A/pratica06/quartus/inib.vhdl                  ;         ;
+; entrada.vhdl                     ; yes             ; User VHDL File                     ; C:/Users/welly/Documents/GitHub/LT38A/pratica06/quartus/entrada.vhdl               ;         ;
+; enabler.vhdl                     ; yes             ; User VHDL File                     ; C:/Users/welly/Documents/GitHub/LT38A/pratica06/quartus/enabler.vhdl               ;         ;
+; divMux.vhdl                      ; yes             ; User VHDL File                     ; C:/Users/welly/Documents/GitHub/LT38A/pratica06/quartus/divMux.vhdl                ;         ;
+; divisorShift.vhdl                ; yes             ; User VHDL File                     ; C:/Users/welly/Documents/GitHub/LT38A/pratica06/quartus/divisorShift.vhdl          ;         ;
+; divisorArith.vhdl                ; yes             ; User VHDL File                     ; C:/Users/welly/Documents/GitHub/LT38A/pratica06/quartus/divisorArith.vhdl          ;         ;
+; divisor.vhdl                     ; yes             ; User VHDL File                     ; C:/Users/welly/Documents/GitHub/LT38A/pratica06/quartus/divisor.vhdl               ;         ;
+; div8.vhdl                        ; yes             ; User VHDL File                     ; C:/Users/welly/Documents/GitHub/LT38A/pratica06/quartus/div8.vhdl                  ;         ;
+; div64.vhdl                       ; yes             ; User VHDL File                     ; C:/Users/welly/Documents/GitHub/LT38A/pratica06/quartus/div64.vhdl                 ;         ;
+; div4.vhdl                        ; yes             ; User VHDL File                     ; C:/Users/welly/Documents/GitHub/LT38A/pratica06/quartus/div4.vhdl                  ;         ;
+; div32.vhdl                       ; yes             ; User VHDL File                     ; C:/Users/welly/Documents/GitHub/LT38A/pratica06/quartus/div32.vhdl                 ;         ;
+; div2.vhdl                        ; yes             ; User VHDL File                     ; C:/Users/welly/Documents/GitHub/LT38A/pratica06/quartus/div2.vhdl                  ;         ;
+; div1.vhdl                        ; yes             ; User VHDL File                     ; C:/Users/welly/Documents/GitHub/LT38A/pratica06/quartus/div1.vhdl                  ;         ;
+; div16.vhdl                       ; yes             ; User VHDL File                     ; C:/Users/welly/Documents/GitHub/LT38A/pratica06/quartus/div16.vhdl                 ;         ;
+; div128.vhdl                      ; yes             ; User VHDL File                     ; C:/Users/welly/Documents/GitHub/LT38A/pratica06/quartus/div128.vhdl                ;         ;
+; arquitetura.vhdl                 ; yes             ; User VHDL File                     ; C:/Users/welly/Documents/GitHub/LT38A/pratica06/quartus/arquitetura.vhdl           ;         ;
+; atv06.bdf                        ; yes             ; User Block Diagram/Schematic File  ; C:/Users/welly/Documents/GitHub/LT38A/pratica06/quartus/atv06.bdf                  ;         ;
+; lpm_divide.tdf                   ; yes             ; Megafunction                       ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/lpm_divide.tdf              ;         ;
+; abs_divider.inc                  ; yes             ; Megafunction                       ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/abs_divider.inc             ;         ;
+; sign_div_unsign.inc              ; yes             ; Megafunction                       ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/sign_div_unsign.inc         ;         ;
+; aglobal170.inc                   ; yes             ; Megafunction                       ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/aglobal170.inc              ;         ;
+; db/lpm_divide_nhm.tdf            ; yes             ; Auto-Generated Megafunction        ; C:/Users/welly/Documents/GitHub/LT38A/pratica06/quartus/db/lpm_divide_nhm.tdf      ;         ;
+; db/sign_div_unsign_fkh.tdf       ; yes             ; Auto-Generated Megafunction        ; C:/Users/welly/Documents/GitHub/LT38A/pratica06/quartus/db/sign_div_unsign_fkh.tdf ;         ;
+; db/alt_u_div_i4f.tdf             ; yes             ; Auto-Generated Megafunction        ; C:/Users/welly/Documents/GitHub/LT38A/pratica06/quartus/db/alt_u_div_i4f.tdf       ;         ;
+; db/add_sub_7pc.tdf               ; yes             ; Auto-Generated Megafunction        ; C:/Users/welly/Documents/GitHub/LT38A/pratica06/quartus/db/add_sub_7pc.tdf         ;         ;
+; db/add_sub_8pc.tdf               ; yes             ; Auto-Generated Megafunction        ; C:/Users/welly/Documents/GitHub/LT38A/pratica06/quartus/db/add_sub_8pc.tdf         ;         ;
+; db/lpm_divide_o0p.tdf            ; yes             ; Auto-Generated Megafunction        ; C:/Users/welly/Documents/GitHub/LT38A/pratica06/quartus/db/lpm_divide_o0p.tdf      ;         ;
+; db/abs_divider_jbg.tdf           ; yes             ; Auto-Generated Megafunction        ; C:/Users/welly/Documents/GitHub/LT38A/pratica06/quartus/db/abs_divider_jbg.tdf     ;         ;
+; db/alt_u_div_47f.tdf             ; yes             ; Auto-Generated Megafunction        ; C:/Users/welly/Documents/GitHub/LT38A/pratica06/quartus/db/alt_u_div_47f.tdf       ;         ;
+; db/lpm_abs_2v9.tdf               ; yes             ; Auto-Generated Megafunction        ; C:/Users/welly/Documents/GitHub/LT38A/pratica06/quartus/db/lpm_abs_2v9.tdf         ;         ;
+; db/lpm_abs_h0a.tdf               ; yes             ; Auto-Generated Megafunction        ; C:/Users/welly/Documents/GitHub/LT38A/pratica06/quartus/db/lpm_abs_h0a.tdf         ;         ;
+; db/lpm_divide_q9m.tdf            ; yes             ; Auto-Generated Megafunction        ; C:/Users/welly/Documents/GitHub/LT38A/pratica06/quartus/db/lpm_divide_q9m.tdf      ;         ;
+; db/lpm_divide_mhm.tdf            ; yes             ; Auto-Generated Megafunction        ; C:/Users/welly/Documents/GitHub/LT38A/pratica06/quartus/db/lpm_divide_mhm.tdf      ;         ;
+; db/sign_div_unsign_ekh.tdf       ; yes             ; Auto-Generated Megafunction        ; C:/Users/welly/Documents/GitHub/LT38A/pratica06/quartus/db/sign_div_unsign_ekh.tdf ;         ;
+; db/alt_u_div_g4f.tdf             ; yes             ; Auto-Generated Megafunction        ; C:/Users/welly/Documents/GitHub/LT38A/pratica06/quartus/db/alt_u_div_g4f.tdf       ;         ;
+; lpm_mult.tdf                     ; yes             ; Megafunction                       ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/lpm_mult.tdf                ;         ;
+; lpm_add_sub.inc                  ; yes             ; Megafunction                       ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/lpm_add_sub.inc             ;         ;
+; multcore.inc                     ; yes             ; Megafunction                       ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/multcore.inc                ;         ;
+; bypassff.inc                     ; yes             ; Megafunction                       ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/bypassff.inc                ;         ;
+; altshift.inc                     ; yes             ; Megafunction                       ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/altshift.inc                ;         ;
+; multcore.tdf                     ; yes             ; Megafunction                       ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/multcore.tdf                ;         ;
+; csa_add.inc                      ; yes             ; Megafunction                       ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/csa_add.inc                 ;         ;
+; mpar_add.inc                     ; yes             ; Megafunction                       ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/mpar_add.inc                ;         ;
+; muleabz.inc                      ; yes             ; Megafunction                       ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/muleabz.inc                 ;         ;
+; mul_lfrg.inc                     ; yes             ; Megafunction                       ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/mul_lfrg.inc                ;         ;
+; mul_boothc.inc                   ; yes             ; Megafunction                       ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/mul_boothc.inc              ;         ;
+; alt_ded_mult.inc                 ; yes             ; Megafunction                       ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/alt_ded_mult.inc            ;         ;
+; alt_ded_mult_y.inc               ; yes             ; Megafunction                       ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/alt_ded_mult_y.inc          ;         ;
+; dffpipe.inc                      ; yes             ; Megafunction                       ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/dffpipe.inc                 ;         ;
+; mpar_add.tdf                     ; yes             ; Megafunction                       ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/mpar_add.tdf                ;         ;
+; altshift.tdf                     ; yes             ; Megafunction                       ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/altshift.tdf                ;         ;
++----------------------------------+-----------------+------------------------------------+------------------------------------------------------------------------------------+---------+
+
+
++--------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary            ;
++---------------------------------------------+----------+
+; Resource                                    ; Usage    ;
++---------------------------------------------+----------+
+; Estimated Total logic elements              ; 1,280    ;
+;                                             ;          ;
+; Total combinational functions               ; 1280     ;
+; Logic element usage by number of LUT inputs ;          ;
+;     -- 4 input functions                    ; 474      ;
+;     -- 3 input functions                    ; 426      ;
+;     -- <=2 input functions                  ; 380      ;
+;                                             ;          ;
+; Logic elements by mode                      ;          ;
+;     -- normal mode                          ; 939      ;
+;     -- arithmetic mode                      ; 341      ;
+;                                             ;          ;
+; Total registers                             ; 0        ;
+;     -- Dedicated logic registers            ; 0        ;
+;     -- I/O registers                        ; 0        ;
+;                                             ;          ;
+; I/O pins                                    ; 41       ;
+;                                             ;          ;
+; Embedded Multiplier 9-bit elements          ; 0        ;
+;                                             ;          ;
+; Maximum fan-out node                        ; En~input ;
+; Maximum fan-out                             ; 72       ;
+; Total fan-out                               ; 3860     ;
+; Average fan-out                             ; 2.83     ;
++---------------------------------------------+----------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                                                                                                                                                        ;
++----------------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
+; Compilation Hierarchy Node                               ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                                                                                             ; Entity Name         ; Library Name ;
++----------------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
+; |atv06                                                   ; 1280 (0)            ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 41   ; 0            ; |atv06                                                                                                                                                                                                                          ; atv06               ; work         ;
+;    |arquitetura:inst|                                    ; 1280 (0)            ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |atv06|arquitetura:inst                                                                                                                                                                                                         ; arquitetura         ; work         ;
+;       |entrada:entrada01|                                ; 16 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |atv06|arquitetura:inst|entrada:entrada01                                                                                                                                                                                       ; entrada             ; work         ;
+;          |enabler:enab|                                  ; 16 (16)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |atv06|arquitetura:inst|entrada:entrada01|enabler:enab                                                                                                                                                                          ; enabler             ; work         ;
+;       |saida:saida01|                                    ; 1007 (0)            ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |atv06|arquitetura:inst|saida:saida01                                                                                                                                                                                           ; saida               ; work         ;
+;          |inib:inibidor|                                 ; 61 (61)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |atv06|arquitetura:inst|saida:saida01|inib:inibidor                                                                                                                                                                             ; inib                ; work         ;
+;          |sevenSeg8bitDec:dividendoDecoder|              ; 236 (59)            ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |atv06|arquitetura:inst|saida:saida01|sevenSeg8bitDec:dividendoDecoder                                                                                                                                                          ; sevenSeg8bitDec     ; work         ;
+;             |lpm_divide:Div0|                            ; 26 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |atv06|arquitetura:inst|saida:saida01|sevenSeg8bitDec:dividendoDecoder|lpm_divide:Div0                                                                                                                                          ; lpm_divide          ; work         ;
+;                |lpm_divide_mhm:auto_generated|           ; 26 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |atv06|arquitetura:inst|saida:saida01|sevenSeg8bitDec:dividendoDecoder|lpm_divide:Div0|lpm_divide_mhm:auto_generated                                                                                                            ; lpm_divide_mhm      ; work         ;
+;                   |sign_div_unsign_ekh:divider|          ; 26 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |atv06|arquitetura:inst|saida:saida01|sevenSeg8bitDec:dividendoDecoder|lpm_divide:Div0|lpm_divide_mhm:auto_generated|sign_div_unsign_ekh:divider                                                                                ; sign_div_unsign_ekh ; work         ;
+;                      |alt_u_div_g4f:divider|             ; 26 (26)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |atv06|arquitetura:inst|saida:saida01|sevenSeg8bitDec:dividendoDecoder|lpm_divide:Div0|lpm_divide_mhm:auto_generated|sign_div_unsign_ekh:divider|alt_u_div_g4f:divider                                                          ; alt_u_div_g4f       ; work         ;
+;             |lpm_divide:Div1|                            ; 151 (0)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |atv06|arquitetura:inst|saida:saida01|sevenSeg8bitDec:dividendoDecoder|lpm_divide:Div1                                                                                                                                          ; lpm_divide          ; work         ;
+;                |lpm_divide_o0p:auto_generated|           ; 151 (0)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |atv06|arquitetura:inst|saida:saida01|sevenSeg8bitDec:dividendoDecoder|lpm_divide:Div1|lpm_divide_o0p:auto_generated                                                                                                            ; lpm_divide_o0p      ; work         ;
+;                   |abs_divider_jbg:divider|              ; 151 (8)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |atv06|arquitetura:inst|saida:saida01|sevenSeg8bitDec:dividendoDecoder|lpm_divide:Div1|lpm_divide_o0p:auto_generated|abs_divider_jbg:divider                                                                                    ; abs_divider_jbg     ; work         ;
+;                      |alt_u_div_47f:divider|             ; 132 (132)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |atv06|arquitetura:inst|saida:saida01|sevenSeg8bitDec:dividendoDecoder|lpm_divide:Div1|lpm_divide_o0p:auto_generated|abs_divider_jbg:divider|alt_u_div_47f:divider                                                              ; alt_u_div_47f       ; work         ;
+;                      |lpm_abs_h0a:my_abs_num|            ; 11 (11)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |atv06|arquitetura:inst|saida:saida01|sevenSeg8bitDec:dividendoDecoder|lpm_divide:Div1|lpm_divide_o0p:auto_generated|abs_divider_jbg:divider|lpm_abs_h0a:my_abs_num                                                             ; lpm_abs_h0a         ; work         ;
+;          |sevenSeg8bitDec:divisorDecoder|                ; 236 (59)            ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |atv06|arquitetura:inst|saida:saida01|sevenSeg8bitDec:divisorDecoder                                                                                                                                                            ; sevenSeg8bitDec     ; work         ;
+;             |lpm_divide:Div0|                            ; 26 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |atv06|arquitetura:inst|saida:saida01|sevenSeg8bitDec:divisorDecoder|lpm_divide:Div0                                                                                                                                            ; lpm_divide          ; work         ;
+;                |lpm_divide_mhm:auto_generated|           ; 26 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |atv06|arquitetura:inst|saida:saida01|sevenSeg8bitDec:divisorDecoder|lpm_divide:Div0|lpm_divide_mhm:auto_generated                                                                                                              ; lpm_divide_mhm      ; work         ;
+;                   |sign_div_unsign_ekh:divider|          ; 26 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |atv06|arquitetura:inst|saida:saida01|sevenSeg8bitDec:divisorDecoder|lpm_divide:Div0|lpm_divide_mhm:auto_generated|sign_div_unsign_ekh:divider                                                                                  ; sign_div_unsign_ekh ; work         ;
+;                      |alt_u_div_g4f:divider|             ; 26 (26)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |atv06|arquitetura:inst|saida:saida01|sevenSeg8bitDec:divisorDecoder|lpm_divide:Div0|lpm_divide_mhm:auto_generated|sign_div_unsign_ekh:divider|alt_u_div_g4f:divider                                                            ; alt_u_div_g4f       ; work         ;
+;             |lpm_divide:Div1|                            ; 151 (0)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |atv06|arquitetura:inst|saida:saida01|sevenSeg8bitDec:divisorDecoder|lpm_divide:Div1                                                                                                                                            ; lpm_divide          ; work         ;
+;                |lpm_divide_o0p:auto_generated|           ; 151 (0)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |atv06|arquitetura:inst|saida:saida01|sevenSeg8bitDec:divisorDecoder|lpm_divide:Div1|lpm_divide_o0p:auto_generated                                                                                                              ; lpm_divide_o0p      ; work         ;
+;                   |abs_divider_jbg:divider|              ; 151 (8)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |atv06|arquitetura:inst|saida:saida01|sevenSeg8bitDec:divisorDecoder|lpm_divide:Div1|lpm_divide_o0p:auto_generated|abs_divider_jbg:divider                                                                                      ; abs_divider_jbg     ; work         ;
+;                      |alt_u_div_47f:divider|             ; 132 (132)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |atv06|arquitetura:inst|saida:saida01|sevenSeg8bitDec:divisorDecoder|lpm_divide:Div1|lpm_divide_o0p:auto_generated|abs_divider_jbg:divider|alt_u_div_47f:divider                                                                ; alt_u_div_47f       ; work         ;
+;                      |lpm_abs_h0a:my_abs_num|            ; 11 (11)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |atv06|arquitetura:inst|saida:saida01|sevenSeg8bitDec:divisorDecoder|lpm_divide:Div1|lpm_divide_o0p:auto_generated|abs_divider_jbg:divider|lpm_abs_h0a:my_abs_num                                                               ; lpm_abs_h0a         ; work         ;
+;          |sevenSeg8bitDec:quocienteDecoder|              ; 237 (60)            ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |atv06|arquitetura:inst|saida:saida01|sevenSeg8bitDec:quocienteDecoder                                                                                                                                                          ; sevenSeg8bitDec     ; work         ;
+;             |lpm_divide:Div0|                            ; 26 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |atv06|arquitetura:inst|saida:saida01|sevenSeg8bitDec:quocienteDecoder|lpm_divide:Div0                                                                                                                                          ; lpm_divide          ; work         ;
+;                |lpm_divide_mhm:auto_generated|           ; 26 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |atv06|arquitetura:inst|saida:saida01|sevenSeg8bitDec:quocienteDecoder|lpm_divide:Div0|lpm_divide_mhm:auto_generated                                                                                                            ; lpm_divide_mhm      ; work         ;
+;                   |sign_div_unsign_ekh:divider|          ; 26 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |atv06|arquitetura:inst|saida:saida01|sevenSeg8bitDec:quocienteDecoder|lpm_divide:Div0|lpm_divide_mhm:auto_generated|sign_div_unsign_ekh:divider                                                                                ; sign_div_unsign_ekh ; work         ;
+;                      |alt_u_div_g4f:divider|             ; 26 (26)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |atv06|arquitetura:inst|saida:saida01|sevenSeg8bitDec:quocienteDecoder|lpm_divide:Div0|lpm_divide_mhm:auto_generated|sign_div_unsign_ekh:divider|alt_u_div_g4f:divider                                                          ; alt_u_div_g4f       ; work         ;
+;             |lpm_divide:Div1|                            ; 151 (0)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |atv06|arquitetura:inst|saida:saida01|sevenSeg8bitDec:quocienteDecoder|lpm_divide:Div1                                                                                                                                          ; lpm_divide          ; work         ;
+;                |lpm_divide_o0p:auto_generated|           ; 151 (0)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |atv06|arquitetura:inst|saida:saida01|sevenSeg8bitDec:quocienteDecoder|lpm_divide:Div1|lpm_divide_o0p:auto_generated                                                                                                            ; lpm_divide_o0p      ; work         ;
+;                   |abs_divider_jbg:divider|              ; 151 (8)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |atv06|arquitetura:inst|saida:saida01|sevenSeg8bitDec:quocienteDecoder|lpm_divide:Div1|lpm_divide_o0p:auto_generated|abs_divider_jbg:divider                                                                                    ; abs_divider_jbg     ; work         ;
+;                      |alt_u_div_47f:divider|             ; 132 (132)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |atv06|arquitetura:inst|saida:saida01|sevenSeg8bitDec:quocienteDecoder|lpm_divide:Div1|lpm_divide_o0p:auto_generated|abs_divider_jbg:divider|alt_u_div_47f:divider                                                              ; alt_u_div_47f       ; work         ;
+;                      |lpm_abs_h0a:my_abs_num|            ; 11 (11)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |atv06|arquitetura:inst|saida:saida01|sevenSeg8bitDec:quocienteDecoder|lpm_divide:Div1|lpm_divide_o0p:auto_generated|abs_divider_jbg:divider|lpm_abs_h0a:my_abs_num                                                             ; lpm_abs_h0a         ; work         ;
+;          |sevenSeg8bitDec:restoDecoder|                  ; 237 (59)            ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |atv06|arquitetura:inst|saida:saida01|sevenSeg8bitDec:restoDecoder                                                                                                                                                              ; sevenSeg8bitDec     ; work         ;
+;             |lpm_divide:Div0|                            ; 26 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |atv06|arquitetura:inst|saida:saida01|sevenSeg8bitDec:restoDecoder|lpm_divide:Div0                                                                                                                                              ; lpm_divide          ; work         ;
+;                |lpm_divide_mhm:auto_generated|           ; 26 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |atv06|arquitetura:inst|saida:saida01|sevenSeg8bitDec:restoDecoder|lpm_divide:Div0|lpm_divide_mhm:auto_generated                                                                                                                ; lpm_divide_mhm      ; work         ;
+;                   |sign_div_unsign_ekh:divider|          ; 26 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |atv06|arquitetura:inst|saida:saida01|sevenSeg8bitDec:restoDecoder|lpm_divide:Div0|lpm_divide_mhm:auto_generated|sign_div_unsign_ekh:divider                                                                                    ; sign_div_unsign_ekh ; work         ;
+;                      |alt_u_div_g4f:divider|             ; 26 (26)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |atv06|arquitetura:inst|saida:saida01|sevenSeg8bitDec:restoDecoder|lpm_divide:Div0|lpm_divide_mhm:auto_generated|sign_div_unsign_ekh:divider|alt_u_div_g4f:divider                                                              ; alt_u_div_g4f       ; work         ;
+;             |lpm_divide:Div1|                            ; 152 (0)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |atv06|arquitetura:inst|saida:saida01|sevenSeg8bitDec:restoDecoder|lpm_divide:Div1                                                                                                                                              ; lpm_divide          ; work         ;
+;                |lpm_divide_o0p:auto_generated|           ; 152 (0)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |atv06|arquitetura:inst|saida:saida01|sevenSeg8bitDec:restoDecoder|lpm_divide:Div1|lpm_divide_o0p:auto_generated                                                                                                                ; lpm_divide_o0p      ; work         ;
+;                   |abs_divider_jbg:divider|              ; 152 (8)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |atv06|arquitetura:inst|saida:saida01|sevenSeg8bitDec:restoDecoder|lpm_divide:Div1|lpm_divide_o0p:auto_generated|abs_divider_jbg:divider                                                                                        ; abs_divider_jbg     ; work         ;
+;                      |alt_u_div_47f:divider|             ; 132 (132)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |atv06|arquitetura:inst|saida:saida01|sevenSeg8bitDec:restoDecoder|lpm_divide:Div1|lpm_divide_o0p:auto_generated|abs_divider_jbg:divider|alt_u_div_47f:divider                                                                  ; alt_u_div_47f       ; work         ;
+;                      |lpm_abs_h0a:my_abs_num|            ; 12 (12)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |atv06|arquitetura:inst|saida:saida01|sevenSeg8bitDec:restoDecoder|lpm_divide:Div1|lpm_divide_o0p:auto_generated|abs_divider_jbg:divider|lpm_abs_h0a:my_abs_num                                                                 ; lpm_abs_h0a         ; work         ;
+;       |sistema:sistema01|                                ; 257 (0)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |atv06|arquitetura:inst|sistema:sistema01                                                                                                                                                                                       ; sistema             ; work         ;
+;          |zeroReject:zr|                                 ; 257 (0)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |atv06|arquitetura:inst|sistema:sistema01|zeroReject:zr                                                                                                                                                                         ; zeroReject          ; work         ;
+;             |magnitudeComparator:mc|                     ; 257 (71)            ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |atv06|arquitetura:inst|sistema:sistema01|zeroReject:zr|magnitudeComparator:mc                                                                                                                                                  ; magnitudeComparator ; work         ;
+;                |divisor:dv|                              ; 186 (29)            ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |atv06|arquitetura:inst|sistema:sistema01|zeroReject:zr|magnitudeComparator:mc|divisor:dv                                                                                                                                       ; divisor             ; work         ;
+;                   |divisorArith:da|                      ; 145 (0)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |atv06|arquitetura:inst|sistema:sistema01|zeroReject:zr|magnitudeComparator:mc|divisor:dv|divisorArith:da                                                                                                                       ; divisorArith        ; work         ;
+;                      |lpm_divide:Div0|                   ; 79 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |atv06|arquitetura:inst|sistema:sistema01|zeroReject:zr|magnitudeComparator:mc|divisor:dv|divisorArith:da|lpm_divide:Div0                                                                                                       ; lpm_divide          ; work         ;
+;                         |lpm_divide_nhm:auto_generated|  ; 79 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |atv06|arquitetura:inst|sistema:sistema01|zeroReject:zr|magnitudeComparator:mc|divisor:dv|divisorArith:da|lpm_divide:Div0|lpm_divide_nhm:auto_generated                                                                         ; lpm_divide_nhm      ; work         ;
+;                            |sign_div_unsign_fkh:divider| ; 79 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |atv06|arquitetura:inst|sistema:sistema01|zeroReject:zr|magnitudeComparator:mc|divisor:dv|divisorArith:da|lpm_divide:Div0|lpm_divide_nhm:auto_generated|sign_div_unsign_fkh:divider                                             ; sign_div_unsign_fkh ; work         ;
+;                               |alt_u_div_i4f:divider|    ; 79 (78)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |atv06|arquitetura:inst|sistema:sistema01|zeroReject:zr|magnitudeComparator:mc|divisor:dv|divisorArith:da|lpm_divide:Div0|lpm_divide_nhm:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_i4f:divider                       ; alt_u_div_i4f       ; work         ;
+;                                  |add_sub_8pc:add_sub_1| ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |atv06|arquitetura:inst|sistema:sistema01|zeroReject:zr|magnitudeComparator:mc|divisor:dv|divisorArith:da|lpm_divide:Div0|lpm_divide_nhm:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_i4f:divider|add_sub_8pc:add_sub_1 ; add_sub_8pc         ; work         ;
+;                      |lpm_divide:Mod0|                   ; 66 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |atv06|arquitetura:inst|sistema:sistema01|zeroReject:zr|magnitudeComparator:mc|divisor:dv|divisorArith:da|lpm_divide:Mod0                                                                                                       ; lpm_divide          ; work         ;
+;                         |lpm_divide_q9m:auto_generated|  ; 66 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |atv06|arquitetura:inst|sistema:sistema01|zeroReject:zr|magnitudeComparator:mc|divisor:dv|divisorArith:da|lpm_divide:Mod0|lpm_divide_q9m:auto_generated                                                                         ; lpm_divide_q9m      ; work         ;
+;                            |sign_div_unsign_fkh:divider| ; 66 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |atv06|arquitetura:inst|sistema:sistema01|zeroReject:zr|magnitudeComparator:mc|divisor:dv|divisorArith:da|lpm_divide:Mod0|lpm_divide_q9m:auto_generated|sign_div_unsign_fkh:divider                                             ; sign_div_unsign_fkh ; work         ;
+;                               |alt_u_div_i4f:divider|    ; 66 (66)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |atv06|arquitetura:inst|sistema:sistema01|zeroReject:zr|magnitudeComparator:mc|divisor:dv|divisorArith:da|lpm_divide:Mod0|lpm_divide_q9m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_i4f:divider                       ; alt_u_div_i4f       ; work         ;
+;                   |divisorShift:ds|                      ; 12 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |atv06|arquitetura:inst|sistema:sistema01|zeroReject:zr|magnitudeComparator:mc|divisor:dv|divisorShift:ds                                                                                                                       ; divisorShift        ; work         ;
+;                      |divMux:dMux|                       ; 12 (12)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |atv06|arquitetura:inst|sistema:sistema01|zeroReject:zr|magnitudeComparator:mc|divisor:dv|divisorShift:ds|divMux:dMux                                                                                                           ; divMux              ; work         ;
++----------------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++------------------------------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                                    ;
++-------------------------------------------------------------------------+---------------------+------------------------+
+; Latch Name                                                              ; Latch Enable Signal ; Free of Timing Hazards ;
++-------------------------------------------------------------------------+---------------------+------------------------+
+; arquitetura:inst|saida:saida01|sevenSeg8bitDec:quocienteDecoder|ssA0[6] ; GND                 ; yes                    ;
+; arquitetura:inst|saida:saida01|sevenSeg8bitDec:divisorDecoder|ssA0[6]   ; GND                 ; yes                    ;
+; arquitetura:inst|saida:saida01|sevenSeg8bitDec:dividendoDecoder|ssA0[6] ; GND                 ; yes                    ;
+; arquitetura:inst|saida:saida01|sevenSeg8bitDec:restoDecoder|ssA0[6]     ; GND                 ; yes                    ;
+; arquitetura:inst|saida:saida01|sevenSeg8bitDec:divisorDecoder|ssA0[5]   ; GND                 ; yes                    ;
+; arquitetura:inst|saida:saida01|sevenSeg8bitDec:quocienteDecoder|ssA0[5] ; GND                 ; yes                    ;
+; arquitetura:inst|saida:saida01|sevenSeg8bitDec:dividendoDecoder|ssA0[5] ; GND                 ; yes                    ;
+; arquitetura:inst|saida:saida01|sevenSeg8bitDec:restoDecoder|ssA0[5]     ; GND                 ; yes                    ;
+; arquitetura:inst|saida:saida01|sevenSeg8bitDec:quocienteDecoder|ssA0[4] ; GND                 ; yes                    ;
+; arquitetura:inst|saida:saida01|sevenSeg8bitDec:divisorDecoder|ssA0[4]   ; GND                 ; yes                    ;
+; arquitetura:inst|saida:saida01|sevenSeg8bitDec:dividendoDecoder|ssA0[4] ; GND                 ; yes                    ;
+; arquitetura:inst|saida:saida01|sevenSeg8bitDec:restoDecoder|ssA0[4]     ; GND                 ; yes                    ;
+; arquitetura:inst|saida:saida01|sevenSeg8bitDec:divisorDecoder|ssA0[3]   ; GND                 ; yes                    ;
+; arquitetura:inst|saida:saida01|sevenSeg8bitDec:quocienteDecoder|ssA0[3] ; GND                 ; yes                    ;
+; arquitetura:inst|saida:saida01|sevenSeg8bitDec:dividendoDecoder|ssA0[3] ; GND                 ; yes                    ;
+; arquitetura:inst|saida:saida01|sevenSeg8bitDec:restoDecoder|ssA0[3]     ; GND                 ; yes                    ;
+; arquitetura:inst|saida:saida01|sevenSeg8bitDec:quocienteDecoder|ssA0[2] ; GND                 ; yes                    ;
+; arquitetura:inst|saida:saida01|sevenSeg8bitDec:divisorDecoder|ssA0[2]   ; GND                 ; yes                    ;
+; arquitetura:inst|saida:saida01|sevenSeg8bitDec:dividendoDecoder|ssA0[2] ; GND                 ; yes                    ;
+; arquitetura:inst|saida:saida01|sevenSeg8bitDec:restoDecoder|ssA0[2]     ; GND                 ; yes                    ;
+; arquitetura:inst|saida:saida01|sevenSeg8bitDec:divisorDecoder|ssA0[1]   ; GND                 ; yes                    ;
+; arquitetura:inst|saida:saida01|sevenSeg8bitDec:quocienteDecoder|ssA0[1] ; GND                 ; yes                    ;
+; arquitetura:inst|saida:saida01|sevenSeg8bitDec:dividendoDecoder|ssA0[1] ; GND                 ; yes                    ;
+; arquitetura:inst|saida:saida01|sevenSeg8bitDec:restoDecoder|ssA0[1]     ; GND                 ; yes                    ;
+; arquitetura:inst|saida:saida01|sevenSeg8bitDec:quocienteDecoder|ssA0[0] ; GND                 ; yes                    ;
+; arquitetura:inst|saida:saida01|sevenSeg8bitDec:divisorDecoder|ssA0[0]   ; GND                 ; yes                    ;
+; arquitetura:inst|saida:saida01|sevenSeg8bitDec:dividendoDecoder|ssA0[0] ; GND                 ; yes                    ;
+; arquitetura:inst|saida:saida01|sevenSeg8bitDec:restoDecoder|ssA0[0]     ; GND                 ; yes                    ;
+; arquitetura:inst|saida:saida01|sevenSeg8bitDec:divisorDecoder|ssA1[6]   ; GND                 ; yes                    ;
+; arquitetura:inst|saida:saida01|sevenSeg8bitDec:quocienteDecoder|ssA1[6] ; GND                 ; yes                    ;
+; arquitetura:inst|saida:saida01|sevenSeg8bitDec:dividendoDecoder|ssA1[6] ; GND                 ; yes                    ;
+; arquitetura:inst|saida:saida01|sevenSeg8bitDec:restoDecoder|ssA1[6]     ; GND                 ; yes                    ;
+; arquitetura:inst|saida:saida01|sevenSeg8bitDec:quocienteDecoder|ssA1[5] ; GND                 ; yes                    ;
+; arquitetura:inst|saida:saida01|sevenSeg8bitDec:divisorDecoder|ssA1[5]   ; GND                 ; yes                    ;
+; arquitetura:inst|saida:saida01|sevenSeg8bitDec:dividendoDecoder|ssA1[5] ; GND                 ; yes                    ;
+; arquitetura:inst|saida:saida01|sevenSeg8bitDec:restoDecoder|ssA1[5]     ; GND                 ; yes                    ;
+; arquitetura:inst|saida:saida01|sevenSeg8bitDec:divisorDecoder|ssA1[4]   ; GND                 ; yes                    ;
+; arquitetura:inst|saida:saida01|sevenSeg8bitDec:quocienteDecoder|ssA1[4] ; GND                 ; yes                    ;
+; arquitetura:inst|saida:saida01|sevenSeg8bitDec:dividendoDecoder|ssA1[4] ; GND                 ; yes                    ;
+; arquitetura:inst|saida:saida01|sevenSeg8bitDec:restoDecoder|ssA1[4]     ; GND                 ; yes                    ;
+; arquitetura:inst|saida:saida01|sevenSeg8bitDec:quocienteDecoder|ssA1[3] ; GND                 ; yes                    ;
+; arquitetura:inst|saida:saida01|sevenSeg8bitDec:divisorDecoder|ssA1[3]   ; GND                 ; yes                    ;
+; arquitetura:inst|saida:saida01|sevenSeg8bitDec:dividendoDecoder|ssA1[3] ; GND                 ; yes                    ;
+; arquitetura:inst|saida:saida01|sevenSeg8bitDec:restoDecoder|ssA1[3]     ; GND                 ; yes                    ;
+; arquitetura:inst|saida:saida01|sevenSeg8bitDec:divisorDecoder|ssA1[2]   ; GND                 ; yes                    ;
+; arquitetura:inst|saida:saida01|sevenSeg8bitDec:quocienteDecoder|ssA1[2] ; GND                 ; yes                    ;
+; arquitetura:inst|saida:saida01|sevenSeg8bitDec:dividendoDecoder|ssA1[2] ; GND                 ; yes                    ;
+; arquitetura:inst|saida:saida01|sevenSeg8bitDec:restoDecoder|ssA1[2]     ; GND                 ; yes                    ;
+; arquitetura:inst|saida:saida01|sevenSeg8bitDec:quocienteDecoder|ssA1[1] ; GND                 ; yes                    ;
+; arquitetura:inst|saida:saida01|sevenSeg8bitDec:divisorDecoder|ssA1[1]   ; GND                 ; yes                    ;
+; arquitetura:inst|saida:saida01|sevenSeg8bitDec:dividendoDecoder|ssA1[1] ; GND                 ; yes                    ;
+; arquitetura:inst|saida:saida01|sevenSeg8bitDec:restoDecoder|ssA1[1]     ; GND                 ; yes                    ;
+; arquitetura:inst|saida:saida01|sevenSeg8bitDec:divisorDecoder|ssA1[0]   ; GND                 ; yes                    ;
+; arquitetura:inst|saida:saida01|sevenSeg8bitDec:quocienteDecoder|ssA1[0] ; GND                 ; yes                    ;
+; arquitetura:inst|saida:saida01|sevenSeg8bitDec:dividendoDecoder|ssA1[0] ; GND                 ; yes                    ;
+; arquitetura:inst|saida:saida01|sevenSeg8bitDec:restoDecoder|ssA1[0]     ; GND                 ; yes                    ;
+; Number of user-specified and inferred latches = 56                      ;                     ;                        ;
++-------------------------------------------------------------------------+---------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 0     ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                                                 ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                       ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------------------------------------+
+; 5:1                ; 21 bits   ; 63 LEs        ; 63 LEs               ; 0 LEs                  ; No         ; |atv06|arquitetura:inst|saida:saida01|inib:inibidor|inibedsevenSeg1[2]                           ;
+; 5:1                ; 5 bits    ; 15 LEs        ; 10 LEs               ; 5 LEs                  ; No         ; |atv06|arquitetura:inst|sistema:sistema01|zeroReject:zr|magnitudeComparator:mc|Q[2]              ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; No         ; |atv06|arquitetura:inst|saida:saida01|sevenSeg8bitDec:dividendoDecoder|ssA0[1]                   ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; No         ; |atv06|arquitetura:inst|saida:saida01|sevenSeg8bitDec:divisorDecoder|ssA0[0]                     ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; No         ; |atv06|arquitetura:inst|saida:saida01|sevenSeg8bitDec:quocienteDecoder|ssA0[0]                   ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; No         ; |atv06|arquitetura:inst|saida:saida01|sevenSeg8bitDec:restoDecoder|ssA0[0]                       ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; No         ; |atv06|arquitetura:inst|saida:saida01|sevenSeg8bitDec:dividendoDecoder|ssA1[1]                   ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; No         ; |atv06|arquitetura:inst|saida:saida01|sevenSeg8bitDec:divisorDecoder|ssA1[0]                     ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; No         ; |atv06|arquitetura:inst|saida:saida01|sevenSeg8bitDec:quocienteDecoder|ssA1[1]                   ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; No         ; |atv06|arquitetura:inst|saida:saida01|sevenSeg8bitDec:restoDecoder|ssA1[0]                       ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; No         ; |atv06|arquitetura:inst|saida:saida01|sevenSeg8bitDec:dividendoDecoder|ssA2[1]                   ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; No         ; |atv06|arquitetura:inst|saida:saida01|sevenSeg8bitDec:divisorDecoder|ssA2[1]                     ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; No         ; |atv06|arquitetura:inst|saida:saida01|sevenSeg8bitDec:quocienteDecoder|ssA2[1]                   ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; No         ; |atv06|arquitetura:inst|saida:saida01|sevenSeg8bitDec:restoDecoder|ssA2[0]                       ;
+; 7:1                ; 2 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |atv06|arquitetura:inst|sistema:sistema01|zeroReject:zr|magnitudeComparator:mc|divisor:dv|sel[2] ;
+; 8:1                ; 2 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; No         ; |atv06|arquitetura:inst|sistema:sistema01|zeroReject:zr|magnitudeComparator:mc|divisor:dv|sel[3] ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: arquitetura:inst|sistema:sistema01|zeroReject:zr|magnitudeComparator:mc|divisor:dv|divisorArith:da|lpm_divide:Div0 ;
++------------------------+----------------+---------------------------------------------------------------------------------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                                                                                                      ;
++------------------------+----------------+---------------------------------------------------------------------------------------------------------------------------+
+; LPM_WIDTHN             ; 8              ; Untyped                                                                                                                   ;
+; LPM_WIDTHD             ; 8              ; Untyped                                                                                                                   ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                                                                                                   ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                                                                                                   ;
+; LPM_PIPELINE           ; 0              ; Untyped                                                                                                                   ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                                                                                                   ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                                                                                                   ;
+; CBXI_PARAMETER         ; lpm_divide_nhm ; Untyped                                                                                                                   ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                                                                                                   ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                                                                                                   ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                                                                                                ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                                                                                              ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                                                                                              ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                                                                                            ;
++------------------------+----------------+---------------------------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: arquitetura:inst|saida:saida01|sevenSeg8bitDec:quocienteDecoder|lpm_divide:Div1 ;
++------------------------+----------------+----------------------------------------------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                                                                   ;
++------------------------+----------------+----------------------------------------------------------------------------------------+
+; LPM_WIDTHN             ; 13             ; Untyped                                                                                ;
+; LPM_WIDTHD             ; 5              ; Untyped                                                                                ;
+; LPM_NREPRESENTATION    ; SIGNED         ; Untyped                                                                                ;
+; LPM_DREPRESENTATION    ; SIGNED         ; Untyped                                                                                ;
+; LPM_PIPELINE           ; 0              ; Untyped                                                                                ;
+; LPM_REMAINDERPOSITIVE  ; FALSE          ; Untyped                                                                                ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                                                                ;
+; CBXI_PARAMETER         ; lpm_divide_o0p ; Untyped                                                                                ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                                                                ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                                                                ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                                                             ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                                                           ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                                                           ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                                                         ;
++------------------------+----------------+----------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: arquitetura:inst|saida:saida01|sevenSeg8bitDec:divisorDecoder|lpm_divide:Div1 ;
++------------------------+----------------+--------------------------------------------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                                                                 ;
++------------------------+----------------+--------------------------------------------------------------------------------------+
+; LPM_WIDTHN             ; 13             ; Untyped                                                                              ;
+; LPM_WIDTHD             ; 5              ; Untyped                                                                              ;
+; LPM_NREPRESENTATION    ; SIGNED         ; Untyped                                                                              ;
+; LPM_DREPRESENTATION    ; SIGNED         ; Untyped                                                                              ;
+; LPM_PIPELINE           ; 0              ; Untyped                                                                              ;
+; LPM_REMAINDERPOSITIVE  ; FALSE          ; Untyped                                                                              ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                                                              ;
+; CBXI_PARAMETER         ; lpm_divide_o0p ; Untyped                                                                              ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                                                              ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                                                              ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                                                           ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                                                         ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                                                         ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                                                       ;
++------------------------+----------------+--------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: arquitetura:inst|saida:saida01|sevenSeg8bitDec:dividendoDecoder|lpm_divide:Div1 ;
++------------------------+----------------+----------------------------------------------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                                                                   ;
++------------------------+----------------+----------------------------------------------------------------------------------------+
+; LPM_WIDTHN             ; 13             ; Untyped                                                                                ;
+; LPM_WIDTHD             ; 5              ; Untyped                                                                                ;
+; LPM_NREPRESENTATION    ; SIGNED         ; Untyped                                                                                ;
+; LPM_DREPRESENTATION    ; SIGNED         ; Untyped                                                                                ;
+; LPM_PIPELINE           ; 0              ; Untyped                                                                                ;
+; LPM_REMAINDERPOSITIVE  ; FALSE          ; Untyped                                                                                ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                                                                ;
+; CBXI_PARAMETER         ; lpm_divide_o0p ; Untyped                                                                                ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                                                                ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                                                                ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                                                             ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                                                           ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                                                           ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                                                         ;
++------------------------+----------------+----------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: arquitetura:inst|sistema:sistema01|zeroReject:zr|magnitudeComparator:mc|divisor:dv|divisorArith:da|lpm_divide:Mod0 ;
++------------------------+----------------+---------------------------------------------------------------------------------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                                                                                                      ;
++------------------------+----------------+---------------------------------------------------------------------------------------------------------------------------+
+; LPM_WIDTHN             ; 8              ; Untyped                                                                                                                   ;
+; LPM_WIDTHD             ; 8              ; Untyped                                                                                                                   ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                                                                                                   ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                                                                                                   ;
+; LPM_PIPELINE           ; 0              ; Untyped                                                                                                                   ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                                                                                                   ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                                                                                                   ;
+; CBXI_PARAMETER         ; lpm_divide_q9m ; Untyped                                                                                                                   ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                                                                                                   ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                                                                                                   ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                                                                                                ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                                                                                              ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                                                                                              ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                                                                                            ;
++------------------------+----------------+---------------------------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: arquitetura:inst|saida:saida01|sevenSeg8bitDec:restoDecoder|lpm_divide:Div1 ;
++------------------------+----------------+------------------------------------------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                                                               ;
++------------------------+----------------+------------------------------------------------------------------------------------+
+; LPM_WIDTHN             ; 13             ; Untyped                                                                            ;
+; LPM_WIDTHD             ; 5              ; Untyped                                                                            ;
+; LPM_NREPRESENTATION    ; SIGNED         ; Untyped                                                                            ;
+; LPM_DREPRESENTATION    ; SIGNED         ; Untyped                                                                            ;
+; LPM_PIPELINE           ; 0              ; Untyped                                                                            ;
+; LPM_REMAINDERPOSITIVE  ; FALSE          ; Untyped                                                                            ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                                                            ;
+; CBXI_PARAMETER         ; lpm_divide_o0p ; Untyped                                                                            ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                                                            ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                                                            ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                                                         ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                                                       ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                                                       ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                                                     ;
++------------------------+----------------+------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: arquitetura:inst|saida:saida01|sevenSeg8bitDec:quocienteDecoder|lpm_divide:Div0 ;
++------------------------+----------------+----------------------------------------------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                                                                   ;
++------------------------+----------------+----------------------------------------------------------------------------------------+
+; LPM_WIDTHN             ; 8              ; Untyped                                                                                ;
+; LPM_WIDTHD             ; 7              ; Untyped                                                                                ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                                                                ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                                                                ;
+; LPM_PIPELINE           ; 0              ; Untyped                                                                                ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                                                                ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                                                                ;
+; CBXI_PARAMETER         ; lpm_divide_mhm ; Untyped                                                                                ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                                                                ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                                                                ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                                                             ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                                                           ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                                                           ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                                                         ;
++------------------------+----------------+----------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: arquitetura:inst|saida:saida01|sevenSeg8bitDec:divisorDecoder|lpm_divide:Div0 ;
++------------------------+----------------+--------------------------------------------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                                                                 ;
++------------------------+----------------+--------------------------------------------------------------------------------------+
+; LPM_WIDTHN             ; 8              ; Untyped                                                                              ;
+; LPM_WIDTHD             ; 7              ; Untyped                                                                              ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                                                              ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                                                              ;
+; LPM_PIPELINE           ; 0              ; Untyped                                                                              ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                                                              ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                                                              ;
+; CBXI_PARAMETER         ; lpm_divide_mhm ; Untyped                                                                              ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                                                              ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                                                              ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                                                           ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                                                         ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                                                         ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                                                       ;
++------------------------+----------------+--------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: arquitetura:inst|saida:saida01|sevenSeg8bitDec:dividendoDecoder|lpm_divide:Div0 ;
++------------------------+----------------+----------------------------------------------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                                                                   ;
++------------------------+----------------+----------------------------------------------------------------------------------------+
+; LPM_WIDTHN             ; 8              ; Untyped                                                                                ;
+; LPM_WIDTHD             ; 7              ; Untyped                                                                                ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                                                                ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                                                                ;
+; LPM_PIPELINE           ; 0              ; Untyped                                                                                ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                                                                ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                                                                ;
+; CBXI_PARAMETER         ; lpm_divide_mhm ; Untyped                                                                                ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                                                                ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                                                                ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                                                             ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                                                           ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                                                           ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                                                         ;
++------------------------+----------------+----------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: arquitetura:inst|saida:saida01|sevenSeg8bitDec:restoDecoder|lpm_divide:Div0 ;
++------------------------+----------------+------------------------------------------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                                                               ;
++------------------------+----------------+------------------------------------------------------------------------------------+
+; LPM_WIDTHN             ; 8              ; Untyped                                                                            ;
+; LPM_WIDTHD             ; 7              ; Untyped                                                                            ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                                                            ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                                                            ;
+; LPM_PIPELINE           ; 0              ; Untyped                                                                            ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                                                            ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                                                            ;
+; CBXI_PARAMETER         ; lpm_divide_mhm ; Untyped                                                                            ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                                                            ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                                                            ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                                                         ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                                                       ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                                                       ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                                                     ;
++------------------------+----------------+------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: arquitetura:inst|saida:saida01|sevenSeg8bitDec:quocienteDecoder|lpm_mult:Mult0 ;
++------------------------------------------------+--------------+-----------------------------------------------------------------+
+; Parameter Name                                 ; Value        ; Type                                                            ;
++------------------------------------------------+--------------+-----------------------------------------------------------------+
+; AUTO_CARRY_CHAINS                              ; ON           ; AUTO_CARRY                                                      ;
+; IGNORE_CARRY_BUFFERS                           ; OFF          ; IGNORE_CARRY                                                    ;
+; AUTO_CASCADE_CHAINS                            ; ON           ; AUTO_CASCADE                                                    ;
+; IGNORE_CASCADE_BUFFERS                         ; OFF          ; IGNORE_CASCADE                                                  ;
+; LPM_WIDTHA                                     ; 4            ; Untyped                                                         ;
+; LPM_WIDTHB                                     ; 7            ; Untyped                                                         ;
+; LPM_WIDTHP                                     ; 11           ; Untyped                                                         ;
+; LPM_WIDTHR                                     ; 11           ; Untyped                                                         ;
+; LPM_WIDTHS                                     ; 1            ; Untyped                                                         ;
+; LPM_REPRESENTATION                             ; UNSIGNED     ; Untyped                                                         ;
+; LPM_PIPELINE                                   ; 0            ; Untyped                                                         ;
+; LATENCY                                        ; 0            ; Untyped                                                         ;
+; INPUT_A_IS_CONSTANT                            ; NO           ; Untyped                                                         ;
+; INPUT_B_IS_CONSTANT                            ; YES          ; Untyped                                                         ;
+; USE_EAB                                        ; OFF          ; Untyped                                                         ;
+; MAXIMIZE_SPEED                                 ; 5            ; Untyped                                                         ;
+; DEVICE_FAMILY                                  ; Cyclone IV E ; Untyped                                                         ;
+; CARRY_CHAIN                                    ; MANUAL       ; Untyped                                                         ;
+; APEX20K_TECHNOLOGY_MAPPER                      ; LUT          ; TECH_MAPPER_APEX20K                                             ;
+; DEDICATED_MULTIPLIER_CIRCUITRY                 ; AUTO         ; Untyped                                                         ;
+; DEDICATED_MULTIPLIER_MIN_INPUT_WIDTH_FOR_AUTO  ; 0            ; Untyped                                                         ;
+; DEDICATED_MULTIPLIER_MIN_OUTPUT_WIDTH_FOR_AUTO ; 0            ; Untyped                                                         ;
+; CBXI_PARAMETER                                 ; NOTHING      ; Untyped                                                         ;
+; INPUT_A_FIXED_VALUE                            ; Bx           ; Untyped                                                         ;
+; INPUT_B_FIXED_VALUE                            ; Bx           ; Untyped                                                         ;
+; USE_AHDL_IMPLEMENTATION                        ; OFF          ; Untyped                                                         ;
++------------------------------------------------+--------------+-----------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: arquitetura:inst|saida:saida01|sevenSeg8bitDec:divisorDecoder|lpm_mult:Mult0 ;
++------------------------------------------------+--------------+---------------------------------------------------------------+
+; Parameter Name                                 ; Value        ; Type                                                          ;
++------------------------------------------------+--------------+---------------------------------------------------------------+
+; AUTO_CARRY_CHAINS                              ; ON           ; AUTO_CARRY                                                    ;
+; IGNORE_CARRY_BUFFERS                           ; OFF          ; IGNORE_CARRY                                                  ;
+; AUTO_CASCADE_CHAINS                            ; ON           ; AUTO_CASCADE                                                  ;
+; IGNORE_CASCADE_BUFFERS                         ; OFF          ; IGNORE_CASCADE                                                ;
+; LPM_WIDTHA                                     ; 4            ; Untyped                                                       ;
+; LPM_WIDTHB                                     ; 7            ; Untyped                                                       ;
+; LPM_WIDTHP                                     ; 11           ; Untyped                                                       ;
+; LPM_WIDTHR                                     ; 11           ; Untyped                                                       ;
+; LPM_WIDTHS                                     ; 1            ; Untyped                                                       ;
+; LPM_REPRESENTATION                             ; UNSIGNED     ; Untyped                                                       ;
+; LPM_PIPELINE                                   ; 0            ; Untyped                                                       ;
+; LATENCY                                        ; 0            ; Untyped                                                       ;
+; INPUT_A_IS_CONSTANT                            ; NO           ; Untyped                                                       ;
+; INPUT_B_IS_CONSTANT                            ; YES          ; Untyped                                                       ;
+; USE_EAB                                        ; OFF          ; Untyped                                                       ;
+; MAXIMIZE_SPEED                                 ; 5            ; Untyped                                                       ;
+; DEVICE_FAMILY                                  ; Cyclone IV E ; Untyped                                                       ;
+; CARRY_CHAIN                                    ; MANUAL       ; Untyped                                                       ;
+; APEX20K_TECHNOLOGY_MAPPER                      ; LUT          ; TECH_MAPPER_APEX20K                                           ;
+; DEDICATED_MULTIPLIER_CIRCUITRY                 ; AUTO         ; Untyped                                                       ;
+; DEDICATED_MULTIPLIER_MIN_INPUT_WIDTH_FOR_AUTO  ; 0            ; Untyped                                                       ;
+; DEDICATED_MULTIPLIER_MIN_OUTPUT_WIDTH_FOR_AUTO ; 0            ; Untyped                                                       ;
+; CBXI_PARAMETER                                 ; NOTHING      ; Untyped                                                       ;
+; INPUT_A_FIXED_VALUE                            ; Bx           ; Untyped                                                       ;
+; INPUT_B_FIXED_VALUE                            ; Bx           ; Untyped                                                       ;
+; USE_AHDL_IMPLEMENTATION                        ; OFF          ; Untyped                                                       ;
++------------------------------------------------+--------------+---------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: arquitetura:inst|saida:saida01|sevenSeg8bitDec:dividendoDecoder|lpm_mult:Mult0 ;
++------------------------------------------------+--------------+-----------------------------------------------------------------+
+; Parameter Name                                 ; Value        ; Type                                                            ;
++------------------------------------------------+--------------+-----------------------------------------------------------------+
+; AUTO_CARRY_CHAINS                              ; ON           ; AUTO_CARRY                                                      ;
+; IGNORE_CARRY_BUFFERS                           ; OFF          ; IGNORE_CARRY                                                    ;
+; AUTO_CASCADE_CHAINS                            ; ON           ; AUTO_CASCADE                                                    ;
+; IGNORE_CASCADE_BUFFERS                         ; OFF          ; IGNORE_CASCADE                                                  ;
+; LPM_WIDTHA                                     ; 4            ; Untyped                                                         ;
+; LPM_WIDTHB                                     ; 7            ; Untyped                                                         ;
+; LPM_WIDTHP                                     ; 11           ; Untyped                                                         ;
+; LPM_WIDTHR                                     ; 11           ; Untyped                                                         ;
+; LPM_WIDTHS                                     ; 1            ; Untyped                                                         ;
+; LPM_REPRESENTATION                             ; UNSIGNED     ; Untyped                                                         ;
+; LPM_PIPELINE                                   ; 0            ; Untyped                                                         ;
+; LATENCY                                        ; 0            ; Untyped                                                         ;
+; INPUT_A_IS_CONSTANT                            ; NO           ; Untyped                                                         ;
+; INPUT_B_IS_CONSTANT                            ; YES          ; Untyped                                                         ;
+; USE_EAB                                        ; OFF          ; Untyped                                                         ;
+; MAXIMIZE_SPEED                                 ; 5            ; Untyped                                                         ;
+; DEVICE_FAMILY                                  ; Cyclone IV E ; Untyped                                                         ;
+; CARRY_CHAIN                                    ; MANUAL       ; Untyped                                                         ;
+; APEX20K_TECHNOLOGY_MAPPER                      ; LUT          ; TECH_MAPPER_APEX20K                                             ;
+; DEDICATED_MULTIPLIER_CIRCUITRY                 ; AUTO         ; Untyped                                                         ;
+; DEDICATED_MULTIPLIER_MIN_INPUT_WIDTH_FOR_AUTO  ; 0            ; Untyped                                                         ;
+; DEDICATED_MULTIPLIER_MIN_OUTPUT_WIDTH_FOR_AUTO ; 0            ; Untyped                                                         ;
+; CBXI_PARAMETER                                 ; NOTHING      ; Untyped                                                         ;
+; INPUT_A_FIXED_VALUE                            ; Bx           ; Untyped                                                         ;
+; INPUT_B_FIXED_VALUE                            ; Bx           ; Untyped                                                         ;
+; USE_AHDL_IMPLEMENTATION                        ; OFF          ; Untyped                                                         ;
++------------------------------------------------+--------------+-----------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: arquitetura:inst|saida:saida01|sevenSeg8bitDec:restoDecoder|lpm_mult:Mult0 ;
++------------------------------------------------+--------------+-------------------------------------------------------------+
+; Parameter Name                                 ; Value        ; Type                                                        ;
++------------------------------------------------+--------------+-------------------------------------------------------------+
+; AUTO_CARRY_CHAINS                              ; ON           ; AUTO_CARRY                                                  ;
+; IGNORE_CARRY_BUFFERS                           ; OFF          ; IGNORE_CARRY                                                ;
+; AUTO_CASCADE_CHAINS                            ; ON           ; AUTO_CASCADE                                                ;
+; IGNORE_CASCADE_BUFFERS                         ; OFF          ; IGNORE_CASCADE                                              ;
+; LPM_WIDTHA                                     ; 4            ; Untyped                                                     ;
+; LPM_WIDTHB                                     ; 7            ; Untyped                                                     ;
+; LPM_WIDTHP                                     ; 11           ; Untyped                                                     ;
+; LPM_WIDTHR                                     ; 11           ; Untyped                                                     ;
+; LPM_WIDTHS                                     ; 1            ; Untyped                                                     ;
+; LPM_REPRESENTATION                             ; UNSIGNED     ; Untyped                                                     ;
+; LPM_PIPELINE                                   ; 0            ; Untyped                                                     ;
+; LATENCY                                        ; 0            ; Untyped                                                     ;
+; INPUT_A_IS_CONSTANT                            ; NO           ; Untyped                                                     ;
+; INPUT_B_IS_CONSTANT                            ; YES          ; Untyped                                                     ;
+; USE_EAB                                        ; OFF          ; Untyped                                                     ;
+; MAXIMIZE_SPEED                                 ; 5            ; Untyped                                                     ;
+; DEVICE_FAMILY                                  ; Cyclone IV E ; Untyped                                                     ;
+; CARRY_CHAIN                                    ; MANUAL       ; Untyped                                                     ;
+; APEX20K_TECHNOLOGY_MAPPER                      ; LUT          ; TECH_MAPPER_APEX20K                                         ;
+; DEDICATED_MULTIPLIER_CIRCUITRY                 ; AUTO         ; Untyped                                                     ;
+; DEDICATED_MULTIPLIER_MIN_INPUT_WIDTH_FOR_AUTO  ; 0            ; Untyped                                                     ;
+; DEDICATED_MULTIPLIER_MIN_OUTPUT_WIDTH_FOR_AUTO ; 0            ; Untyped                                                     ;
+; CBXI_PARAMETER                                 ; NOTHING      ; Untyped                                                     ;
+; INPUT_A_FIXED_VALUE                            ; Bx           ; Untyped                                                     ;
+; INPUT_B_FIXED_VALUE                            ; Bx           ; Untyped                                                     ;
+; USE_AHDL_IMPLEMENTATION                        ; OFF          ; Untyped                                                     ;
++------------------------------------------------+--------------+-------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------------------------+
+; lpm_mult Parameter Settings by Entity Instance                                                                         ;
++---------------------------------------+--------------------------------------------------------------------------------+
+; Name                                  ; Value                                                                          ;
++---------------------------------------+--------------------------------------------------------------------------------+
+; Number of entity instances            ; 4                                                                              ;
+; Entity Instance                       ; arquitetura:inst|saida:saida01|sevenSeg8bitDec:quocienteDecoder|lpm_mult:Mult0 ;
+;     -- LPM_WIDTHA                     ; 4                                                                              ;
+;     -- LPM_WIDTHB                     ; 7                                                                              ;
+;     -- LPM_WIDTHP                     ; 11                                                                             ;
+;     -- LPM_REPRESENTATION             ; UNSIGNED                                                                       ;
+;     -- INPUT_A_IS_CONSTANT            ; NO                                                                             ;
+;     -- INPUT_B_IS_CONSTANT            ; YES                                                                            ;
+;     -- USE_EAB                        ; OFF                                                                            ;
+;     -- DEDICATED_MULTIPLIER_CIRCUITRY ; AUTO                                                                           ;
+;     -- INPUT_A_FIXED_VALUE            ; Bx                                                                             ;
+;     -- INPUT_B_FIXED_VALUE            ; Bx                                                                             ;
+; Entity Instance                       ; arquitetura:inst|saida:saida01|sevenSeg8bitDec:divisorDecoder|lpm_mult:Mult0   ;
+;     -- LPM_WIDTHA                     ; 4                                                                              ;
+;     -- LPM_WIDTHB                     ; 7                                                                              ;
+;     -- LPM_WIDTHP                     ; 11                                                                             ;
+;     -- LPM_REPRESENTATION             ; UNSIGNED                                                                       ;
+;     -- INPUT_A_IS_CONSTANT            ; NO                                                                             ;
+;     -- INPUT_B_IS_CONSTANT            ; YES                                                                            ;
+;     -- USE_EAB                        ; OFF                                                                            ;
+;     -- DEDICATED_MULTIPLIER_CIRCUITRY ; AUTO                                                                           ;
+;     -- INPUT_A_FIXED_VALUE            ; Bx                                                                             ;
+;     -- INPUT_B_FIXED_VALUE            ; Bx                                                                             ;
+; Entity Instance                       ; arquitetura:inst|saida:saida01|sevenSeg8bitDec:dividendoDecoder|lpm_mult:Mult0 ;
+;     -- LPM_WIDTHA                     ; 4                                                                              ;
+;     -- LPM_WIDTHB                     ; 7                                                                              ;
+;     -- LPM_WIDTHP                     ; 11                                                                             ;
+;     -- LPM_REPRESENTATION             ; UNSIGNED                                                                       ;
+;     -- INPUT_A_IS_CONSTANT            ; NO                                                                             ;
+;     -- INPUT_B_IS_CONSTANT            ; YES                                                                            ;
+;     -- USE_EAB                        ; OFF                                                                            ;
+;     -- DEDICATED_MULTIPLIER_CIRCUITRY ; AUTO                                                                           ;
+;     -- INPUT_A_FIXED_VALUE            ; Bx                                                                             ;
+;     -- INPUT_B_FIXED_VALUE            ; Bx                                                                             ;
+; Entity Instance                       ; arquitetura:inst|saida:saida01|sevenSeg8bitDec:restoDecoder|lpm_mult:Mult0     ;
+;     -- LPM_WIDTHA                     ; 4                                                                              ;
+;     -- LPM_WIDTHB                     ; 7                                                                              ;
+;     -- LPM_WIDTHP                     ; 11                                                                             ;
+;     -- LPM_REPRESENTATION             ; UNSIGNED                                                                       ;
+;     -- INPUT_A_IS_CONSTANT            ; NO                                                                             ;
+;     -- INPUT_B_IS_CONSTANT            ; YES                                                                            ;
+;     -- USE_EAB                        ; OFF                                                                            ;
+;     -- DEDICATED_MULTIPLIER_CIRCUITRY ; AUTO                                                                           ;
+;     -- INPUT_A_FIXED_VALUE            ; Bx                                                                             ;
+;     -- INPUT_B_FIXED_VALUE            ; Bx                                                                             ;
++---------------------------------------+--------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; boundary_port         ; 41                          ;
+; cycloneiii_lcell_comb ; 1280                        ;
+;     arith             ; 341                         ;
+;         1 data inputs ; 12                          ;
+;         2 data inputs ; 36                          ;
+;         3 data inputs ; 293                         ;
+;     normal            ; 939                         ;
+;         0 data inputs ; 60                          ;
+;         1 data inputs ; 4                           ;
+;         2 data inputs ; 268                         ;
+;         3 data inputs ; 133                         ;
+;         4 data inputs ; 474                         ;
+;                       ;                             ;
+; Max LUT depth         ; 59.70                       ;
+; Average LUT depth     ; 45.46                       ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:02     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
+    Info: Processing started: Tue Nov 07 22:51:39 2023
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off atv06 -c atv06
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
+Info (12021): Found 2 design units, including 1 entities, in source file zeroreject.vhdl
+    Info (12022): Found design unit 1: zeroReject-behavior File: C:/Users/welly/Documents/GitHub/LT38A/pratica06/quartus/zeroReject.vhdl Line: 12
+    Info (12023): Found entity 1: zeroReject File: C:/Users/welly/Documents/GitHub/LT38A/pratica06/quartus/zeroReject.vhdl Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file testdivisorshift.vhdl
+    Info (12022): Found design unit 1: testDivisorShift-behavior File: C:/Users/welly/Documents/GitHub/LT38A/pratica06/quartus/testDivisorShift.vhdl Line: 9
+    Info (12023): Found entity 1: testDivisorShift File: C:/Users/welly/Documents/GitHub/LT38A/pratica06/quartus/testDivisorShift.vhdl Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file testdivisor.vhdl
+    Info (12022): Found design unit 1: testDivisor-behavior File: C:/Users/welly/Documents/GitHub/LT38A/pratica06/quartus/testDivisor.vhdl Line: 9
+    Info (12023): Found entity 1: testDivisor File: C:/Users/welly/Documents/GitHub/LT38A/pratica06/quartus/testDivisor.vhdl Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file sistema.vhdl
+    Info (12022): Found design unit 1: sistema-behavior File: C:/Users/welly/Documents/GitHub/LT38A/pratica06/quartus/sistema.vhdl Line: 12
+    Info (12023): Found entity 1: sistema File: C:/Users/welly/Documents/GitHub/LT38A/pratica06/quartus/sistema.vhdl Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file sevenseg8bitdec.vhdl
+    Info (12022): Found design unit 1: sevenSeg8bitDec-behavior File: C:/Users/welly/Documents/GitHub/LT38A/pratica06/quartus/sevenSeg8bitDec.vhdl Line: 12
+    Info (12023): Found entity 1: sevenSeg8bitDec File: C:/Users/welly/Documents/GitHub/LT38A/pratica06/quartus/sevenSeg8bitDec.vhdl Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file saida.vhdl
+    Info (12022): Found design unit 1: saida-behavior File: C:/Users/welly/Documents/GitHub/LT38A/pratica06/quartus/saida.vhdl Line: 16
+    Info (12023): Found entity 1: saida File: C:/Users/welly/Documents/GitHub/LT38A/pratica06/quartus/saida.vhdl Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file outputmultiplexer.vhdl
+    Info (12022): Found design unit 1: outputMultiplexer-behavior File: C:/Users/welly/Documents/GitHub/LT38A/pratica06/quartus/outputMultiplexer.vhdl Line: 13
+    Info (12023): Found entity 1: outputMultiplexer File: C:/Users/welly/Documents/GitHub/LT38A/pratica06/quartus/outputMultiplexer.vhdl Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file magnitudecomparator.vhdl
+    Info (12022): Found design unit 1: magnitudeComparator-behavior File: C:/Users/welly/Documents/GitHub/LT38A/pratica06/quartus/magnitudeComparator.vhdl Line: 12
+    Info (12023): Found entity 1: magnitudeComparator File: C:/Users/welly/Documents/GitHub/LT38A/pratica06/quartus/magnitudeComparator.vhdl Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file inib.vhdl
+    Info (12022): Found design unit 1: inib-behavior File: C:/Users/welly/Documents/GitHub/LT38A/pratica06/quartus/inib.vhdl Line: 13
+    Info (12023): Found entity 1: inib File: C:/Users/welly/Documents/GitHub/LT38A/pratica06/quartus/inib.vhdl Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file entrada.vhdl
+    Info (12022): Found design unit 1: entrada-behavior File: C:/Users/welly/Documents/GitHub/LT38A/pratica06/quartus/entrada.vhdl Line: 13
+    Info (12023): Found entity 1: entrada File: C:/Users/welly/Documents/GitHub/LT38A/pratica06/quartus/entrada.vhdl Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file enabler.vhdl
+    Info (12022): Found design unit 1: enabler-behavior File: C:/Users/welly/Documents/GitHub/LT38A/pratica06/quartus/enabler.vhdl Line: 13
+    Info (12023): Found entity 1: enabler File: C:/Users/welly/Documents/GitHub/LT38A/pratica06/quartus/enabler.vhdl Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file divmux.vhdl
+    Info (12022): Found design unit 1: divMux-behavior File: C:/Users/welly/Documents/GitHub/LT38A/pratica06/quartus/divMux.vhdl Line: 15
+    Info (12023): Found entity 1: divMux File: C:/Users/welly/Documents/GitHub/LT38A/pratica06/quartus/divMux.vhdl Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file divisorshift.vhdl
+    Info (12022): Found design unit 1: divisorShift-behavior File: C:/Users/welly/Documents/GitHub/LT38A/pratica06/quartus/divisorShift.vhdl Line: 13
+    Info (12023): Found entity 1: divisorShift File: C:/Users/welly/Documents/GitHub/LT38A/pratica06/quartus/divisorShift.vhdl Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file divisorarith.vhdl
+    Info (12022): Found design unit 1: divisorArith-behavior File: C:/Users/welly/Documents/GitHub/LT38A/pratica06/quartus/divisorArith.vhdl Line: 12
+    Info (12023): Found entity 1: divisorArith File: C:/Users/welly/Documents/GitHub/LT38A/pratica06/quartus/divisorArith.vhdl Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file divisor.vhdl
+    Info (12022): Found design unit 1: divisor-behavior File: C:/Users/welly/Documents/GitHub/LT38A/pratica06/quartus/divisor.vhdl Line: 12
+    Info (12023): Found entity 1: divisor File: C:/Users/welly/Documents/GitHub/LT38A/pratica06/quartus/divisor.vhdl Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file div8.vhdl
+    Info (12022): Found design unit 1: div8-behavior File: C:/Users/welly/Documents/GitHub/LT38A/pratica06/quartus/div8.vhdl Line: 12
+    Info (12023): Found entity 1: div8 File: C:/Users/welly/Documents/GitHub/LT38A/pratica06/quartus/div8.vhdl Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file div64.vhdl
+    Info (12022): Found design unit 1: div64-behavior File: C:/Users/welly/Documents/GitHub/LT38A/pratica06/quartus/div64.vhdl Line: 12
+    Info (12023): Found entity 1: div64 File: C:/Users/welly/Documents/GitHub/LT38A/pratica06/quartus/div64.vhdl Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file div4.vhdl
+    Info (12022): Found design unit 1: div4-behavior File: C:/Users/welly/Documents/GitHub/LT38A/pratica06/quartus/div4.vhdl Line: 12
+    Info (12023): Found entity 1: div4 File: C:/Users/welly/Documents/GitHub/LT38A/pratica06/quartus/div4.vhdl Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file div32.vhdl
+    Info (12022): Found design unit 1: div32-behavior File: C:/Users/welly/Documents/GitHub/LT38A/pratica06/quartus/div32.vhdl Line: 12
+    Info (12023): Found entity 1: div32 File: C:/Users/welly/Documents/GitHub/LT38A/pratica06/quartus/div32.vhdl Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file div2.vhdl
+    Info (12022): Found design unit 1: div2-behavior File: C:/Users/welly/Documents/GitHub/LT38A/pratica06/quartus/div2.vhdl Line: 12
+    Info (12023): Found entity 1: div2 File: C:/Users/welly/Documents/GitHub/LT38A/pratica06/quartus/div2.vhdl Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file div1.vhdl
+    Info (12022): Found design unit 1: div1-behavior File: C:/Users/welly/Documents/GitHub/LT38A/pratica06/quartus/div1.vhdl Line: 12
+    Info (12023): Found entity 1: div1 File: C:/Users/welly/Documents/GitHub/LT38A/pratica06/quartus/div1.vhdl Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file div16.vhdl
+    Info (12022): Found design unit 1: div16-behavior File: C:/Users/welly/Documents/GitHub/LT38A/pratica06/quartus/div16.vhdl Line: 12
+    Info (12023): Found entity 1: div16 File: C:/Users/welly/Documents/GitHub/LT38A/pratica06/quartus/div16.vhdl Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file div128.vhdl
+    Info (12022): Found design unit 1: div128-behavior File: C:/Users/welly/Documents/GitHub/LT38A/pratica06/quartus/div128.vhdl Line: 12
+    Info (12023): Found entity 1: div128 File: C:/Users/welly/Documents/GitHub/LT38A/pratica06/quartus/div128.vhdl Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file arquitetura.vhdl
+    Info (12022): Found design unit 1: arquitetura-behavior File: C:/Users/welly/Documents/GitHub/LT38A/pratica06/quartus/arquitetura.vhdl Line: 16
+    Info (12023): Found entity 1: arquitetura File: C:/Users/welly/Documents/GitHub/LT38A/pratica06/quartus/arquitetura.vhdl Line: 5
+Info (12021): Found 1 design units, including 1 entities, in source file atv06.bdf
+    Info (12023): Found entity 1: atv06
+Info (12127): Elaborating entity "atv06" for the top level hierarchy
+Info (12128): Elaborating entity "arquitetura" for hierarchy "arquitetura:inst"
+Info (12128): Elaborating entity "entrada" for hierarchy "arquitetura:inst|entrada:entrada01" File: C:/Users/welly/Documents/GitHub/LT38A/pratica06/quartus/arquitetura.vhdl Line: 49
+Info (12128): Elaborating entity "enabler" for hierarchy "arquitetura:inst|entrada:entrada01|enabler:enab" File: C:/Users/welly/Documents/GitHub/LT38A/pratica06/quartus/entrada.vhdl Line: 25
+Info (12128): Elaborating entity "sistema" for hierarchy "arquitetura:inst|sistema:sistema01" File: C:/Users/welly/Documents/GitHub/LT38A/pratica06/quartus/arquitetura.vhdl Line: 50
+Info (12128): Elaborating entity "zeroReject" for hierarchy "arquitetura:inst|sistema:sistema01|zeroReject:zr" File: C:/Users/welly/Documents/GitHub/LT38A/pratica06/quartus/sistema.vhdl Line: 23
+Info (10041): Inferred latch for "R[0]" at zeroReject.vhdl(30) File: C:/Users/welly/Documents/GitHub/LT38A/pratica06/quartus/zeroReject.vhdl Line: 30
+Info (10041): Inferred latch for "R[1]" at zeroReject.vhdl(30) File: C:/Users/welly/Documents/GitHub/LT38A/pratica06/quartus/zeroReject.vhdl Line: 30
+Info (10041): Inferred latch for "R[2]" at zeroReject.vhdl(30) File: C:/Users/welly/Documents/GitHub/LT38A/pratica06/quartus/zeroReject.vhdl Line: 30
+Info (10041): Inferred latch for "R[3]" at zeroReject.vhdl(30) File: C:/Users/welly/Documents/GitHub/LT38A/pratica06/quartus/zeroReject.vhdl Line: 30
+Info (10041): Inferred latch for "R[4]" at zeroReject.vhdl(30) File: C:/Users/welly/Documents/GitHub/LT38A/pratica06/quartus/zeroReject.vhdl Line: 30
+Info (10041): Inferred latch for "R[5]" at zeroReject.vhdl(30) File: C:/Users/welly/Documents/GitHub/LT38A/pratica06/quartus/zeroReject.vhdl Line: 30
+Info (10041): Inferred latch for "R[6]" at zeroReject.vhdl(30) File: C:/Users/welly/Documents/GitHub/LT38A/pratica06/quartus/zeroReject.vhdl Line: 30
+Info (10041): Inferred latch for "R[7]" at zeroReject.vhdl(30) File: C:/Users/welly/Documents/GitHub/LT38A/pratica06/quartus/zeroReject.vhdl Line: 30
+Info (10041): Inferred latch for "Q[0]" at zeroReject.vhdl(27) File: C:/Users/welly/Documents/GitHub/LT38A/pratica06/quartus/zeroReject.vhdl Line: 27
+Info (10041): Inferred latch for "Q[1]" at zeroReject.vhdl(27) File: C:/Users/welly/Documents/GitHub/LT38A/pratica06/quartus/zeroReject.vhdl Line: 27
+Info (10041): Inferred latch for "Q[2]" at zeroReject.vhdl(27) File: C:/Users/welly/Documents/GitHub/LT38A/pratica06/quartus/zeroReject.vhdl Line: 27
+Info (10041): Inferred latch for "Q[3]" at zeroReject.vhdl(27) File: C:/Users/welly/Documents/GitHub/LT38A/pratica06/quartus/zeroReject.vhdl Line: 27
+Info (10041): Inferred latch for "Q[4]" at zeroReject.vhdl(27) File: C:/Users/welly/Documents/GitHub/LT38A/pratica06/quartus/zeroReject.vhdl Line: 27
+Info (10041): Inferred latch for "Q[5]" at zeroReject.vhdl(27) File: C:/Users/welly/Documents/GitHub/LT38A/pratica06/quartus/zeroReject.vhdl Line: 27
+Info (10041): Inferred latch for "Q[6]" at zeroReject.vhdl(27) File: C:/Users/welly/Documents/GitHub/LT38A/pratica06/quartus/zeroReject.vhdl Line: 27
+Info (10041): Inferred latch for "Q[7]" at zeroReject.vhdl(27) File: C:/Users/welly/Documents/GitHub/LT38A/pratica06/quartus/zeroReject.vhdl Line: 27
+Info (12128): Elaborating entity "magnitudeComparator" for hierarchy "arquitetura:inst|sistema:sistema01|zeroReject:zr|magnitudeComparator:mc" File: C:/Users/welly/Documents/GitHub/LT38A/pratica06/quartus/zeroReject.vhdl Line: 25
+Info (12128): Elaborating entity "divisor" for hierarchy "arquitetura:inst|sistema:sistema01|zeroReject:zr|magnitudeComparator:mc|divisor:dv" File: C:/Users/welly/Documents/GitHub/LT38A/pratica06/quartus/magnitudeComparator.vhdl Line: 25
+Info (12128): Elaborating entity "divisorArith" for hierarchy "arquitetura:inst|sistema:sistema01|zeroReject:zr|magnitudeComparator:mc|divisor:dv|divisorArith:da" File: C:/Users/welly/Documents/GitHub/LT38A/pratica06/quartus/divisor.vhdl Line: 45
+Info (12128): Elaborating entity "divisorShift" for hierarchy "arquitetura:inst|sistema:sistema01|zeroReject:zr|magnitudeComparator:mc|divisor:dv|divisorShift:ds" File: C:/Users/welly/Documents/GitHub/LT38A/pratica06/quartus/divisor.vhdl Line: 46
+Info (12128): Elaborating entity "div1" for hierarchy "arquitetura:inst|sistema:sistema01|zeroReject:zr|magnitudeComparator:mc|divisor:dv|divisorShift:ds|div1:por1" File: C:/Users/welly/Documents/GitHub/LT38A/pratica06/quartus/divisorShift.vhdl Line: 85
+Info (12128): Elaborating entity "div2" for hierarchy "arquitetura:inst|sistema:sistema01|zeroReject:zr|magnitudeComparator:mc|divisor:dv|divisorShift:ds|div2:por2" File: C:/Users/welly/Documents/GitHub/LT38A/pratica06/quartus/divisorShift.vhdl Line: 86
+Info (12128): Elaborating entity "div4" for hierarchy "arquitetura:inst|sistema:sistema01|zeroReject:zr|magnitudeComparator:mc|divisor:dv|divisorShift:ds|div4:por4" File: C:/Users/welly/Documents/GitHub/LT38A/pratica06/quartus/divisorShift.vhdl Line: 87
+Info (12128): Elaborating entity "div8" for hierarchy "arquitetura:inst|sistema:sistema01|zeroReject:zr|magnitudeComparator:mc|divisor:dv|divisorShift:ds|div8:por8" File: C:/Users/welly/Documents/GitHub/LT38A/pratica06/quartus/divisorShift.vhdl Line: 88
+Info (12128): Elaborating entity "div16" for hierarchy "arquitetura:inst|sistema:sistema01|zeroReject:zr|magnitudeComparator:mc|divisor:dv|divisorShift:ds|div16:por16" File: C:/Users/welly/Documents/GitHub/LT38A/pratica06/quartus/divisorShift.vhdl Line: 89
+Info (12128): Elaborating entity "div32" for hierarchy "arquitetura:inst|sistema:sistema01|zeroReject:zr|magnitudeComparator:mc|divisor:dv|divisorShift:ds|div32:por32" File: C:/Users/welly/Documents/GitHub/LT38A/pratica06/quartus/divisorShift.vhdl Line: 90
+Info (12128): Elaborating entity "div64" for hierarchy "arquitetura:inst|sistema:sistema01|zeroReject:zr|magnitudeComparator:mc|divisor:dv|divisorShift:ds|div64:por64" File: C:/Users/welly/Documents/GitHub/LT38A/pratica06/quartus/divisorShift.vhdl Line: 91
+Info (12128): Elaborating entity "div128" for hierarchy "arquitetura:inst|sistema:sistema01|zeroReject:zr|magnitudeComparator:mc|divisor:dv|divisorShift:ds|div128:por128" File: C:/Users/welly/Documents/GitHub/LT38A/pratica06/quartus/divisorShift.vhdl Line: 92
+Info (12128): Elaborating entity "divMux" for hierarchy "arquitetura:inst|sistema:sistema01|zeroReject:zr|magnitudeComparator:mc|divisor:dv|divisorShift:ds|divMux:dMux" File: C:/Users/welly/Documents/GitHub/LT38A/pratica06/quartus/divisorShift.vhdl Line: 94
+Info (12128): Elaborating entity "saida" for hierarchy "arquitetura:inst|saida:saida01" File: C:/Users/welly/Documents/GitHub/LT38A/pratica06/quartus/arquitetura.vhdl Line: 51
+Info (12128): Elaborating entity "sevenSeg8bitDec" for hierarchy "arquitetura:inst|saida:saida01|sevenSeg8bitDec:dividendoDecoder" File: C:/Users/welly/Documents/GitHub/LT38A/pratica06/quartus/saida.vhdl Line: 50
+Info (10041): Inferred latch for "ssA0[0]" at sevenSeg8bitDec.vhdl(47) File: C:/Users/welly/Documents/GitHub/LT38A/pratica06/quartus/sevenSeg8bitDec.vhdl Line: 47
+Info (10041): Inferred latch for "ssA0[1]" at sevenSeg8bitDec.vhdl(47) File: C:/Users/welly/Documents/GitHub/LT38A/pratica06/quartus/sevenSeg8bitDec.vhdl Line: 47
+Info (10041): Inferred latch for "ssA0[2]" at sevenSeg8bitDec.vhdl(47) File: C:/Users/welly/Documents/GitHub/LT38A/pratica06/quartus/sevenSeg8bitDec.vhdl Line: 47
+Info (10041): Inferred latch for "ssA0[3]" at sevenSeg8bitDec.vhdl(47) File: C:/Users/welly/Documents/GitHub/LT38A/pratica06/quartus/sevenSeg8bitDec.vhdl Line: 47
+Info (10041): Inferred latch for "ssA0[4]" at sevenSeg8bitDec.vhdl(47) File: C:/Users/welly/Documents/GitHub/LT38A/pratica06/quartus/sevenSeg8bitDec.vhdl Line: 47
+Info (10041): Inferred latch for "ssA0[5]" at sevenSeg8bitDec.vhdl(47) File: C:/Users/welly/Documents/GitHub/LT38A/pratica06/quartus/sevenSeg8bitDec.vhdl Line: 47
+Info (10041): Inferred latch for "ssA0[6]" at sevenSeg8bitDec.vhdl(47) File: C:/Users/welly/Documents/GitHub/LT38A/pratica06/quartus/sevenSeg8bitDec.vhdl Line: 47
+Info (10041): Inferred latch for "ssA1[0]" at sevenSeg8bitDec.vhdl(36) File: C:/Users/welly/Documents/GitHub/LT38A/pratica06/quartus/sevenSeg8bitDec.vhdl Line: 36
+Info (10041): Inferred latch for "ssA1[1]" at sevenSeg8bitDec.vhdl(36) File: C:/Users/welly/Documents/GitHub/LT38A/pratica06/quartus/sevenSeg8bitDec.vhdl Line: 36
+Info (10041): Inferred latch for "ssA1[2]" at sevenSeg8bitDec.vhdl(36) File: C:/Users/welly/Documents/GitHub/LT38A/pratica06/quartus/sevenSeg8bitDec.vhdl Line: 36
+Info (10041): Inferred latch for "ssA1[3]" at sevenSeg8bitDec.vhdl(36) File: C:/Users/welly/Documents/GitHub/LT38A/pratica06/quartus/sevenSeg8bitDec.vhdl Line: 36
+Info (10041): Inferred latch for "ssA1[4]" at sevenSeg8bitDec.vhdl(36) File: C:/Users/welly/Documents/GitHub/LT38A/pratica06/quartus/sevenSeg8bitDec.vhdl Line: 36
+Info (10041): Inferred latch for "ssA1[5]" at sevenSeg8bitDec.vhdl(36) File: C:/Users/welly/Documents/GitHub/LT38A/pratica06/quartus/sevenSeg8bitDec.vhdl Line: 36
+Info (10041): Inferred latch for "ssA1[6]" at sevenSeg8bitDec.vhdl(36) File: C:/Users/welly/Documents/GitHub/LT38A/pratica06/quartus/sevenSeg8bitDec.vhdl Line: 36
+Info (10041): Inferred latch for "ssA2[0]" at sevenSeg8bitDec.vhdl(25) File: C:/Users/welly/Documents/GitHub/LT38A/pratica06/quartus/sevenSeg8bitDec.vhdl Line: 25
+Info (10041): Inferred latch for "ssA2[1]" at sevenSeg8bitDec.vhdl(25) File: C:/Users/welly/Documents/GitHub/LT38A/pratica06/quartus/sevenSeg8bitDec.vhdl Line: 25
+Info (10041): Inferred latch for "ssA2[2]" at sevenSeg8bitDec.vhdl(25) File: C:/Users/welly/Documents/GitHub/LT38A/pratica06/quartus/sevenSeg8bitDec.vhdl Line: 25
+Info (10041): Inferred latch for "ssA2[3]" at sevenSeg8bitDec.vhdl(25) File: C:/Users/welly/Documents/GitHub/LT38A/pratica06/quartus/sevenSeg8bitDec.vhdl Line: 25
+Info (10041): Inferred latch for "ssA2[4]" at sevenSeg8bitDec.vhdl(25) File: C:/Users/welly/Documents/GitHub/LT38A/pratica06/quartus/sevenSeg8bitDec.vhdl Line: 25
+Info (10041): Inferred latch for "ssA2[5]" at sevenSeg8bitDec.vhdl(25) File: C:/Users/welly/Documents/GitHub/LT38A/pratica06/quartus/sevenSeg8bitDec.vhdl Line: 25
+Info (10041): Inferred latch for "ssA2[6]" at sevenSeg8bitDec.vhdl(25) File: C:/Users/welly/Documents/GitHub/LT38A/pratica06/quartus/sevenSeg8bitDec.vhdl Line: 25
+Info (12128): Elaborating entity "outputMultiplexer" for hierarchy "arquitetura:inst|saida:saida01|outputMultiplexer:mux0" File: C:/Users/welly/Documents/GitHub/LT38A/pratica06/quartus/saida.vhdl Line: 55
+Info (12128): Elaborating entity "inib" for hierarchy "arquitetura:inst|saida:saida01|inib:inibidor" File: C:/Users/welly/Documents/GitHub/LT38A/pratica06/quartus/saida.vhdl Line: 59
+Warning (13046): Tri-state node(s) do not directly drive top-level pin(s)
+    Warning (13049): Converted tri-state buffer "arquitetura:inst|sistema:sistema01|zeroReject:zr|R[0]" feeding internal logic into a wire File: C:/Users/welly/Documents/GitHub/LT38A/pratica06/quartus/zeroReject.vhdl Line: 30
+    Warning (13049): Converted tri-state buffer "arquitetura:inst|sistema:sistema01|zeroReject:zr|R[1]" feeding internal logic into a wire File: C:/Users/welly/Documents/GitHub/LT38A/pratica06/quartus/zeroReject.vhdl Line: 30
+    Warning (13049): Converted tri-state buffer "arquitetura:inst|sistema:sistema01|zeroReject:zr|R[2]" feeding internal logic into a wire File: C:/Users/welly/Documents/GitHub/LT38A/pratica06/quartus/zeroReject.vhdl Line: 30
+    Warning (13049): Converted tri-state buffer "arquitetura:inst|sistema:sistema01|zeroReject:zr|R[3]" feeding internal logic into a wire File: C:/Users/welly/Documents/GitHub/LT38A/pratica06/quartus/zeroReject.vhdl Line: 30
+    Warning (13049): Converted tri-state buffer "arquitetura:inst|sistema:sistema01|zeroReject:zr|R[4]" feeding internal logic into a wire File: C:/Users/welly/Documents/GitHub/LT38A/pratica06/quartus/zeroReject.vhdl Line: 30
+    Warning (13049): Converted tri-state buffer "arquitetura:inst|sistema:sistema01|zeroReject:zr|R[5]" feeding internal logic into a wire File: C:/Users/welly/Documents/GitHub/LT38A/pratica06/quartus/zeroReject.vhdl Line: 30
+    Warning (13049): Converted tri-state buffer "arquitetura:inst|sistema:sistema01|zeroReject:zr|R[6]" feeding internal logic into a wire File: C:/Users/welly/Documents/GitHub/LT38A/pratica06/quartus/zeroReject.vhdl Line: 30
+    Warning (13049): Converted tri-state buffer "arquitetura:inst|sistema:sistema01|zeroReject:zr|R[7]" feeding internal logic into a wire File: C:/Users/welly/Documents/GitHub/LT38A/pratica06/quartus/zeroReject.vhdl Line: 30
+    Warning (13049): Converted tri-state buffer "arquitetura:inst|sistema:sistema01|zeroReject:zr|Q[0]" feeding internal logic into a wire File: C:/Users/welly/Documents/GitHub/LT38A/pratica06/quartus/zeroReject.vhdl Line: 27
+    Warning (13049): Converted tri-state buffer "arquitetura:inst|sistema:sistema01|zeroReject:zr|Q[1]" feeding internal logic into a wire File: C:/Users/welly/Documents/GitHub/LT38A/pratica06/quartus/zeroReject.vhdl Line: 27
+    Warning (13049): Converted tri-state buffer "arquitetura:inst|sistema:sistema01|zeroReject:zr|Q[2]" feeding internal logic into a wire File: C:/Users/welly/Documents/GitHub/LT38A/pratica06/quartus/zeroReject.vhdl Line: 27
+    Warning (13049): Converted tri-state buffer "arquitetura:inst|sistema:sistema01|zeroReject:zr|Q[3]" feeding internal logic into a wire File: C:/Users/welly/Documents/GitHub/LT38A/pratica06/quartus/zeroReject.vhdl Line: 27
+    Warning (13049): Converted tri-state buffer "arquitetura:inst|sistema:sistema01|zeroReject:zr|Q[4]" feeding internal logic into a wire File: C:/Users/welly/Documents/GitHub/LT38A/pratica06/quartus/zeroReject.vhdl Line: 27
+    Warning (13049): Converted tri-state buffer "arquitetura:inst|sistema:sistema01|zeroReject:zr|Q[5]" feeding internal logic into a wire File: C:/Users/welly/Documents/GitHub/LT38A/pratica06/quartus/zeroReject.vhdl Line: 27
+    Warning (13049): Converted tri-state buffer "arquitetura:inst|sistema:sistema01|zeroReject:zr|Q[6]" feeding internal logic into a wire File: C:/Users/welly/Documents/GitHub/LT38A/pratica06/quartus/zeroReject.vhdl Line: 27
+    Warning (13049): Converted tri-state buffer "arquitetura:inst|sistema:sistema01|zeroReject:zr|Q[7]" feeding internal logic into a wire File: C:/Users/welly/Documents/GitHub/LT38A/pratica06/quartus/zeroReject.vhdl Line: 27
+Info (278001): Inferred 14 megafunctions from design logic
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "arquitetura:inst|sistema:sistema01|zeroReject:zr|magnitudeComparator:mc|divisor:dv|divisorArith:da|Div0" File: C:/Users/welly/Documents/GitHub/LT38A/pratica06/quartus/divisorArith.vhdl Line: 16
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "arquitetura:inst|saida:saida01|sevenSeg8bitDec:quocienteDecoder|Div1" File: C:/Users/welly/Documents/GitHub/LT38A/pratica06/quartus/sevenSeg8bitDec.vhdl Line: 22
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "arquitetura:inst|saida:saida01|sevenSeg8bitDec:divisorDecoder|Div1" File: C:/Users/welly/Documents/GitHub/LT38A/pratica06/quartus/sevenSeg8bitDec.vhdl Line: 22
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "arquitetura:inst|saida:saida01|sevenSeg8bitDec:dividendoDecoder|Div1" File: C:/Users/welly/Documents/GitHub/LT38A/pratica06/quartus/sevenSeg8bitDec.vhdl Line: 22
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "arquitetura:inst|sistema:sistema01|zeroReject:zr|magnitudeComparator:mc|divisor:dv|divisorArith:da|Mod0" File: C:/Users/welly/Documents/GitHub/LT38A/pratica06/quartus/divisorArith.vhdl Line: 17
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "arquitetura:inst|saida:saida01|sevenSeg8bitDec:restoDecoder|Div1" File: C:/Users/welly/Documents/GitHub/LT38A/pratica06/quartus/sevenSeg8bitDec.vhdl Line: 22
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "arquitetura:inst|saida:saida01|sevenSeg8bitDec:quocienteDecoder|Div0" File: C:/Users/welly/Documents/GitHub/LT38A/pratica06/quartus/sevenSeg8bitDec.vhdl Line: 21
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "arquitetura:inst|saida:saida01|sevenSeg8bitDec:divisorDecoder|Div0" File: C:/Users/welly/Documents/GitHub/LT38A/pratica06/quartus/sevenSeg8bitDec.vhdl Line: 21
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "arquitetura:inst|saida:saida01|sevenSeg8bitDec:dividendoDecoder|Div0" File: C:/Users/welly/Documents/GitHub/LT38A/pratica06/quartus/sevenSeg8bitDec.vhdl Line: 21
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "arquitetura:inst|saida:saida01|sevenSeg8bitDec:restoDecoder|Div0" File: C:/Users/welly/Documents/GitHub/LT38A/pratica06/quartus/sevenSeg8bitDec.vhdl Line: 21
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "arquitetura:inst|saida:saida01|sevenSeg8bitDec:quocienteDecoder|Mult0" File: C:/Users/welly/Documents/GitHub/LT38A/pratica06/quartus/sevenSeg8bitDec.vhdl Line: 23
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "arquitetura:inst|saida:saida01|sevenSeg8bitDec:divisorDecoder|Mult0" File: C:/Users/welly/Documents/GitHub/LT38A/pratica06/quartus/sevenSeg8bitDec.vhdl Line: 23
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "arquitetura:inst|saida:saida01|sevenSeg8bitDec:dividendoDecoder|Mult0" File: C:/Users/welly/Documents/GitHub/LT38A/pratica06/quartus/sevenSeg8bitDec.vhdl Line: 23
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "arquitetura:inst|saida:saida01|sevenSeg8bitDec:restoDecoder|Mult0" File: C:/Users/welly/Documents/GitHub/LT38A/pratica06/quartus/sevenSeg8bitDec.vhdl Line: 23
+Info (12130): Elaborated megafunction instantiation "arquitetura:inst|sistema:sistema01|zeroReject:zr|magnitudeComparator:mc|divisor:dv|divisorArith:da|lpm_divide:Div0" File: C:/Users/welly/Documents/GitHub/LT38A/pratica06/quartus/divisorArith.vhdl Line: 16
+Info (12133): Instantiated megafunction "arquitetura:inst|sistema:sistema01|zeroReject:zr|magnitudeComparator:mc|divisor:dv|divisorArith:da|lpm_divide:Div0" with the following parameter: File: C:/Users/welly/Documents/GitHub/LT38A/pratica06/quartus/divisorArith.vhdl Line: 16
+    Info (12134): Parameter "LPM_WIDTHN" = "8"
+    Info (12134): Parameter "LPM_WIDTHD" = "8"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_nhm.tdf
+    Info (12023): Found entity 1: lpm_divide_nhm File: C:/Users/welly/Documents/GitHub/LT38A/pratica06/quartus/db/lpm_divide_nhm.tdf Line: 25
+Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_fkh.tdf
+    Info (12023): Found entity 1: sign_div_unsign_fkh File: C:/Users/welly/Documents/GitHub/LT38A/pratica06/quartus/db/sign_div_unsign_fkh.tdf Line: 25
+Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_i4f.tdf
+    Info (12023): Found entity 1: alt_u_div_i4f File: C:/Users/welly/Documents/GitHub/LT38A/pratica06/quartus/db/alt_u_div_i4f.tdf Line: 27
+Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_7pc.tdf
+    Info (12023): Found entity 1: add_sub_7pc File: C:/Users/welly/Documents/GitHub/LT38A/pratica06/quartus/db/add_sub_7pc.tdf Line: 23
+Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_8pc.tdf
+    Info (12023): Found entity 1: add_sub_8pc File: C:/Users/welly/Documents/GitHub/LT38A/pratica06/quartus/db/add_sub_8pc.tdf Line: 23
+Info (12130): Elaborated megafunction instantiation "arquitetura:inst|saida:saida01|sevenSeg8bitDec:quocienteDecoder|lpm_divide:Div1" File: C:/Users/welly/Documents/GitHub/LT38A/pratica06/quartus/sevenSeg8bitDec.vhdl Line: 22
+Info (12133): Instantiated megafunction "arquitetura:inst|saida:saida01|sevenSeg8bitDec:quocienteDecoder|lpm_divide:Div1" with the following parameter: File: C:/Users/welly/Documents/GitHub/LT38A/pratica06/quartus/sevenSeg8bitDec.vhdl Line: 22
+    Info (12134): Parameter "LPM_WIDTHN" = "13"
+    Info (12134): Parameter "LPM_WIDTHD" = "5"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "SIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "SIGNED"
+    Info (12134): Parameter "LPM_HINT" = "LPM_REMAINDERPOSITIVE=FALSE"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_o0p.tdf
+    Info (12023): Found entity 1: lpm_divide_o0p File: C:/Users/welly/Documents/GitHub/LT38A/pratica06/quartus/db/lpm_divide_o0p.tdf Line: 25
+Info (12021): Found 1 design units, including 1 entities, in source file db/abs_divider_jbg.tdf
+    Info (12023): Found entity 1: abs_divider_jbg File: C:/Users/welly/Documents/GitHub/LT38A/pratica06/quartus/db/abs_divider_jbg.tdf Line: 29
+Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_47f.tdf
+    Info (12023): Found entity 1: alt_u_div_47f File: C:/Users/welly/Documents/GitHub/LT38A/pratica06/quartus/db/alt_u_div_47f.tdf Line: 27
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_abs_2v9.tdf
+    Info (12023): Found entity 1: lpm_abs_2v9 File: C:/Users/welly/Documents/GitHub/LT38A/pratica06/quartus/db/lpm_abs_2v9.tdf Line: 25
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_abs_h0a.tdf
+    Info (12023): Found entity 1: lpm_abs_h0a File: C:/Users/welly/Documents/GitHub/LT38A/pratica06/quartus/db/lpm_abs_h0a.tdf Line: 25
+Info (12130): Elaborated megafunction instantiation "arquitetura:inst|sistema:sistema01|zeroReject:zr|magnitudeComparator:mc|divisor:dv|divisorArith:da|lpm_divide:Mod0" File: C:/Users/welly/Documents/GitHub/LT38A/pratica06/quartus/divisorArith.vhdl Line: 17
+Info (12133): Instantiated megafunction "arquitetura:inst|sistema:sistema01|zeroReject:zr|magnitudeComparator:mc|divisor:dv|divisorArith:da|lpm_divide:Mod0" with the following parameter: File: C:/Users/welly/Documents/GitHub/LT38A/pratica06/quartus/divisorArith.vhdl Line: 17
+    Info (12134): Parameter "LPM_WIDTHN" = "8"
+    Info (12134): Parameter "LPM_WIDTHD" = "8"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_q9m.tdf
+    Info (12023): Found entity 1: lpm_divide_q9m File: C:/Users/welly/Documents/GitHub/LT38A/pratica06/quartus/db/lpm_divide_q9m.tdf Line: 25
+Info (12130): Elaborated megafunction instantiation "arquitetura:inst|saida:saida01|sevenSeg8bitDec:quocienteDecoder|lpm_divide:Div0" File: C:/Users/welly/Documents/GitHub/LT38A/pratica06/quartus/sevenSeg8bitDec.vhdl Line: 21
+Info (12133): Instantiated megafunction "arquitetura:inst|saida:saida01|sevenSeg8bitDec:quocienteDecoder|lpm_divide:Div0" with the following parameter: File: C:/Users/welly/Documents/GitHub/LT38A/pratica06/quartus/sevenSeg8bitDec.vhdl Line: 21
+    Info (12134): Parameter "LPM_WIDTHN" = "8"
+    Info (12134): Parameter "LPM_WIDTHD" = "7"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_mhm.tdf
+    Info (12023): Found entity 1: lpm_divide_mhm File: C:/Users/welly/Documents/GitHub/LT38A/pratica06/quartus/db/lpm_divide_mhm.tdf Line: 25
+Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_ekh.tdf
+    Info (12023): Found entity 1: sign_div_unsign_ekh File: C:/Users/welly/Documents/GitHub/LT38A/pratica06/quartus/db/sign_div_unsign_ekh.tdf Line: 25
+Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_g4f.tdf
+    Info (12023): Found entity 1: alt_u_div_g4f File: C:/Users/welly/Documents/GitHub/LT38A/pratica06/quartus/db/alt_u_div_g4f.tdf Line: 27
+Info (12130): Elaborated megafunction instantiation "arquitetura:inst|saida:saida01|sevenSeg8bitDec:quocienteDecoder|lpm_mult:Mult0" File: C:/Users/welly/Documents/GitHub/LT38A/pratica06/quartus/sevenSeg8bitDec.vhdl Line: 23
+Info (12133): Instantiated megafunction "arquitetura:inst|saida:saida01|sevenSeg8bitDec:quocienteDecoder|lpm_mult:Mult0" with the following parameter: File: C:/Users/welly/Documents/GitHub/LT38A/pratica06/quartus/sevenSeg8bitDec.vhdl Line: 23
+    Info (12134): Parameter "LPM_WIDTHA" = "4"
+    Info (12134): Parameter "LPM_WIDTHB" = "7"
+    Info (12134): Parameter "LPM_WIDTHP" = "11"
+    Info (12134): Parameter "LPM_WIDTHR" = "11"
+    Info (12134): Parameter "LPM_WIDTHS" = "1"
+    Info (12134): Parameter "LPM_REPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "INPUT_A_IS_CONSTANT" = "NO"
+    Info (12134): Parameter "INPUT_B_IS_CONSTANT" = "YES"
+    Info (12134): Parameter "MAXIMIZE_SPEED" = "5"
+Info (12131): Elaborated megafunction instantiation "arquitetura:inst|saida:saida01|sevenSeg8bitDec:quocienteDecoder|lpm_mult:Mult0|multcore:mult_core", which is child of megafunction instantiation "arquitetura:inst|saida:saida01|sevenSeg8bitDec:quocienteDecoder|lpm_mult:Mult0" File: c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/lpm_mult.tdf Line: 309
+Info (12131): Elaborated megafunction instantiation "arquitetura:inst|saida:saida01|sevenSeg8bitDec:quocienteDecoder|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder", which is child of megafunction instantiation "arquitetura:inst|saida:saida01|sevenSeg8bitDec:quocienteDecoder|lpm_mult:Mult0" File: c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/multcore.tdf Line: 229
+Info (12131): Elaborated megafunction instantiation "arquitetura:inst|saida:saida01|sevenSeg8bitDec:quocienteDecoder|lpm_mult:Mult0|altshift:external_latency_ffs", which is child of megafunction instantiation "arquitetura:inst|saida:saida01|sevenSeg8bitDec:quocienteDecoder|lpm_mult:Mult0" File: c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/lpm_mult.tdf Line: 352
+Info (13014): Ignored 44 buffer(s)
+    Info (13016): Ignored 44 CARRY_SUM buffer(s)
+Info (286030): Timing-Driven Synthesis is running
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 1321 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 20 input pins
+    Info (21059): Implemented 21 output pins
+    Info (21061): Implemented 1280 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 18 warnings
+    Info: Peak virtual memory: 4825 megabytes
+    Info: Processing ended: Tue Nov 07 22:51:48 2023
+    Info: Elapsed time: 00:00:09
+    Info: Total CPU time (on all processors): 00:00:16
+
+
