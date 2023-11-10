@@ -1,0 +1,63 @@
+# Copyright (C) 2017  Intel Corporation. All rights reserved.
+# Your use of Intel Corporation's design tools, logic functions 
+# and other software and tools, and its AMPP partner logic 
+# functions, and any output files from any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Intel Program License 
+# Subscription Agreement, the Intel Quartus Prime License Agreement,
+# the Intel MegaCore Function License Agreement, or other 
+# applicable license agreement, including, without limitation, 
+# that your use is for the sole purpose of programming logic 
+# devices manufactured by Intel and sold by Intel or its 
+# authorized distributors.  Please refer to the applicable 
+# agreement for further details.
+
+# Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
+# File: C:\Users\welly\Documents\GitHub\LT38A\pratica06\quartus\atv06.csv
+# Generated on: Fri Nov 10 13:16:26 2023
+
+# Note: The column header names should not be changed if you wish to import this .csv file into the Quartus Prime software.
+
+To,Direction,Location,I/O Bank,VREF Group,Fitter Location,I/O Standard,Reserved,Current Strength,Slew Rate,Differential Pair,Strict Preservation
+A[7],Input,PIN_ab26,5,B5_N1,PIN_J15,,,,,,
+A[6],Input,PIN_ad26,5,B5_N2,PIN_D15,,,,,,
+A[5],Input,PIN_ac26,5,B5_N2,PIN_A17,,,,,,
+A[4],Input,PIN_ab27,5,B5_N1,PIN_G15,,,,,,
+A[3],Input,PIN_ad27,5,B5_N2,PIN_B17,,,,,,
+A[2],Input,PIN_ac27,5,B5_N2,PIN_A12,,,,,,
+A[1],Input,PIN_ac28,5,B5_N2,PIN_E15,,,,,,
+A[0],Input,PIN_ab28,5,B5_N1,PIN_G14,,,,,,
+B[7],Input,PIN_AA22,5,B5_N2,PIN_F14,,,,,,
+B[6],Input,PIN_AA23,5,B5_N2,PIN_C13,,,,,,
+B[5],Input,PIN_aa24,5,B5_N2,PIN_J14,,,,,,
+B[4],Input,PIN_ab23,5,B5_N2,PIN_D12,,,,,,
+B[3],Input,PIN_ab24,5,B5_N2,PIN_D14,,,,,,
+B[2],Input,PIN_ac24,5,B5_N2,PIN_C12,,,,,,
+B[1],Input,PIN_ab25,5,B5_N1,PIN_C15,,,,,,
+B[0],Input,PIN_ac25,5,B5_N2,PIN_C14,,,,,,
+En,Input,PIN_Y23,5,B5_N2,PIN_D13,,,,,,
+inibedsevenSeg0[6],Output,PIN_h22,6,B6_N0,PIN_H21,,,,,,
+inibedsevenSeg0[5],Output,PIN_j22,6,B6_N0,PIN_J17,,,,,,
+inibedsevenSeg0[4],Output,PIN_l25,6,B6_N1,PIN_E17,,,,,,
+inibedsevenSeg0[3],Output,PIN_l26,6,B6_N1,PIN_H17,,,,,,
+inibedsevenSeg0[2],Output,PIN_e17,7,B7_N2,PIN_H16,,,,,,
+inibedsevenSeg0[1],Output,PIN_f22,7,B7_N0,PIN_F15,,,,,,
+inibedsevenSeg0[0],Output,PIN_g18,7,B7_N2,PIN_C16,,,,,,
+inibedsevenSeg1[6],Output,PIN_u24,5,B5_N0,PIN_G18,,,,,,
+inibedsevenSeg1[5],Output,PIN_u23,5,B5_N1,PIN_G16,,,,,,
+inibedsevenSeg1[4],Output,PIN_w25,5,B5_N1,PIN_B18,,,,,,
+inibedsevenSeg1[3],Output,PIN_w22,5,B5_N0,PIN_G19,,,,,,
+inibedsevenSeg1[2],Output,PIN_w21,5,B5_N1,PIN_G21,,,,,,
+inibedsevenSeg1[1],Output,PIN_y22,5,B5_N0,PIN_G20,,,,,,
+inibedsevenSeg1[0],Output,PIN_m24,6,B6_N2,PIN_G22,,,,,,
+inibedsevenSeg2[6],Output,PIN_w28,5,B5_N1,PIN_AB16,,,,,,
+inibedsevenSeg2[5],Output,PIN_W27,5,B5_N1,PIN_J16,,,,,,
+inibedsevenSeg2[4],Output,PIN_Y26,5,B5_N1,PIN_F17,,,,,,
+inibedsevenSeg2[3],Output,PIN_W26,5,B5_N1,PIN_AF16,,,,,,
+inibedsevenSeg2[2],Output,PIN_Y25,5,B5_N1,PIN_H15,,,,,,
+inibedsevenSeg2[1],Output,PIN_AA26,5,B5_N1,PIN_D16,,,,,,
+inibedsevenSeg2[0],Output,PIN_AA25,5,B5_N1,PIN_H14,,,,,,
+inibi,Input,PIN_Y24,5,B5_N2,PIN_AG17,,,,,,
+sel[1],Input,PIN_m21,6,B6_N1,PIN_J19,,,,,,
+sel[0],Input,PIN_m23,6,B6_N2,PIN_H19,,,,,,

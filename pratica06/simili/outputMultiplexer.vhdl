@@ -15,9 +15,9 @@ architecture behavior of outputMultiplexer is
 begin
 
     with sel select
-    S <= A when "00",
-         B when "01",
-         C when "10",
-         D when "11";
+    S <= D when "00",
+         C when "01",
+         B when "10",
+         A when "11";
 
 end architecture;
