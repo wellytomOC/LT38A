@@ -1,0 +1,31 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.STD_LOGIC_ARITH.ALL;
+use IEEE.STD_LOGIC_UNSIGNED.ALL;
+use IEEE.NUMERIC_STD.ALL;
+
+entity bitConcat is
+    port (
+        input_hundreds,input_tens,input_units: in  std_logic_vector(3 downto 0);
+
+        output_result  : out std_logic_vector(7 downto 0);
+    );
+end entity;
+
+architecture behavior of bitConcat is
+
+    signal hundreds_unsigned : unsigned(3 downto 0);
+    signal tens_unsigned     : unsigned(3 downto 0);
+    signal units_unsigned    : unsigned(3 downto 0);
+    signal result_unsigned   : unsigned(7 downto 0);
+
+begin
+
+    hundreds_unsigned <= unsigned(input_hundreds);
+    tens_unsigned     <= unsigned(input_tens);
+    units_unsigned    <= unsigned(input_units);
+
+    result_unsigned <= (hundreds_unsigned * 100) + (tens_unsigned * 10) + units_unsigned;
+    output_result <= std_logic_vector(result_unsigned);
+
+end architecture;

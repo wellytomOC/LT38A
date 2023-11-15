@@ -1,0 +1,386 @@
+|testEntrada
+A[0] <= entrada:inst.A[0]
+A[1] <= entrada:inst.A[1]
+A[2] <= entrada:inst.A[2]
+A[3] <= entrada:inst.A[3]
+A[4] <= entrada:inst.A[4]
+A[5] <= entrada:inst.A[5]
+A[6] <= entrada:inst.A[6]
+clk => entrada:inst.clk
+Enable => entrada:inst.Enable
+strobe => entrada:inst.strobe
+col[0] => entrada:inst.col[0]
+col[1] => entrada:inst.col[1]
+col[2] => entrada:inst.col[2]
+B[0] <= entrada:inst.B[0]
+B[1] <= entrada:inst.B[1]
+B[2] <= entrada:inst.B[2]
+B[3] <= entrada:inst.B[3]
+B[4] <= entrada:inst.B[4]
+B[5] <= entrada:inst.B[5]
+B[6] <= entrada:inst.B[6]
+Q1[0] <= entrada:inst.Q1[0]
+Q1[1] <= entrada:inst.Q1[1]
+Q1[2] <= entrada:inst.Q1[2]
+Q1[3] <= entrada:inst.Q1[3]
+Q2[0] <= entrada:inst.Q2[0]
+Q2[1] <= entrada:inst.Q2[1]
+Q2[2] <= entrada:inst.Q2[2]
+Q2[3] <= entrada:inst.Q2[3]
+Q3[0] <= entrada:inst.Q3[0]
+Q3[1] <= entrada:inst.Q3[1]
+Q3[2] <= entrada:inst.Q3[2]
+Q3[3] <= entrada:inst.Q3[3]
+Q4[0] <= entrada:inst.Q4[0]
+Q4[1] <= entrada:inst.Q4[1]
+Q4[2] <= entrada:inst.Q4[2]
+Q4[3] <= entrada:inst.Q4[3]
+Q5[0] <= entrada:inst.Q5[0]
+Q5[1] <= entrada:inst.Q5[1]
+Q5[2] <= entrada:inst.Q5[2]
+Q5[3] <= entrada:inst.Q5[3]
+Q6[0] <= entrada:inst.Q6[0]
+Q6[1] <= entrada:inst.Q6[1]
+Q6[2] <= entrada:inst.Q6[2]
+Q6[3] <= entrada:inst.Q6[3]
+row[0] <= entrada:inst.row[0]
+row[1] <= entrada:inst.row[1]
+row[2] <= entrada:inst.row[2]
+row[3] <= entrada:inst.row[3]
+
+
+|testEntrada|entrada:inst
+clk => Clock_Divider:cd.clk
+col[0] => keypadEncoder:ke.col[0]
+col[1] => keypadEncoder:ke.col[1]
+col[2] => keypadEncoder:ke.col[2]
+Enable => keypadEncoder:ke.Enable
+row[0] <= keypadEncoder:ke.row[0]
+row[1] <= keypadEncoder:ke.row[1]
+row[2] <= keypadEncoder:ke.row[2]
+row[3] <= keypadEncoder:ke.row[3]
+strobe => ~NO_FANOUT~
+Q1[0] <= Q1[0].DB_MAX_OUTPUT_PORT_TYPE
+Q1[1] <= Q1[1].DB_MAX_OUTPUT_PORT_TYPE
+Q1[2] <= Q1[2].DB_MAX_OUTPUT_PORT_TYPE
+Q1[3] <= Q1[3].DB_MAX_OUTPUT_PORT_TYPE
+Q2[0] <= Q2[0].DB_MAX_OUTPUT_PORT_TYPE
+Q2[1] <= Q2[1].DB_MAX_OUTPUT_PORT_TYPE
+Q2[2] <= Q2[2].DB_MAX_OUTPUT_PORT_TYPE
+Q2[3] <= Q2[3].DB_MAX_OUTPUT_PORT_TYPE
+Q3[0] <= Q3[0].DB_MAX_OUTPUT_PORT_TYPE
+Q3[1] <= Q3[1].DB_MAX_OUTPUT_PORT_TYPE
+Q3[2] <= Q3[2].DB_MAX_OUTPUT_PORT_TYPE
+Q3[3] <= Q3[3].DB_MAX_OUTPUT_PORT_TYPE
+Q4[0] <= Q4[0].DB_MAX_OUTPUT_PORT_TYPE
+Q4[1] <= Q4[1].DB_MAX_OUTPUT_PORT_TYPE
+Q4[2] <= Q4[2].DB_MAX_OUTPUT_PORT_TYPE
+Q4[3] <= Q4[3].DB_MAX_OUTPUT_PORT_TYPE
+Q5[0] <= Q5[0].DB_MAX_OUTPUT_PORT_TYPE
+Q5[1] <= Q5[1].DB_MAX_OUTPUT_PORT_TYPE
+Q5[2] <= Q5[2].DB_MAX_OUTPUT_PORT_TYPE
+Q5[3] <= Q5[3].DB_MAX_OUTPUT_PORT_TYPE
+Q6[0] <= Q6[0].DB_MAX_OUTPUT_PORT_TYPE
+Q6[1] <= Q6[1].DB_MAX_OUTPUT_PORT_TYPE
+Q6[2] <= Q6[2].DB_MAX_OUTPUT_PORT_TYPE
+Q6[3] <= Q6[3].DB_MAX_OUTPUT_PORT_TYPE
+A[0] <= bitConcat:bcA.output_result[0]
+A[1] <= bitConcat:bcA.output_result[1]
+A[2] <= bitConcat:bcA.output_result[2]
+A[3] <= bitConcat:bcA.output_result[3]
+A[4] <= bitConcat:bcA.output_result[4]
+A[5] <= bitConcat:bcA.output_result[5]
+A[6] <= bitConcat:bcA.output_result[6]
+B[0] <= bitConcat:bcB.output_result[0]
+B[1] <= bitConcat:bcB.output_result[1]
+B[2] <= bitConcat:bcB.output_result[2]
+B[3] <= bitConcat:bcB.output_result[3]
+B[4] <= bitConcat:bcB.output_result[4]
+B[5] <= bitConcat:bcB.output_result[5]
+B[6] <= bitConcat:bcB.output_result[6]
+
+
+|testEntrada|entrada:inst|Clock_Divider:cd
+clk => tmp.CLK
+clk => count[0].CLK
+clk => count[1].CLK
+clk => count[2].CLK
+clk => count[3].CLK
+clk => count[4].CLK
+clk => count[5].CLK
+clk => count[6].CLK
+clk => count[7].CLK
+clk => count[8].CLK
+clk => count[9].CLK
+clk => count[10].CLK
+clk => count[11].CLK
+clk => count[12].CLK
+clk => count[13].CLK
+clk => count[14].CLK
+clk => count[15].CLK
+clk => count[16].CLK
+clk => count[17].CLK
+clk => count[18].CLK
+clk => count[19].CLK
+clk => count[20].CLK
+clk => count[21].CLK
+clk => count[22].CLK
+clk => count[23].CLK
+clk => count[24].CLK
+clk => count[25].CLK
+clk => count[26].CLK
+clk => count[27].CLK
+clk => count[28].CLK
+clk => count[29].CLK
+clk => count[30].CLK
+clk => count[31].CLK
+clock_out <= tmp.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|testEntrada|entrada:inst|keypadEncoder:ke
+clk => ringCounter:RC.clk
+clk => dav~reg0.CLK
+col[0] => Freeze.IN1
+col[0] => colEncoder:CE.cols[0]
+col[1] => Freeze.IN0
+col[1] => colEncoder:CE.cols[1]
+col[2] => Freeze.IN1
+col[2] => colEncoder:CE.cols[2]
+Enable => data.IN1
+row[0] <= ringCounter:RC.toRow[0]
+row[1] <= ringCounter:RC.toRow[1]
+row[2] <= ringCounter:RC.toRow[2]
+row[3] <= ringCounter:RC.toRow[3]
+data[0] <= data[0].DB_MAX_OUTPUT_PORT_TYPE
+data[1] <= data[1].DB_MAX_OUTPUT_PORT_TYPE
+data[2] <= data[2].DB_MAX_OUTPUT_PORT_TYPE
+data[3] <= data[3].DB_MAX_OUTPUT_PORT_TYPE
+dav <= dav~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|testEntrada|entrada:inst|keypadEncoder:ke|ringCounter:RC
+clk => ring[0].CLK
+clk => ring[1].CLK
+clk => ring[2].CLK
+clk => ring[3].CLK
+Freeze => ring[0].ENA
+Freeze => ring[1].ENA
+Freeze => ring[2].ENA
+Freeze => ring[3].ENA
+toRow[0] <= ring[0].DB_MAX_OUTPUT_PORT_TYPE
+toRow[1] <= ring[1].DB_MAX_OUTPUT_PORT_TYPE
+toRow[2] <= ring[2].DB_MAX_OUTPUT_PORT_TYPE
+toRow[3] <= ring[3].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|testEntrada|entrada:inst|keypadEncoder:ke|rowEncoder:RE
+rows[0] => Mux0.IN19
+rows[0] => Mux1.IN19
+rows[1] => Mux0.IN18
+rows[1] => Mux1.IN18
+rows[2] => Mux0.IN17
+rows[2] => Mux1.IN17
+rows[3] => Mux0.IN16
+rows[3] => Mux1.IN16
+data[0] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+data[1] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|testEntrada|entrada:inst|keypadEncoder:ke|colEncoder:CE
+cols[0] => Mux0.IN10
+cols[0] => Mux1.IN10
+cols[1] => Mux0.IN9
+cols[1] => Mux1.IN9
+cols[2] => Mux0.IN8
+cols[2] => Mux1.IN8
+data[0] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+data[1] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|testEntrada|entrada:inst|keypadEncoder:ke|rowAndColEncoder:RaCE
+dataIn[0] => Mux0.IN19
+dataIn[0] => Mux1.IN19
+dataIn[0] => Mux2.IN19
+dataIn[0] => Mux3.IN19
+dataIn[1] => Mux0.IN18
+dataIn[1] => Mux1.IN18
+dataIn[1] => Mux2.IN18
+dataIn[1] => Mux3.IN18
+dataIn[2] => Mux0.IN17
+dataIn[2] => Mux1.IN17
+dataIn[2] => Mux2.IN17
+dataIn[2] => Mux3.IN17
+dataIn[3] => Mux0.IN16
+dataIn[3] => Mux1.IN16
+dataIn[3] => Mux2.IN16
+dataIn[3] => Mux3.IN16
+dataOut[0] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+dataOut[1] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+dataOut[2] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+dataOut[3] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|testEntrada|entrada:inst|registerSelector:rs
+DAV => state[0].CLK
+DAV => state[1].CLK
+DAV => state[2].CLK
+DAV => state[3].CLK
+DAV => state[4].CLK
+DAV => state[5].CLK
+sel[0] <= state[0].DB_MAX_OUTPUT_PORT_TYPE
+sel[1] <= state[1].DB_MAX_OUTPUT_PORT_TYPE
+sel[2] <= state[2].DB_MAX_OUTPUT_PORT_TYPE
+sel[3] <= state[3].DB_MAX_OUTPUT_PORT_TYPE
+sel[4] <= state[4].DB_MAX_OUTPUT_PORT_TYPE
+sel[5] <= state[5].DB_MAX_OUTPUT_PORT_TYPE
+enabler <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|testEntrada|entrada:inst|fourbitsRegister:fbr1
+CLK => Q[0]~reg0.CLK
+CLK => Q[1]~reg0.CLK
+CLK => Q[2]~reg0.CLK
+CLK => Q[3]~reg0.CLK
+enable => ~NO_FANOUT~
+D[0] => ~NO_FANOUT~
+D[1] => ~NO_FANOUT~
+D[2] => ~NO_FANOUT~
+D[3] => ~NO_FANOUT~
+Q[0] <= Q[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= Q[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= Q[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= Q[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|testEntrada|entrada:inst|fourbitsRegister:fbr2
+CLK => Q[0]~reg0.CLK
+CLK => Q[1]~reg0.CLK
+CLK => Q[2]~reg0.CLK
+CLK => Q[3]~reg0.CLK
+enable => ~NO_FANOUT~
+D[0] => ~NO_FANOUT~
+D[1] => ~NO_FANOUT~
+D[2] => ~NO_FANOUT~
+D[3] => ~NO_FANOUT~
+Q[0] <= Q[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= Q[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= Q[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= Q[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|testEntrada|entrada:inst|fourbitsRegister:fbr3
+CLK => Q[0]~reg0.CLK
+CLK => Q[1]~reg0.CLK
+CLK => Q[2]~reg0.CLK
+CLK => Q[3]~reg0.CLK
+enable => ~NO_FANOUT~
+D[0] => ~NO_FANOUT~
+D[1] => ~NO_FANOUT~
+D[2] => ~NO_FANOUT~
+D[3] => ~NO_FANOUT~
+Q[0] <= Q[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= Q[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= Q[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= Q[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|testEntrada|entrada:inst|fourbitsRegister:fbr4
+CLK => Q[0]~reg0.CLK
+CLK => Q[1]~reg0.CLK
+CLK => Q[2]~reg0.CLK
+CLK => Q[3]~reg0.CLK
+enable => ~NO_FANOUT~
+D[0] => ~NO_FANOUT~
+D[1] => ~NO_FANOUT~
+D[2] => ~NO_FANOUT~
+D[3] => ~NO_FANOUT~
+Q[0] <= Q[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= Q[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= Q[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= Q[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|testEntrada|entrada:inst|fourbitsRegister:fbr5
+CLK => Q[0]~reg0.CLK
+CLK => Q[1]~reg0.CLK
+CLK => Q[2]~reg0.CLK
+CLK => Q[3]~reg0.CLK
+enable => ~NO_FANOUT~
+D[0] => ~NO_FANOUT~
+D[1] => ~NO_FANOUT~
+D[2] => ~NO_FANOUT~
+D[3] => ~NO_FANOUT~
+Q[0] <= Q[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= Q[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= Q[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= Q[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|testEntrada|entrada:inst|fourbitsRegister:fbr6
+CLK => Q[0]~reg0.CLK
+CLK => Q[1]~reg0.CLK
+CLK => Q[2]~reg0.CLK
+CLK => Q[3]~reg0.CLK
+enable => ~NO_FANOUT~
+D[0] => ~NO_FANOUT~
+D[1] => ~NO_FANOUT~
+D[2] => ~NO_FANOUT~
+D[3] => ~NO_FANOUT~
+Q[0] <= Q[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= Q[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= Q[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= Q[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|testEntrada|entrada:inst|bitConcat:bcA
+input_hundreds[0] => Mult0.IN7
+input_hundreds[1] => ~NO_FANOUT~
+input_hundreds[2] => ~NO_FANOUT~
+input_hundreds[3] => ~NO_FANOUT~
+input_tens[0] => Add0.IN8
+input_tens[0] => Add1.IN14
+input_tens[1] => Add0.IN7
+input_tens[1] => Add1.IN13
+input_tens[2] => Add0.IN5
+input_tens[2] => Add0.IN6
+input_tens[3] => Add0.IN3
+input_tens[3] => Add0.IN4
+input_units[0] => Add2.IN18
+input_units[1] => Add2.IN17
+input_units[2] => Add2.IN16
+input_units[3] => Add2.IN15
+output_result[0] <= Add2.DB_MAX_OUTPUT_PORT_TYPE
+output_result[1] <= Add2.DB_MAX_OUTPUT_PORT_TYPE
+output_result[2] <= Add2.DB_MAX_OUTPUT_PORT_TYPE
+output_result[3] <= Add2.DB_MAX_OUTPUT_PORT_TYPE
+output_result[4] <= Add2.DB_MAX_OUTPUT_PORT_TYPE
+output_result[5] <= Add2.DB_MAX_OUTPUT_PORT_TYPE
+output_result[6] <= Add2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|testEntrada|entrada:inst|bitConcat:bcB
+input_hundreds[0] => Mult0.IN7
+input_hundreds[1] => ~NO_FANOUT~
+input_hundreds[2] => ~NO_FANOUT~
+input_hundreds[3] => ~NO_FANOUT~
+input_tens[0] => Add0.IN8
+input_tens[0] => Add1.IN14
+input_tens[1] => Add0.IN7
+input_tens[1] => Add1.IN13
+input_tens[2] => Add0.IN5
+input_tens[2] => Add0.IN6
+input_tens[3] => Add0.IN3
+input_tens[3] => Add0.IN4
+input_units[0] => Add2.IN18
+input_units[1] => Add2.IN17
+input_units[2] => Add2.IN16
+input_units[3] => Add2.IN15
+output_result[0] <= Add2.DB_MAX_OUTPUT_PORT_TYPE
+output_result[1] <= Add2.DB_MAX_OUTPUT_PORT_TYPE
+output_result[2] <= Add2.DB_MAX_OUTPUT_PORT_TYPE
+output_result[3] <= Add2.DB_MAX_OUTPUT_PORT_TYPE
+output_result[4] <= Add2.DB_MAX_OUTPUT_PORT_TYPE
+output_result[5] <= Add2.DB_MAX_OUTPUT_PORT_TYPE
+output_result[6] <= Add2.DB_MAX_OUTPUT_PORT_TYPE
+
+

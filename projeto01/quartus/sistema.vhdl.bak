@@ -1,0 +1,42 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.numeric_std.ALL;
+
+entity sistema is
+    port(
+            A,B: in std_logic_vector(6 downto 0);
+            S,R: out std_logic_vector(6 downto 0)
+    );
+end entity;
+
+architecture behavior of sistema is
+
+    component successiveSubtraction is
+        port(
+            A,B,Sin: in std_logic_vector(6 downto 0);
+            S,R: out std_logic_vector(6 downto 0)
+        );
+    end component;
+
+    signal Sprev, Snxt, Rnxt: std_logic_vector(6 downto 0);
+
+begin
+
+    loop: for i in 0 to 127 generate
+
+        if i = 0 generate
+            ss: successiveSubtraction port map(A,B,"0000000",Snxt,Rnxt);
+        end generate;
+
+        if i /= 0 generate
+            ss: successiveSubtraction port map(A,B,Sprev,Snxt,Rnxt);
+        end generate;
+
+        Sprev<= Snxt;
+
+    end generate;
+
+    S <= Snxt;
+    R <= Rnxt;
+
+end architecture;
