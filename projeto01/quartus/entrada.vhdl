@@ -9,7 +9,7 @@ entity entrada is
         clk: in std_logic;
         col: in std_logic_vector(2 downto 0);
         Enable: in std_logic;
-        row: in std_logic_vector(3 downto 0);
+        row: out std_logic_vector(3 downto 0);
 			
 		--seeDAV: out std_logic;
         --seeData: out std_logic_vector(3 downto 0);
@@ -20,13 +20,13 @@ end entity;
 
 architecture behavior of entrada is
 
-    component keypadHACKED is
+    component keypadEncoder is
         port(
             clk: in std_logic;
             col: in std_logic_vector(2 downto 0);
             Enable: in std_logic;
 
-            row: in std_logic_vector(3 downto 0);
+            row: buffer std_logic_vector(3 downto 0);
             data: out std_logic_vector(3 downto 0);
             dav: out std_logic
         );
@@ -74,7 +74,7 @@ architecture behavior of entrada is
 begin 
 
     cd: Clock_Divider port map(clk,clock_out);
-    ke: keypadHACKED port map(clock_out,col,Enable,row,data,dav);
+    ke: keypadEncoder port map(clock_out,col,Enable,row,data,dav);
     rs: registerSelector port map(dav,sel,enabler);
     
     fbr1: fourbitsRegister port map(sel(0),data,Q1);

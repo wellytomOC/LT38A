@@ -2,65 +2,89 @@
 TimeQuest Timing Analyzer Summary
 ------------------------------------------------------------
 
+Type  : Slow 1200mV 85C Model Setup 'clk'
+Slack : -4.025
+TNS   : -66.749
+
 Type  : Slow 1200mV 85C Model Setup 'col[0]'
-Slack : -2.569
-TNS   : -13.089
-
-Type  : Slow 1200mV 85C Model Setup 'arquitetura:inst|entrada:ent|registerSelector:rs|state[0]'
-Slack : -1.491
-TNS   : -5.681
-
-Type  : Slow 1200mV 85C Model Setup 'arquitetura:inst|entrada:ent|registerSelector:rs|state[2]'
-Slack : -1.409
-TNS   : -5.425
+Slack : -3.282
+TNS   : -18.312
 
 Type  : Slow 1200mV 85C Model Setup 'arquitetura:inst|entrada:ent|registerSelector:rs|state[3]'
-Slack : -1.345
-TNS   : -3.823
+Slack : -2.802
+TNS   : -10.288
+
+Type  : Slow 1200mV 85C Model Setup 'arquitetura:inst|entrada:ent|registerSelector:rs|state[2]'
+Slack : -2.731
+TNS   : -10.380
 
 Type  : Slow 1200mV 85C Model Setup 'arquitetura:inst|entrada:ent|registerSelector:rs|state[5]'
-Slack : -1.159
-TNS   : -3.566
+Slack : -2.720
+TNS   : -10.335
 
 Type  : Slow 1200mV 85C Model Setup 'arquitetura:inst|entrada:ent|registerSelector:rs|state[4]'
-Slack : -1.155
-TNS   : -3.375
+Slack : -2.695
+TNS   : -10.436
 
 Type  : Slow 1200mV 85C Model Setup 'arquitetura:inst|entrada:ent|registerSelector:rs|state[1]'
-Slack : -1.135
-TNS   : -3.473
+Slack : -2.665
+TNS   : -10.300
+
+Type  : Slow 1200mV 85C Model Setup 'arquitetura:inst|entrada:ent|registerSelector:rs|state[0]'
+Slack : -2.659
+TNS   : -10.075
+
+Type  : Slow 1200mV 85C Model Setup 'arquitetura:inst|entrada:ent|Clock_Divider:cd|tmp'
+Slack : -1.521
+TNS   : -6.084
+
+Type  : Slow 1200mV 85C Model Hold 'arquitetura:inst|entrada:ent|Clock_Divider:cd|tmp'
+Slack : 0.403
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'clk'
+Slack : 0.654
+TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Hold 'arquitetura:inst|entrada:ent|registerSelector:rs|state[1]'
-Slack : 0.516
-TNS   : 0.000
-
-Type  : Slow 1200mV 85C Model Hold 'arquitetura:inst|entrada:ent|registerSelector:rs|state[4]'
-Slack : 0.542
-TNS   : 0.000
-
-Type  : Slow 1200mV 85C Model Hold 'arquitetura:inst|entrada:ent|registerSelector:rs|state[5]'
-Slack : 0.587
+Slack : 1.023
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Hold 'arquitetura:inst|entrada:ent|registerSelector:rs|state[3]'
-Slack : 0.599
+Slack : 1.047
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'arquitetura:inst|entrada:ent|registerSelector:rs|state[5]'
+Slack : 1.059
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'arquitetura:inst|entrada:ent|registerSelector:rs|state[4]'
+Slack : 1.066
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Hold 'arquitetura:inst|entrada:ent|registerSelector:rs|state[2]'
-Slack : 0.944
-TNS   : 0.000
-
-Type  : Slow 1200mV 85C Model Hold 'col[0]'
-Slack : 1.046
+Slack : 1.071
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Hold 'arquitetura:inst|entrada:ent|registerSelector:rs|state[0]'
-Slack : 1.220
+Slack : 1.433
 TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'col[0]'
+Slack : 1.511
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clk'
+Slack : -3.000
+TNS   : -45.405
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'col[0]'
 Slack : -3.000
 TNS   : -10.710
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'arquitetura:inst|entrada:ent|Clock_Divider:cd|tmp'
+Slack : -1.285
+TNS   : -5.140
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'arquitetura:inst|entrada:ent|registerSelector:rs|state[0]'
 Slack : -1.285
@@ -86,65 +110,89 @@ Type  : Slow 1200mV 85C Model Minimum Pulse Width 'arquitetura:inst|entrada:ent|
 Slack : -1.285
 TNS   : -5.140
 
+Type  : Slow 1200mV 0C Model Setup 'clk'
+Slack : -3.610
+TNS   : -56.312
+
 Type  : Slow 1200mV 0C Model Setup 'col[0]'
-Slack : -2.309
-TNS   : -11.914
-
-Type  : Slow 1200mV 0C Model Setup 'arquitetura:inst|entrada:ent|registerSelector:rs|state[2]'
-Slack : -1.486
-TNS   : -5.640
-
-Type  : Slow 1200mV 0C Model Setup 'arquitetura:inst|entrada:ent|registerSelector:rs|state[0]'
-Slack : -1.408
-TNS   : -5.203
+Slack : -2.994
+TNS   : -17.122
 
 Type  : Slow 1200mV 0C Model Setup 'arquitetura:inst|entrada:ent|registerSelector:rs|state[3]'
-Slack : -1.364
-TNS   : -4.017
+Slack : -2.565
+TNS   : -9.380
+
+Type  : Slow 1200mV 0C Model Setup 'arquitetura:inst|entrada:ent|registerSelector:rs|state[2]'
+Slack : -2.486
+TNS   : -9.428
 
 Type  : Slow 1200mV 0C Model Setup 'arquitetura:inst|entrada:ent|registerSelector:rs|state[5]'
-Slack : -1.173
-TNS   : -3.726
+Slack : -2.474
+TNS   : -9.378
 
 Type  : Slow 1200mV 0C Model Setup 'arquitetura:inst|entrada:ent|registerSelector:rs|state[4]'
-Slack : -1.171
-TNS   : -3.575
+Slack : -2.456
+TNS   : -9.470
 
 Type  : Slow 1200mV 0C Model Setup 'arquitetura:inst|entrada:ent|registerSelector:rs|state[1]'
-Slack : -1.150
-TNS   : -3.648
+Slack : -2.439
+TNS   : -9.390
 
-Type  : Slow 1200mV 0C Model Hold 'arquitetura:inst|entrada:ent|registerSelector:rs|state[1]'
-Slack : 0.546
+Type  : Slow 1200mV 0C Model Setup 'arquitetura:inst|entrada:ent|registerSelector:rs|state[0]'
+Slack : -2.370
+TNS   : -8.897
+
+Type  : Slow 1200mV 0C Model Setup 'arquitetura:inst|entrada:ent|Clock_Divider:cd|tmp'
+Slack : -1.369
+TNS   : -5.476
+
+Type  : Slow 1200mV 0C Model Hold 'arquitetura:inst|entrada:ent|Clock_Divider:cd|tmp'
+Slack : 0.355
 TNS   : 0.000
 
-Type  : Slow 1200mV 0C Model Hold 'arquitetura:inst|entrada:ent|registerSelector:rs|state[4]'
-Slack : 0.556
+Type  : Slow 1200mV 0C Model Hold 'clk'
+Slack : 0.598
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Hold 'arquitetura:inst|entrada:ent|registerSelector:rs|state[5]'
-Slack : 0.582
+Slack : 0.973
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Hold 'arquitetura:inst|entrada:ent|registerSelector:rs|state[3]'
-Slack : 0.587
-TNS   : 0.000
-
-Type  : Slow 1200mV 0C Model Hold 'col[0]'
-Slack : 0.884
+Slack : 0.982
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Hold 'arquitetura:inst|entrada:ent|registerSelector:rs|state[2]'
-Slack : 0.967
+Slack : 0.985
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'arquitetura:inst|entrada:ent|registerSelector:rs|state[1]'
+Slack : 0.992
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'arquitetura:inst|entrada:ent|registerSelector:rs|state[4]'
+Slack : 1.001
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'col[0]'
+Slack : 1.357
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Hold 'arquitetura:inst|entrada:ent|registerSelector:rs|state[0]'
-Slack : 1.207
+Slack : 1.420
 TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clk'
+Slack : -3.000
+TNS   : -45.405
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'col[0]'
 Slack : -3.000
 TNS   : -10.710
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'arquitetura:inst|entrada:ent|Clock_Divider:cd|tmp'
+Slack : -1.285
+TNS   : -5.140
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'arquitetura:inst|entrada:ent|registerSelector:rs|state[0]'
 Slack : -1.285
@@ -170,65 +218,89 @@ Type  : Slow 1200mV 0C Model Minimum Pulse Width 'arquitetura:inst|entrada:ent|r
 Slack : -1.285
 TNS   : -5.140
 
+Type  : Fast 1200mV 0C Model Setup 'clk'
+Slack : -1.606
+TNS   : -16.678
+
 Type  : Fast 1200mV 0C Model Setup 'col[0]'
-Slack : -0.854
-TNS   : -4.076
+Slack : -1.105
+TNS   : -5.674
 
 Type  : Fast 1200mV 0C Model Setup 'arquitetura:inst|entrada:ent|registerSelector:rs|state[0]'
-Slack : -0.818
-TNS   : -2.974
+Slack : -1.104
+TNS   : -4.110
 
 Type  : Fast 1200mV 0C Model Setup 'arquitetura:inst|entrada:ent|registerSelector:rs|state[2]'
-Slack : -0.274
-TNS   : -0.837
+Slack : -1.075
+TNS   : -3.979
 
 Type  : Fast 1200mV 0C Model Setup 'arquitetura:inst|entrada:ent|registerSelector:rs|state[3]'
-Slack : -0.181
-TNS   : -0.314
-
-Type  : Fast 1200mV 0C Model Setup 'arquitetura:inst|entrada:ent|registerSelector:rs|state[1]'
-Slack : -0.114
-TNS   : -0.197
+Slack : -1.071
+TNS   : -3.821
 
 Type  : Fast 1200mV 0C Model Setup 'arquitetura:inst|entrada:ent|registerSelector:rs|state[5]'
-Slack : -0.083
-TNS   : -0.160
+Slack : -1.068
+TNS   : -3.950
 
 Type  : Fast 1200mV 0C Model Setup 'arquitetura:inst|entrada:ent|registerSelector:rs|state[4]'
-Slack : -0.078
-TNS   : -0.154
+Slack : -1.032
+TNS   : -3.926
 
-Type  : Fast 1200mV 0C Model Hold 'arquitetura:inst|entrada:ent|registerSelector:rs|state[0]'
-Slack : 0.363
+Type  : Fast 1200mV 0C Model Setup 'arquitetura:inst|entrada:ent|registerSelector:rs|state[1]'
+Slack : -1.012
+TNS   : -3.828
+
+Type  : Fast 1200mV 0C Model Setup 'arquitetura:inst|entrada:ent|Clock_Divider:cd|tmp'
+Slack : -0.939
+TNS   : -3.756
+
+Type  : Fast 1200mV 0C Model Hold 'arquitetura:inst|entrada:ent|Clock_Divider:cd|tmp'
+Slack : 0.182
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'clk'
+Slack : 0.297
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'col[0]'
-Slack : 0.428
+Slack : 0.451
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'arquitetura:inst|entrada:ent|registerSelector:rs|state[0]'
+Slack : 0.489
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'arquitetura:inst|entrada:ent|registerSelector:rs|state[1]'
-Slack : 0.474
-TNS   : 0.000
-
-Type  : Fast 1200mV 0C Model Hold 'arquitetura:inst|entrada:ent|registerSelector:rs|state[4]'
-Slack : 0.490
-TNS   : 0.000
-
-Type  : Fast 1200mV 0C Model Hold 'arquitetura:inst|entrada:ent|registerSelector:rs|state[5]'
-Slack : 0.500
-TNS   : 0.000
-
-Type  : Fast 1200mV 0C Model Hold 'arquitetura:inst|entrada:ent|registerSelector:rs|state[2]'
-Slack : 0.508
+Slack : 0.681
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'arquitetura:inst|entrada:ent|registerSelector:rs|state[3]'
-Slack : 0.508
+Slack : 0.702
 TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'arquitetura:inst|entrada:ent|registerSelector:rs|state[5]'
+Slack : 0.731
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'arquitetura:inst|entrada:ent|registerSelector:rs|state[2]'
+Slack : 0.737
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'arquitetura:inst|entrada:ent|registerSelector:rs|state[4]'
+Slack : 0.740
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clk'
+Slack : -3.000
+TNS   : -38.028
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'col[0]'
 Slack : -3.000
-TNS   : -9.395
+TNS   : -12.912
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'arquitetura:inst|entrada:ent|Clock_Divider:cd|tmp'
+Slack : -1.000
+TNS   : -4.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'arquitetura:inst|entrada:ent|registerSelector:rs|state[0]'
 Slack : -1.000

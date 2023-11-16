@@ -23,6 +23,7 @@ architecture behavior of keypadEncoder is
             toRow: out std_logic_vector(3 downto 0)
         );
     end component;
+    --signal toRow: std_logic_vector(3 downto 0);
 
     component rowEncoder is
         port(
@@ -62,11 +63,13 @@ begin
 
     data <= dataOut when (Freeze and Enable) = '1' else "ZZZZ";
 
-    process(clk)
-    begin
-        if(clk'event and clk='1') then
-            dav <= Freeze;
-        end if;
-    end process;
+    dav <= Freeze;
+
+    --process(clk)
+    --begin
+    --    if(clk'event and clk='1') then
+    --        dav <= Freeze;
+    --    end if;
+    --end process;
 
 end architecture;

@@ -98,5 +98,40 @@ set_global_assignment -name BDF_FILE testArquitetura.bdf
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
-set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
 set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform7.vwf
+set_location_assignment PIN_J10 -to col[2]
+set_location_assignment PIN_J14 -to col[1]
+set_location_assignment PIN_Y2 -to clk
+set_location_assignment PIN_Y23 -to Enable
+set_location_assignment PIN_Y24 -to strobe
+set_location_assignment PIN_H14 -to row[3]
+set_location_assignment PIN_H15 -to EnLed
+set_location_assignment PIN_G16 -to StrobeLed
+set_location_assignment PIN_AB28 -to sel[0]
+set_location_assignment PIN_AC28 -to sel[1]
+set_location_assignment PIN_G18 -to ss0[0]
+set_location_assignment PIN_F22 -to ss0[1]
+set_location_assignment PIN_E17 -to ss0[2]
+set_location_assignment PIN_L26 -to ss0[3]
+set_location_assignment PIN_L25 -to ss0[4]
+set_location_assignment PIN_J22 -to ss0[5]
+set_location_assignment PIN_H22 -to ss0[6]
+set_location_assignment PIN_M24 -to ss1[0]
+set_location_assignment PIN_Y22 -to ss1[1]
+set_location_assignment PIN_W21 -to ss1[2]
+set_location_assignment PIN_W22 -to ss1[3]
+set_location_assignment PIN_W25 -to ss1[4]
+set_location_assignment PIN_U23 -to ss1[5]
+set_location_assignment PIN_U24 -to ss1[6]
+set_location_assignment PIN_AA25 -to ss2[0]
+set_location_assignment PIN_AA26 -to ss2[1]
+set_location_assignment PIN_Y25 -to ss2[2]
+set_location_assignment PIN_W26 -to ss2[3]
+set_location_assignment PIN_Y26 -to ss2[4]
+set_location_assignment PIN_W27 -to ss2[5]
+set_location_assignment PIN_W28 -to ss2[6]
+set_location_assignment PIN_D9 -to row[0]
+set_location_assignment PIN_E10 -to row[1]
+set_location_assignment PIN_F14 -to row[2]
+set_location_assignment PIN_H13 -to col[0]
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

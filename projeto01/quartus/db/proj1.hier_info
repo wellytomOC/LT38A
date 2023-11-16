@@ -6,13 +6,13 @@ strobe => arquitetura:inst.strobe
 col[0] => arquitetura:inst.col[0]
 col[1] => arquitetura:inst.col[1]
 col[2] => arquitetura:inst.col[2]
-row[0] => arquitetura:inst.row[0]
-row[1] => arquitetura:inst.row[1]
-row[2] => arquitetura:inst.row[2]
-row[3] => arquitetura:inst.row[3]
 sel[0] => arquitetura:inst.sel[0]
 sel[1] => arquitetura:inst.sel[1]
 StrobeLed <= arquitetura:inst.StrobeLed
+row[0] <= arquitetura:inst.row[0]
+row[1] <= arquitetura:inst.row[1]
+row[2] <= arquitetura:inst.row[2]
+row[3] <= arquitetura:inst.row[3]
 ss0[0] <= arquitetura:inst.ss0[0]
 ss0[1] <= arquitetura:inst.ss0[1]
 ss0[2] <= arquitetura:inst.ss0[2]
@@ -43,10 +43,10 @@ col[1] => entrada:ent.col[1]
 col[2] => entrada:ent.col[2]
 Enable => entrada:ent.Enable
 Enable => saida:sai.enable
-row[0] => entrada:ent.row[0]
-row[1] => entrada:ent.row[1]
-row[2] => entrada:ent.row[2]
-row[3] => entrada:ent.row[3]
+row[0] <= entrada:ent.row[0]
+row[1] <= entrada:ent.row[1]
+row[2] <= entrada:ent.row[2]
+row[3] <= entrada:ent.row[3]
 strobe => saida:sai.strobe
 sel[0] => saida:sai.sel[0]
 sel[1] => saida:sai.sel[1]
@@ -77,14 +77,14 @@ StrobeLed <= saida:sai.StrobeLed
 
 |testArquitetura|arquitetura:inst|entrada:ent
 clk => Clock_Divider:cd.clk
-col[0] => keypadHACKED:ke.col[0]
-col[1] => keypadHACKED:ke.col[1]
-col[2] => keypadHACKED:ke.col[2]
-Enable => keypadHACKED:ke.Enable
-row[0] => keypadHACKED:ke.row[0]
-row[1] => keypadHACKED:ke.row[1]
-row[2] => keypadHACKED:ke.row[2]
-row[3] => keypadHACKED:ke.row[3]
+col[0] => keypadEncoder:ke.col[0]
+col[1] => keypadEncoder:ke.col[1]
+col[2] => keypadEncoder:ke.col[2]
+Enable => keypadEncoder:ke.Enable
+row[0] <= keypadEncoder:ke.row[0]
+row[1] <= keypadEncoder:ke.row[1]
+row[2] <= keypadEncoder:ke.row[2]
+row[3] <= keypadEncoder:ke.row[3]
 Q1[0] <= fourbitsRegister:fbr1.Q[0]
 Q1[1] <= fourbitsRegister:fbr1.Q[1]
 Q1[2] <= fourbitsRegister:fbr1.Q[2]
@@ -162,7 +162,7 @@ clk => count[31].CLK
 clock_out <= tmp.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|testArquitetura|arquitetura:inst|entrada:ent|keypadHACKED:ke
+|testArquitetura|arquitetura:inst|entrada:ent|keypadEncoder:ke
 clk => ringCounter:RC.clk
 col[0] => Freeze.IN1
 col[0] => colEncoder:CE.cols[0]
@@ -171,10 +171,10 @@ col[1] => colEncoder:CE.cols[1]
 col[2] => Freeze.IN1
 col[2] => colEncoder:CE.cols[2]
 Enable => data.IN1
-row[0] => rowEncoder:RE.rows[0]
-row[1] => rowEncoder:RE.rows[1]
-row[2] => rowEncoder:RE.rows[2]
-row[3] => rowEncoder:RE.rows[3]
+row[0] <= ringCounter:RC.toRow[0]
+row[1] <= ringCounter:RC.toRow[1]
+row[2] <= ringCounter:RC.toRow[2]
+row[3] <= ringCounter:RC.toRow[3]
 data[0] <= data[0].DB_MAX_OUTPUT_PORT_TYPE
 data[1] <= data[1].DB_MAX_OUTPUT_PORT_TYPE
 data[2] <= data[2].DB_MAX_OUTPUT_PORT_TYPE
@@ -182,7 +182,7 @@ data[3] <= data[3].DB_MAX_OUTPUT_PORT_TYPE
 dav <= Freeze.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|testArquitetura|arquitetura:inst|entrada:ent|keypadHACKED:ke|ringCounter:RC
+|testArquitetura|arquitetura:inst|entrada:ent|keypadEncoder:ke|ringCounter:RC
 clk => ring[0].CLK
 clk => ring[1].CLK
 clk => ring[2].CLK
@@ -197,7 +197,7 @@ toRow[2] <= ring[2].DB_MAX_OUTPUT_PORT_TYPE
 toRow[3] <= ring[3].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|testArquitetura|arquitetura:inst|entrada:ent|keypadHACKED:ke|rowEncoder:RE
+|testArquitetura|arquitetura:inst|entrada:ent|keypadEncoder:ke|rowEncoder:RE
 rows[0] => Mux0.IN19
 rows[0] => Mux1.IN19
 rows[1] => Mux0.IN18
@@ -210,7 +210,7 @@ data[0] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
 data[1] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|testArquitetura|arquitetura:inst|entrada:ent|keypadHACKED:ke|colEncoder:CE
+|testArquitetura|arquitetura:inst|entrada:ent|keypadEncoder:ke|colEncoder:CE
 cols[0] => Mux0.IN10
 cols[0] => Mux1.IN10
 cols[1] => Mux0.IN9
@@ -221,7 +221,7 @@ data[0] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
 data[1] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|testArquitetura|arquitetura:inst|entrada:ent|keypadHACKED:ke|rowAndColEncoder:RaCE
+|testArquitetura|arquitetura:inst|entrada:ent|keypadEncoder:ke|rowAndColEncoder:RaCE
 dataIn[0] => Mux0.IN19
 dataIn[0] => Mux1.IN19
 dataIn[0] => Mux2.IN19

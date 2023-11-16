@@ -7,7 +7,7 @@ entity arquitetura is
 		  clk: in std_logic;
         col: in std_logic_vector(2 downto 0);
         Enable: in std_logic;
-        row: in std_logic_vector(3 downto 0);
+        row: out std_logic_vector(3 downto 0);
 
         strobe: in std_logic;
         sel: in std_logic_vector(1 downto 0);
@@ -24,7 +24,7 @@ architecture behavior of arquitetura is
             clk: in std_logic;
             col: in std_logic_vector(2 downto 0);
             Enable: in std_logic;
-            row: in std_logic_vector(3 downto 0);
+            row: out std_logic_vector(3 downto 0);
                 
             --seeDAV: out std_logic;
             --seeData: out std_logic_vector(3 downto 0);
