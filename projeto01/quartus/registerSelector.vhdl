@@ -20,22 +20,30 @@ begin
 
         if(DAV'event and DAV='1') then
             case state is
-                when "111110" => state := "111101";
-                when "111101" => state := "111011";
-                when "111011" => state := "110111";
-                when "110111" => state := "101111";
-                when "101111" => state := "011111";
-                when "011111" => state := "111111";
-                when others => state := "111110";
+                when "111110" =>
+                    state := "111101";
+                    enabler <= '0';
+                when "111101" =>
+                    state := "111011";
+                    enabler <= '0';
+                when "111011" =>
+                    state := "110111";
+                    enabler <= '0';
+                when "110111" =>
+                    state := "101111";
+                    enabler <= '0';
+                when "101111" =>
+                    state := "011111";
+                    enabler <= '0';
+                when "011111" =>
+                    state := "111111";
+                    enabler <= '1';
+                when others =>
+                    state := "111110";
+                    enabler <= '0';
             end case;
         end if;
-
-        if(state = "111111") then
-            enabler <= '1';
-        else
-            enabler <= '0';
-        end if;
-
+        
         sel <= state;
 		  
     end process;

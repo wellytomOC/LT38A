@@ -19,7 +19,7 @@
 -- the top level entity of the current Quartus project .The user can use this   
 -- testbench to simulate his design using a third-party simulation tool .       
 -- *****************************************************************************
--- Generated on "11/15/2023 17:17:50"
+-- Generated on "11/15/2023 22:33:01"
                                                              
 -- Vhdl Test Bench(with test vectors) for design  :          testEntrada
 -- 
@@ -40,6 +40,14 @@ SIGNAL clk : STD_LOGIC;
 SIGNAL col : STD_LOGIC_VECTOR(2 DOWNTO 0);
 SIGNAL Enable : STD_LOGIC;
 SIGNAL row : STD_LOGIC_VECTOR(3 DOWNTO 0);
+SIGNAL seeData : STD_LOGIC_VECTOR(3 DOWNTO 0);
+SIGNAL seeDAV : STD_LOGIC;
+SIGNAL seeQ1 : STD_LOGIC_VECTOR(3 DOWNTO 0);
+SIGNAL seeQ2 : STD_LOGIC_VECTOR(3 DOWNTO 0);
+SIGNAL seeQ3 : STD_LOGIC_VECTOR(3 DOWNTO 0);
+SIGNAL seeQ4 : STD_LOGIC_VECTOR(3 DOWNTO 0);
+SIGNAL seeQ5 : STD_LOGIC_VECTOR(3 DOWNTO 0);
+SIGNAL seeQ6 : STD_LOGIC_VECTOR(3 DOWNTO 0);
 SIGNAL strobe : STD_LOGIC;
 COMPONENT testEntrada
 	PORT (
@@ -48,7 +56,15 @@ COMPONENT testEntrada
 	clk : IN STD_LOGIC;
 	col : IN STD_LOGIC_VECTOR(2 DOWNTO 0);
 	Enable : IN STD_LOGIC;
-	row : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
+	row : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
+	seeData : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
+	seeDAV : OUT STD_LOGIC;
+	seeQ1 : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
+	seeQ2 : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
+	seeQ3 : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
+	seeQ4 : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
+	seeQ5 : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
+	seeQ6 : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
 	strobe : IN STD_LOGIC
 	);
 END COMPONENT;
@@ -62,54 +78,16 @@ BEGIN
 	col => col,
 	Enable => Enable,
 	row => row,
+	seeData => seeData,
+	seeDAV => seeDAV,
+	seeQ1 => seeQ1,
+	seeQ2 => seeQ2,
+	seeQ3 => seeQ3,
+	seeQ4 => seeQ4,
+	seeQ5 => seeQ5,
+	seeQ6 => seeQ6,
 	strobe => strobe
 	);
--- col[2]
-t_prcs_col_2: PROCESS
-BEGIN
-	col(2) <= '1';
-	WAIT FOR 70000 ps;
-	col(2) <= '0';
-	WAIT FOR 30000 ps;
-	col(2) <= '1';
-WAIT;
-END PROCESS t_prcs_col_2;
--- col[1]
-t_prcs_col_1: PROCESS
-BEGIN
-	col(1) <= '1';
-	WAIT FOR 210000 ps;
-	col(1) <= '0';
-	WAIT FOR 20000 ps;
-	col(1) <= '1';
-	WAIT FOR 170000 ps;
-	col(1) <= '0';
-	WAIT FOR 30000 ps;
-	col(1) <= '1';
-WAIT;
-END PROCESS t_prcs_col_1;
--- col[0]
-t_prcs_col_0: PROCESS
-BEGIN
-	col(0) <= '1';
-WAIT;
-END PROCESS t_prcs_col_0;
-
--- Enable
-t_prcs_Enable: PROCESS
-BEGIN
-	Enable <= '0';
-	WAIT FOR 10000 ps;
-	Enable <= '1';
-WAIT;
-END PROCESS t_prcs_Enable;
-
--- strobe
-t_prcs_strobe: PROCESS
-BEGIN
-	strobe <= '0';
-WAIT;
-END PROCESS t_prcs_strobe;
 
 -- clk
 t_prcs_clk: PROCESS
@@ -122,4 +100,124 @@ LOOP
 	IF (NOW >= 1000000 ps) THEN WAIT; END IF;
 END LOOP;
 END PROCESS t_prcs_clk;
+-- row[3]
+t_prcs_row_3: PROCESS
+BEGIN
+	row(3) <= '1';
+	WAIT FOR 580000 ps;
+	row(3) <= '0';
+	WAIT FOR 40000 ps;
+	row(3) <= '1';
+WAIT;
+END PROCESS t_prcs_row_3;
+-- row[2]
+t_prcs_row_2: PROCESS
+BEGIN
+	row(2) <= '1';
+WAIT;
+END PROCESS t_prcs_row_2;
+-- row[1]
+t_prcs_row_1: PROCESS
+BEGIN
+	row(1) <= '1';
+WAIT;
+END PROCESS t_prcs_row_1;
+-- row[0]
+t_prcs_row_0: PROCESS
+BEGIN
+	row(0) <= '1';
+	WAIT FOR 30000 ps;
+	row(0) <= '0';
+	WAIT FOR 30000 ps;
+	row(0) <= '1';
+	WAIT FOR 40000 ps;
+	row(0) <= '0';
+	WAIT FOR 30000 ps;
+	row(0) <= '1';
+	WAIT FOR 40000 ps;
+	row(0) <= '0';
+	WAIT FOR 30000 ps;
+	row(0) <= '1';
+	WAIT FOR 60000 ps;
+	row(0) <= '0';
+	WAIT FOR 30000 ps;
+	row(0) <= '1';
+	WAIT FOR 40000 ps;
+	row(0) <= '0';
+	WAIT FOR 30000 ps;
+	row(0) <= '1';
+	WAIT FOR 40000 ps;
+	row(0) <= '0';
+	WAIT FOR 30000 ps;
+	row(0) <= '1';
+	WAIT FOR 40000 ps;
+	row(0) <= '0';
+	WAIT FOR 40000 ps;
+	row(0) <= '1';
+WAIT;
+END PROCESS t_prcs_row_0;
+-- col[2]
+t_prcs_col_2: PROCESS
+BEGIN
+	col(2) <= '1';
+	WAIT FOR 170000 ps;
+	col(2) <= '0';
+	WAIT FOR 30000 ps;
+	col(2) <= '1';
+	WAIT FOR 200000 ps;
+	col(2) <= '0';
+	WAIT FOR 30000 ps;
+	col(2) <= '1';
+WAIT;
+END PROCESS t_prcs_col_2;
+-- col[1]
+t_prcs_col_1: PROCESS
+BEGIN
+	col(1) <= '1';
+	WAIT FOR 100000 ps;
+	col(1) <= '0';
+	WAIT FOR 30000 ps;
+	col(1) <= '1';
+	WAIT FOR 200000 ps;
+	col(1) <= '0';
+	WAIT FOR 30000 ps;
+	col(1) <= '1';
+	WAIT FOR 220000 ps;
+	col(1) <= '0';
+	WAIT FOR 40000 ps;
+	col(1) <= '1';
+WAIT;
+END PROCESS t_prcs_col_1;
+-- col[0]
+t_prcs_col_0: PROCESS
+BEGIN
+	col(0) <= '1';
+	WAIT FOR 30000 ps;
+	col(0) <= '0';
+	WAIT FOR 30000 ps;
+	col(0) <= '1';
+	WAIT FOR 200000 ps;
+	col(0) <= '0';
+	WAIT FOR 30000 ps;
+	col(0) <= '1';
+	WAIT FOR 180000 ps;
+	col(0) <= '0';
+	WAIT FOR 40000 ps;
+	col(0) <= '1';
+WAIT;
+END PROCESS t_prcs_col_0;
+
+-- Enable
+t_prcs_Enable: PROCESS
+BEGIN
+	Enable <= '1';
+WAIT;
+END PROCESS t_prcs_Enable;
+
+-- strobe
+t_prcs_strobe: PROCESS
+BEGIN
+	strobe <= '0';
+WAIT;
+END PROCESS t_prcs_strobe;
 END testEntrada_arch;

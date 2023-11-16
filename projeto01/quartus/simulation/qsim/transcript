@@ -1,7 +1,7 @@
 # do proj1.do
 # ** Warning: (vlib-34) Library already exists at "work".
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 18:36:00 on Nov 15,2023
+# Start time: 00:34:01 on Nov 16,2023
 # vcom -work work proj1.vho 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -14,43 +14,52 @@
 # -- Compiling architecture structure of hard_block
 # -- Loading package dffeas_pack
 # -- Loading package altera_primitives_components
-# -- Compiling entity testEntrada
-# -- Compiling architecture structure of testEntrada
-# End time: 18:36:00 on Nov 15,2023, Elapsed time: 0:00:00
+# -- Compiling entity testArquitetura
+# -- Compiling architecture structure of testArquitetura
+# End time: 00:34:02 on Nov 16,2023, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 18:36:00 on Nov 15,2023
-# vcom -work work Waveform2.vwf.vht 
+# Start time: 00:34:02 on Nov 16,2023
+# vcom -work work Waveform7.vwf.vht 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
-# -- Compiling entity testEntrada_vhd_vec_tst
-# -- Compiling architecture testEntrada_arch of testEntrada_vhd_vec_tst
-# End time: 18:36:00 on Nov 15,2023, Elapsed time: 0:00:00
+# -- Compiling entity testArquitetura_vhd_vec_tst
+# -- Compiling architecture testArquitetura_arch of testArquitetura_vhd_vec_tst
+# End time: 00:34:02 on Nov 16,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vsim -novopt -c -t 1ps -L cycloneive -L altera -L altera_mf -L 220model -L sgate -L altera_lnsim work.testEntrada_vhd_vec_tst 
-# Start time: 18:36:01 on Nov 15,2023
+# vsim -novopt -c -t 1ps -sdfmax testArquitetura_vhd_vec_tst/i1=proj1_vhd.sdo -L cycloneive -L altera -L altera_mf -L 220model -L sgate -L altera_lnsim work.testArquitetura_vhd_vec_tst 
+# Start time: 00:34:02 on Nov 16,2023
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
-# Loading work.testentrada_vhd_vec_tst(testentrada_arch)
+# Loading work.testarquitetura_vhd_vec_tst(testarquitetura_arch)
+# SDF 10.5b Compiler 2016.10 Oct  5 2016
+# 
 # Loading ieee.vital_timing(body)
 # Loading ieee.vital_primitives(body)
 # Loading altera.dffeas_pack
 # Loading altera.altera_primitives_components
 # Loading cycloneive.cycloneive_atom_pack(body)
 # Loading cycloneive.cycloneive_components
-# Loading work.testentrada(structure)
+# Loading work.testarquitetura(structure)
 # Loading work.hard_block(structure)
 # Loading ieee.std_logic_arith(body)
 # Loading cycloneive.cycloneive_io_obuf(arch)
 # Loading cycloneive.cycloneive_io_ibuf(arch)
+# Loading cycloneive.cycloneive_lcell_comb(vital_lcell_comb)
 # Loading cycloneive.cycloneive_clkctrl(vital_clkctrl)
 # Loading cycloneive.cycloneive_ena_reg(behave)
-# Loading cycloneive.cycloneive_lcell_comb(vital_lcell_comb)
 # Loading altera.dffeas(vital_dffeas)
-# ** Warning: Design size of 16293 statements exceeds ModelSim-Intel FPGA Starter Edition recommended capacity.
+# Loading instances from proj1_vhd.sdo
+# Loading timing data from proj1_vhd.sdo
+# ** Warning: Design size of 621928 statements exceeds ModelSim-Intel FPGA Starter Edition recommended capacity.
 # Expect performance to be adversely affected.
+# ** Note: (vsim-3587) SDF Backannotation Successfully Completed.
+#    Time: 0 ps  Iteration: 0  Instance: /testarquitetura_vhd_vec_tst File: Waveform7.vwf.vht
 # after#35
-# End time: 18:36:01 on Nov 15,2023, Elapsed time: 0:00:00
+# Simulation time: 194828 ps
+# Simulation time: 194828 ps
+# Simulation time: 194828 ps
+# End time: 00:34:11 on Nov 16,2023, Elapsed time: 0:00:09
 # Errors: 0, Warnings: 1

@@ -1,5 +1,5 @@
 EDA Netlist Writer report for proj1
-Wed Nov 15 18:35:58 2023
+Thu Nov 16 00:34:00 2023
 Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 
 
@@ -37,9 +37,9 @@ agreement for further details.
 +-------------------------------------------------------------------+
 ; EDA Netlist Writer Summary                                        ;
 +---------------------------+---------------------------------------+
-; EDA Netlist Writer Status ; Successful - Wed Nov 15 18:35:58 2023 ;
+; EDA Netlist Writer Status ; Successful - Thu Nov 16 00:34:00 2023 ;
 ; Revision Name             ; proj1                                 ;
-; Top-level Entity Name     ; testEntrada                           ;
+; Top-level Entity Name     ; testArquitetura                       ;
 ; Family                    ; Cyclone IV E                          ;
 ; Simulation Files Creation ; Successful                            ;
 +---------------------------+---------------------------------------+
@@ -51,7 +51,8 @@ agreement for further details.
 ; Option                                                                                            ; Setting                ;
 +---------------------------------------------------------------------------------------------------+------------------------+
 ; Tool Name                                                                                         ; ModelSim-Altera (VHDL) ;
-; Generate functional simulation netlist                                                            ; On                     ;
+; Generate functional simulation netlist                                                            ; Off                    ;
+; Time scale                                                                                        ; 1 ps                   ;
 ; Truncate long hierarchy paths                                                                     ; Off                    ;
 ; Map illegal HDL characters                                                                        ; Off                    ;
 ; Flatten buses into individual nodes                                                               ; Off                    ;
@@ -66,13 +67,20 @@ agreement for further details.
 +---------------------------------------------------------------------------------------------------+------------------------+
 
 
-+------------------------------------------------------------------------------------+
-; Simulation Generated Files                                                         ;
-+------------------------------------------------------------------------------------+
-; Generated Files                                                                    ;
-+------------------------------------------------------------------------------------+
-; C:/Users/welly/Documents/GitHub/LT38A/projeto01/quartus/simulation/qsim//proj1.vho ;
-+------------------------------------------------------------------------------------+
++-----------------------------------------------------------------------------------------------------------+
+; Simulation Generated Files                                                                                ;
++-----------------------------------------------------------------------------------------------------------+
+; Generated Files                                                                                           ;
++-----------------------------------------------------------------------------------------------------------+
+; C:/Users/welly/Documents/GitHub/LT38A/projeto01/quartus/simulation/qsim//proj1_7_1200mv_85c_slow.vho      ;
+; C:/Users/welly/Documents/GitHub/LT38A/projeto01/quartus/simulation/qsim//proj1_7_1200mv_0c_slow.vho       ;
+; C:/Users/welly/Documents/GitHub/LT38A/projeto01/quartus/simulation/qsim//proj1_min_1200mv_0c_fast.vho     ;
+; C:/Users/welly/Documents/GitHub/LT38A/projeto01/quartus/simulation/qsim//proj1.vho                        ;
+; C:/Users/welly/Documents/GitHub/LT38A/projeto01/quartus/simulation/qsim//proj1_7_1200mv_85c_vhd_slow.sdo  ;
+; C:/Users/welly/Documents/GitHub/LT38A/projeto01/quartus/simulation/qsim//proj1_7_1200mv_0c_vhd_slow.sdo   ;
+; C:/Users/welly/Documents/GitHub/LT38A/projeto01/quartus/simulation/qsim//proj1_min_1200mv_0c_vhd_fast.sdo ;
+; C:/Users/welly/Documents/GitHub/LT38A/projeto01/quartus/simulation/qsim//proj1_vhd.sdo                    ;
++-----------------------------------------------------------------------------------------------------------+
 
 
 +-----------------------------+
@@ -95,14 +103,21 @@ Info: Running Quartus Prime EDA Netlist Writer
     Info: devices manufactured by Intel and sold by Intel or its 
     Info: authorized distributors.  Please refer to the applicable 
     Info: agreement for further details.
-    Info: Processing started: Wed Nov 15 18:35:57 2023
-Info: Command: quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory=C:/Users/welly/Documents/GitHub/LT38A/projeto01/quartus/simulation/qsim/ proj1 -c proj1
+    Info: Processing started: Thu Nov 16 00:33:57 2023
+Info: Command: quartus_eda --write_settings_files=off --simulation=on --functional=off --flatten_buses=off --timescale=1ps --tool=modelsim_oem --format=vhdl --output_directory=C:/Users/welly/Documents/GitHub/LT38A/projeto01/quartus/simulation/qsim/ proj1 -c proj1
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (204019): Generated file proj1_7_1200mv_85c_slow.vho in folder "C:/Users/welly/Documents/GitHub/LT38A/projeto01/quartus/simulation/qsim//" for EDA simulation tool
+Info (204019): Generated file proj1_7_1200mv_0c_slow.vho in folder "C:/Users/welly/Documents/GitHub/LT38A/projeto01/quartus/simulation/qsim//" for EDA simulation tool
+Info (204019): Generated file proj1_min_1200mv_0c_fast.vho in folder "C:/Users/welly/Documents/GitHub/LT38A/projeto01/quartus/simulation/qsim//" for EDA simulation tool
 Info (204019): Generated file proj1.vho in folder "C:/Users/welly/Documents/GitHub/LT38A/projeto01/quartus/simulation/qsim//" for EDA simulation tool
+Info (204019): Generated file proj1_7_1200mv_85c_vhd_slow.sdo in folder "C:/Users/welly/Documents/GitHub/LT38A/projeto01/quartus/simulation/qsim//" for EDA simulation tool
+Info (204019): Generated file proj1_7_1200mv_0c_vhd_slow.sdo in folder "C:/Users/welly/Documents/GitHub/LT38A/projeto01/quartus/simulation/qsim//" for EDA simulation tool
+Info (204019): Generated file proj1_min_1200mv_0c_vhd_fast.sdo in folder "C:/Users/welly/Documents/GitHub/LT38A/projeto01/quartus/simulation/qsim//" for EDA simulation tool
+Info (204019): Generated file proj1_vhd.sdo in folder "C:/Users/welly/Documents/GitHub/LT38A/projeto01/quartus/simulation/qsim//" for EDA simulation tool
 Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4637 megabytes
-    Info: Processing ended: Wed Nov 15 18:35:58 2023
-    Info: Elapsed time: 00:00:01
-    Info: Total CPU time (on all processors): 00:00:00
+    Info: Peak virtual memory: 4714 megabytes
+    Info: Processing ended: Thu Nov 16 00:34:01 2023
+    Info: Elapsed time: 00:00:04
+    Info: Total CPU time (on all processors): 00:00:04
 
 

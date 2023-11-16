@@ -19,9 +19,9 @@
 -- the top level entity of the current Quartus project .The user can use this   
 -- testbench to simulate his design using a third-party simulation tool .       
 -- *****************************************************************************
--- Generated on "11/15/2023 17:00:03"
+-- Generated on "11/15/2023 21:42:40"
                                                              
--- Vhdl Test Bench(with test vectors) for design  :          testBitConcat
+-- Vhdl Test Bench(with test vectors) for design  :          testEntrada
 -- 
 -- Simulation tool : 3rd Party
 -- 
@@ -29,142 +29,161 @@
 LIBRARY ieee;                                               
 USE ieee.std_logic_1164.all;                                
 
-ENTITY testBitConcat_vhd_vec_tst IS
-END testBitConcat_vhd_vec_tst;
-ARCHITECTURE testBitConcat_arch OF testBitConcat_vhd_vec_tst IS
+ENTITY testEntrada_vhd_vec_tst IS
+END testEntrada_vhd_vec_tst;
+ARCHITECTURE testEntrada_arch OF testEntrada_vhd_vec_tst IS
 -- constants                                                 
 -- signals                                                   
-SIGNAL input_hundreds : STD_LOGIC_VECTOR(3 DOWNTO 0);
-SIGNAL input_tens : STD_LOGIC_VECTOR(3 DOWNTO 0);
-SIGNAL input_units : STD_LOGIC_VECTOR(3 DOWNTO 0);
-SIGNAL output_result : STD_LOGIC_VECTOR(6 DOWNTO 0);
-COMPONENT testBitConcat
+SIGNAL A : STD_LOGIC_VECTOR(6 DOWNTO 0);
+SIGNAL B : STD_LOGIC_VECTOR(6 DOWNTO 0);
+SIGNAL clk : STD_LOGIC;
+SIGNAL col : STD_LOGIC_VECTOR(2 DOWNTO 0);
+SIGNAL Enable : STD_LOGIC;
+SIGNAL row : STD_LOGIC_VECTOR(3 DOWNTO 0);
+SIGNAL seeData : STD_LOGIC_VECTOR(3 DOWNTO 0);
+SIGNAL seeDAV : STD_LOGIC;
+SIGNAL seeQ1 : STD_LOGIC_VECTOR(3 DOWNTO 0);
+SIGNAL seeQ2 : STD_LOGIC_VECTOR(3 DOWNTO 0);
+SIGNAL seeQ3 : STD_LOGIC_VECTOR(3 DOWNTO 0);
+SIGNAL seeQ4 : STD_LOGIC_VECTOR(3 DOWNTO 0);
+SIGNAL seeQ5 : STD_LOGIC_VECTOR(3 DOWNTO 0);
+SIGNAL seeQ6 : STD_LOGIC_VECTOR(3 DOWNTO 0);
+SIGNAL strobe : STD_LOGIC;
+COMPONENT testEntrada
 	PORT (
-	input_hundreds : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
-	input_tens : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
-	input_units : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
-	output_result : OUT STD_LOGIC_VECTOR(6 DOWNTO 0)
+	A : OUT STD_LOGIC_VECTOR(6 DOWNTO 0);
+	B : OUT STD_LOGIC_VECTOR(6 DOWNTO 0);
+	clk : IN STD_LOGIC;
+	col : IN STD_LOGIC_VECTOR(2 DOWNTO 0);
+	Enable : IN STD_LOGIC;
+	row : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
+	seeData : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
+	seeDAV : OUT STD_LOGIC;
+	seeQ1 : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
+	seeQ2 : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
+	seeQ3 : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
+	seeQ4 : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
+	seeQ5 : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
+	seeQ6 : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
+	strobe : IN STD_LOGIC
 	);
 END COMPONENT;
 BEGIN
-	i1 : testBitConcat
+	i1 : testEntrada
 	PORT MAP (
 -- list connections between master ports and signals
-	input_hundreds => input_hundreds,
-	input_tens => input_tens,
-	input_units => input_units,
-	output_result => output_result
+	A => A,
+	B => B,
+	clk => clk,
+	col => col,
+	Enable => Enable,
+	row => row,
+	seeData => seeData,
+	seeDAV => seeDAV,
+	seeQ1 => seeQ1,
+	seeQ2 => seeQ2,
+	seeQ3 => seeQ3,
+	seeQ4 => seeQ4,
+	seeQ5 => seeQ5,
+	seeQ6 => seeQ6,
+	strobe => strobe
 	);
--- input_hundreds[3]
-t_prcs_input_hundreds_3: PROCESS
+
+-- clk
+t_prcs_clk: PROCESS
 BEGIN
-	input_hundreds(3) <= '0';
+	FOR i IN 1 TO 166
+	LOOP
+		clk <= '0';
+		WAIT FOR 3000 ps;
+		clk <= '1';
+		WAIT FOR 3000 ps;
+	END LOOP;
+	clk <= '0';
+	WAIT FOR 3000 ps;
+	clk <= '1';
 WAIT;
-END PROCESS t_prcs_input_hundreds_3;
--- input_hundreds[2]
-t_prcs_input_hundreds_2: PROCESS
+END PROCESS t_prcs_clk;
+
+-- strobe
+t_prcs_strobe: PROCESS
 BEGIN
-	input_hundreds(2) <= '0';
+	strobe <= '0';
 WAIT;
-END PROCESS t_prcs_input_hundreds_2;
--- input_hundreds[1]
-t_prcs_input_hundreds_1: PROCESS
+END PROCESS t_prcs_strobe;
+
+-- Enable
+t_prcs_Enable: PROCESS
 BEGIN
-	input_hundreds(1) <= '0';
-WAIT;
-END PROCESS t_prcs_input_hundreds_1;
--- input_hundreds[0]
-t_prcs_input_hundreds_0: PROCESS
-BEGIN
-	input_hundreds(0) <= '0';
+	Enable <= '0';
 	WAIT FOR 20000 ps;
-	input_hundreds(0) <= '1';
-	WAIT FOR 330000 ps;
-	input_hundreds(0) <= '0';
+	Enable <= '1';
 WAIT;
-END PROCESS t_prcs_input_hundreds_0;
--- input_tens[3]
-t_prcs_input_tens_3: PROCESS
+END PROCESS t_prcs_Enable;
+-- row[3]
+t_prcs_row_3: PROCESS
 BEGIN
-	input_tens(3) <= '0';
-	WAIT FOR 800000 ps;
-	input_tens(3) <= '1';
+	row(3) <= '1';
 WAIT;
-END PROCESS t_prcs_input_tens_3;
--- input_tens[2]
-t_prcs_input_tens_2: PROCESS
+END PROCESS t_prcs_row_3;
+-- row[2]
+t_prcs_row_2: PROCESS
 BEGIN
-	input_tens(2) <= '0';
-	WAIT FOR 400000 ps;
-	input_tens(2) <= '1';
-	WAIT FOR 400000 ps;
-	input_tens(2) <= '0';
+	row(2) <= '1';
 WAIT;
-END PROCESS t_prcs_input_tens_2;
--- input_tens[1]
-t_prcs_input_tens_1: PROCESS
+END PROCESS t_prcs_row_2;
+-- row[1]
+t_prcs_row_1: PROCESS
 BEGIN
-	FOR i IN 1 TO 2
-	LOOP
-		input_tens(1) <= '0';
-		WAIT FOR 200000 ps;
-		input_tens(1) <= '1';
-		WAIT FOR 200000 ps;
-	END LOOP;
-	input_tens(1) <= '0';
+	row(1) <= '1';
 WAIT;
-END PROCESS t_prcs_input_tens_1;
--- input_tens[0]
-t_prcs_input_tens_0: PROCESS
+END PROCESS t_prcs_row_1;
+-- row[0]
+t_prcs_row_0: PROCESS
 BEGIN
-LOOP
-	input_tens(0) <= '0';
-	WAIT FOR 100000 ps;
-	input_tens(0) <= '1';
-	WAIT FOR 100000 ps;
-	IF (NOW >= 1000000 ps) THEN WAIT; END IF;
-END LOOP;
-END PROCESS t_prcs_input_tens_0;
--- input_units[3]
-t_prcs_input_units_3: PROCESS
-BEGIN
-	input_units(3) <= '0';
-	WAIT FOR 800000 ps;
-	input_units(3) <= '1';
+	row(0) <= '1';
+	WAIT FOR 50000 ps;
+	row(0) <= '0';
+	WAIT FOR 30000 ps;
+	row(0) <= '1';
+	WAIT FOR 40000 ps;
+	row(0) <= '0';
+	WAIT FOR 30000 ps;
+	row(0) <= '1';
+	WAIT FOR 40000 ps;
+	row(0) <= '0';
+	WAIT FOR 40000 ps;
+	row(0) <= '1';
 WAIT;
-END PROCESS t_prcs_input_units_3;
--- input_units[2]
-t_prcs_input_units_2: PROCESS
+END PROCESS t_prcs_row_0;
+-- col[2]
+t_prcs_col_2: PROCESS
 BEGIN
-	input_units(2) <= '0';
-	WAIT FOR 400000 ps;
-	input_units(2) <= '1';
-	WAIT FOR 400000 ps;
-	input_units(2) <= '0';
+	col(2) <= '1';
+	WAIT FOR 190000 ps;
+	col(2) <= '0';
+	WAIT FOR 40000 ps;
+	col(2) <= '1';
 WAIT;
-END PROCESS t_prcs_input_units_2;
--- input_units[1]
-t_prcs_input_units_1: PROCESS
+END PROCESS t_prcs_col_2;
+-- col[1]
+t_prcs_col_1: PROCESS
 BEGIN
-	FOR i IN 1 TO 2
-	LOOP
-		input_units(1) <= '0';
-		WAIT FOR 200000 ps;
-		input_units(1) <= '1';
-		WAIT FOR 200000 ps;
-	END LOOP;
-	input_units(1) <= '0';
+	col(1) <= '1';
+	WAIT FOR 120000 ps;
+	col(1) <= '0';
+	WAIT FOR 30000 ps;
+	col(1) <= '1';
 WAIT;
-END PROCESS t_prcs_input_units_1;
--- input_units[0]
-t_prcs_input_units_0: PROCESS
+END PROCESS t_prcs_col_1;
+-- col[0]
+t_prcs_col_0: PROCESS
 BEGIN
-LOOP
-	input_units(0) <= '0';
-	WAIT FOR 100000 ps;
-	input_units(0) <= '1';
-	WAIT FOR 100000 ps;
-	IF (NOW >= 1000000 ps) THEN WAIT; END IF;
-END LOOP;
-END PROCESS t_prcs_input_units_0;
-END testBitConcat_arch;
+	col(0) <= '1';
+	WAIT FOR 50000 ps;
+	col(0) <= '0';
+	WAIT FOR 30000 ps;
+	col(0) <= '1';
+WAIT;
+END PROCESS t_prcs_col_0;
+END testEntrada_arch;

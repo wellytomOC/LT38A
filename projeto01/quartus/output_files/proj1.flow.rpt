@@ -1,5 +1,5 @@
 Flow report for proj1
-Wed Nov 15 18:35:58 2023
+Thu Nov 16 00:34:00 2023
 Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 
 
@@ -41,18 +41,18 @@ agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Wed Nov 15 18:35:58 2023       ;
+; Flow Status                        ; Successful - Thu Nov 16 00:34:00 2023       ;
 ; Quartus Prime Version              ; 17.0.0 Build 595 04/25/2017 SJ Lite Edition ;
 ; Revision Name                      ; proj1                                       ;
-; Top-level Entity Name              ; testEntrada                                 ;
+; Top-level Entity Name              ; testArquitetura                             ;
 ; Family                             ; Cyclone IV E                                ;
 ; Device                             ; EP4CE115F29C7                               ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 51 / 114,480 ( < 1 % )                      ;
-;     Total combinational functions  ; 50 / 114,480 ( < 1 % )                      ;
-;     Dedicated logic registers      ; 37 / 114,480 ( < 1 % )                      ;
-; Total registers                    ; 37                                          ;
-; Total pins                         ; 48 / 529 ( 9 % )                            ;
+; Total logic elements               ; 5,813 / 114,480 ( 5 % )                     ;
+;     Total combinational functions  ; 5,800 / 114,480 ( 5 % )                     ;
+;     Dedicated logic registers      ; 30 / 114,480 ( < 1 % )                      ;
+; Total registers                    ; 30                                          ;
+; Total pins                         ; 35 / 529 ( 7 % )                            ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0 / 3,981,312 ( 0 % )                       ;
 ; Embedded Multiplier 9-bit elements ; 0 / 532 ( 0 % )                             ;
@@ -65,32 +65,32 @@ agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 11/15/2023 18:34:14 ;
+; Start date & time ; 11/16/2023 00:25:40 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; proj1               ;
 +-------------------+---------------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------+
-; Flow Non-Default Global Settings                                                                                            ;
-+-------------------------------------+----------------------------------------+---------------+-------------+----------------+
-; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id     ;
-+-------------------------------------+----------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 123598314453086.170008405414372        ; --            ; --          ; --             ;
-; EDA_OUTPUT_DATA_FORMAT              ; Vhdl                                   ; --            ; --          ; eda_simulation ;
-; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (VHDL)                 ; <None>        ; --          ; --             ;
-; EDA_TIME_SCALE                      ; 1 ps                                   ; --            ; --          ; eda_simulation ;
-; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --            ; --          ; --             ;
-; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --            ; --          ; --             ;
-; NOMINAL_CORE_SUPPLY_VOLTAGE         ; 1.2V                                   ; --            ; --          ; --             ;
-; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --            ; testEntrada ; Top            ;
-; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family) ; --            ; testEntrada ; Top            ;
-; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family) ; --            ; testEntrada ; Top            ;
-; POWER_BOARD_THERMAL_MODEL           ; None (CONSERVATIVE)                    ; --            ; --          ; --             ;
-; POWER_PRESET_COOLING_SOLUTION       ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW  ; --            ; --          ; --             ;
-; PROJECT_OUTPUT_DIRECTORY            ; output_files                           ; --            ; --          ; --             ;
-; TOP_LEVEL_ENTITY                    ; testEntrada                            ; proj1         ; --          ; --             ;
-+-------------------------------------+----------------------------------------+---------------+-------------+----------------+
++---------------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                                ;
++-------------------------------------+----------------------------------------+---------------+-----------------+----------------+
+; Assignment Name                     ; Value                                  ; Default Value ; Entity Name     ; Section Id     ;
++-------------------------------------+----------------------------------------+---------------+-----------------+----------------+
+; COMPILER_SIGNATURE_ID               ; 123598314453086.170010514014920        ; --            ; --              ; --             ;
+; EDA_OUTPUT_DATA_FORMAT              ; Vhdl                                   ; --            ; --              ; eda_simulation ;
+; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (VHDL)                 ; <None>        ; --              ; --             ;
+; EDA_TIME_SCALE                      ; 1 ps                                   ; --            ; --              ; eda_simulation ;
+; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --            ; --              ; --             ;
+; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --            ; --              ; --             ;
+; NOMINAL_CORE_SUPPLY_VOLTAGE         ; 1.2V                                   ; --            ; --              ; --             ;
+; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --            ; testArquitetura ; Top            ;
+; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family) ; --            ; testArquitetura ; Top            ;
+; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family) ; --            ; testArquitetura ; Top            ;
+; POWER_BOARD_THERMAL_MODEL           ; None (CONSERVATIVE)                    ; --            ; --              ; --             ;
+; POWER_PRESET_COOLING_SOLUTION       ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW  ; --            ; --              ; --             ;
+; PROJECT_OUTPUT_DIRECTORY            ; output_files                           ; --            ; --              ; --             ;
+; TOP_LEVEL_ENTITY                    ; testArquitetura                        ; proj1         ; --              ; --             ;
++-------------------------------------+----------------------------------------+---------------+-----------------+----------------+
 
 
 +-------------------------------------------------------------------------------------------------------------------------------+
@@ -98,14 +98,18 @@ agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:07     ; 1.0                     ; 4809 MB             ; 00:00:15                           ;
-; Fitter                    ; 00:00:10     ; 1.0                     ; 5817 MB             ; 00:00:17                           ;
-; Assembler                 ; 00:00:03     ; 1.0                     ; 4678 MB             ; 00:00:02                           ;
-; TimeQuest Timing Analyzer ; 00:00:02     ; 1.0                     ; 4858 MB             ; 00:00:01                           ;
-; EDA Netlist Writer        ; 00:00:00     ; 1.0                     ; 4645 MB             ; 00:00:01                           ;
-; EDA Netlist Writer        ; 00:00:00     ; 1.0                     ; 4628 MB             ; 00:00:00                           ;
-; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 4637 MB             ; 00:00:00                           ;
-; Total                     ; 00:00:23     ; --                      ; --                  ; 00:00:36                           ;
+; Analysis & Synthesis      ; 00:01:38     ; 1.0                     ; 4870 MB             ; 00:01:45                           ;
+; Fitter                    ; 00:00:17     ; 1.1                     ; 5892 MB             ; 00:00:30                           ;
+; Assembler                 ; 00:00:02     ; 1.0                     ; 4698 MB             ; 00:00:02                           ;
+; TimeQuest Timing Analyzer ; 00:00:02     ; 1.1                     ; 4906 MB             ; 00:00:03                           ;
+; EDA Netlist Writer        ; 00:00:04     ; 1.0                     ; 4712 MB             ; 00:00:04                           ;
+; EDA Netlist Writer        ; 00:00:00     ; 1.0                     ; 4654 MB             ; 00:00:01                           ;
+; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 4667 MB             ; 00:00:01                           ;
+; EDA Netlist Writer        ; 00:00:00     ; 1.0                     ; 4654 MB             ; 00:00:00                           ;
+; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 4667 MB             ; 00:00:01                           ;
+; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 4654 MB             ; 00:00:00                           ;
+; EDA Netlist Writer        ; 00:00:03     ; 1.0                     ; 4714 MB             ; 00:00:04                           ;
+; Total                     ; 00:02:09     ; --                      ; --                  ; 00:02:31                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -121,6 +125,10 @@ agreement for further details.
 ; EDA Netlist Writer        ; DESKTOP-CE5UNQD  ; Windows 10 ; 10.0       ; x86_64         ;
 ; EDA Netlist Writer        ; DESKTOP-CE5UNQD  ; Windows 10 ; 10.0       ; x86_64         ;
 ; EDA Netlist Writer        ; DESKTOP-CE5UNQD  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer        ; DESKTOP-CE5UNQD  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer        ; DESKTOP-CE5UNQD  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer        ; DESKTOP-CE5UNQD  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer        ; DESKTOP-CE5UNQD  ; Windows 10 ; 10.0       ; x86_64         ;
 +---------------------------+------------------+------------+------------+----------------+
 
 
@@ -132,8 +140,12 @@ quartus_fit --read_settings_files=off --write_settings_files=off proj1 -c proj1
 quartus_asm --read_settings_files=off --write_settings_files=off proj1 -c proj1
 quartus_sta proj1 -c proj1
 quartus_eda --read_settings_files=off --write_settings_files=off proj1 -c proj1
-quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off proj1 -c proj1 --vector_source=C:/Users/welly/Documents/GitHub/LT38A/projeto01/quartus/Waveform2.vwf --testbench_file=C:/Users/welly/Documents/GitHub/LT38A/projeto01/quartus/simulation/qsim/Waveform2.vwf.vht
+quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off proj1 -c proj1 --vector_source=C:/Users/welly/Documents/GitHub/LT38A/projeto01/quartus/Waveform7.vwf --testbench_file=C:/Users/welly/Documents/GitHub/LT38A/projeto01/quartus/simulation/qsim/Waveform7.vwf.vht
 quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory=C:/Users/welly/Documents/GitHub/LT38A/projeto01/quartus/simulation/qsim/ proj1 -c proj1
+quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off proj1 -c proj1 --vector_source=C:/Users/welly/Documents/GitHub/LT38A/projeto01/quartus/Waveform7.vwf --testbench_file=C:/Users/welly/Documents/GitHub/LT38A/projeto01/quartus/simulation/qsim/Waveform7.vwf.vht
+quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory=C:/Users/welly/Documents/GitHub/LT38A/projeto01/quartus/simulation/qsim/ proj1 -c proj1
+quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off proj1 -c proj1 --vector_source=C:/Users/welly/Documents/GitHub/LT38A/projeto01/quartus/Waveform7.vwf --testbench_file=C:/Users/welly/Documents/GitHub/LT38A/projeto01/quartus/simulation/qsim/Waveform7.vwf.vht
+quartus_eda --write_settings_files=off --simulation=on --functional=off --flatten_buses=off --timescale=1ps --tool=modelsim_oem --format=vhdl --output_directory=C:/Users/welly/Documents/GitHub/LT38A/projeto01/quartus/simulation/qsim/ proj1 -c proj1
 
 
 

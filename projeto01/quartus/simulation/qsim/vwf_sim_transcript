@@ -7,7 +7,7 @@ Note: if both ModelSim-Altera and ModelSim executables are available, ModelSim-A
 
 **** Generating the ModelSim Testbench ****
 
-quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off proj1 -c proj1 --vector_source="C:/Users/welly/Documents/GitHub/LT38A/projeto01/quartus/Waveform2.vwf" --testbench_file="C:/Users/welly/Documents/GitHub/LT38A/projeto01/quartus/simulation/qsim/Waveform2.vwf.vht"
+quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off proj1 -c proj1 --vector_source="C:/Users/welly/Documents/GitHub/LT38A/projeto01/quartus/Waveform7.vwf" --testbench_file="C:/Users/welly/Documents/GitHub/LT38A/projeto01/quartus/simulation/qsim/Waveform7.vwf.vht"
 
 Info: *******************************************************************
 Info: Running Quartus Prime EDA Netlist Writer
@@ -26,17 +26,17 @@ Info: Running Quartus Prime EDA Netlist Writer
     Info: devices manufactured by Intel and sold by Intel or its 
     Info: authorized distributors.  Please refer to the applicable 
     Info: agreement for further details.
-    Info: Processing started: Wed Nov 15 18:35:57 2023
-Info: Command: quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off proj1 -c proj1 --vector_source=C:/Users/welly/Documents/GitHub/LT38A/projeto01/quartus/Waveform2.vwf --testbench_file=C:/Users/welly/Documents/GitHub/LT38A/projeto01/quartus/simulation/qsim/Waveform2.vwf.vht
+    Info: Processing started: Thu Nov 16 00:33:56 2023
+Info: Command: quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off proj1 -c proj1 --vector_source=C:/Users/welly/Documents/GitHub/LT38A/projeto01/quartus/Waveform7.vwf --testbench_file=C:/Users/welly/Documents/GitHub/LT38A/projeto01/quartus/simulation/qsim/Waveform7.vwf.vht
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 
-ctor source file when writing test bench files
+201005): Ignoring output pin "ss2[0]" in vector source file when writing test bench files
 
 Completed successfully. 
 
-**** Generating the functional simulation netlist ****
+**** Generating the timing simulation netlist ****
 
-quartus_eda --write_settings_files=off --simulation --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory="C:/Users/welly/Documents/GitHub/LT38A/projeto01/quartus/simulation/qsim/" proj1 -c proj1
+quartus_eda --write_settings_files=off --simulation --functional=off --flatten_buses=off --timescale=1ps --tool=modelsim_oem --format=vhdl --output_directory="C:/Users/welly/Documents/GitHub/LT38A/projeto01/quartus/simulation/qsim/" proj1 -c proj1
 
 Info: *******************************************************************
 Info: Running Quartus Prime EDA Netlist Writer
@@ -55,15 +55,22 @@ Info: Running Quartus Prime EDA Netlist Writer
     Info: devices manufactured by Intel and sold by Intel or its 
     Info: authorized distributors.  Please refer to the applicable 
     Info: agreement for further details.
-    Info: Processing started: Wed Nov 15 18:35:57 2023
-Info: Command: quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory=C:/Users/welly/Documents/GitHub/LT38A/projeto01/quartus/simulation/qsim/ proj1 -c proj1
+    Info: Processing started: Thu Nov 16 00:33:57 2023
+Info: Command: quartus_eda --write_settings_files=off --simulation=on --functional=off --flatten_buses=off --timescale=1ps --tool=modelsim_oem --format=vhdl --output_directory=C:/Users/welly/Documents/GitHub/LT38A/projeto01/quartus/simulation/qsim/ proj1 -c proj1
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (204019): Generated file proj1_7_1200mv_85c_slow.vho in folder "C:/Users/welly/Documents/GitHub/LT38A/projeto01/quartus/simulation/qsim//" for EDA simulation tool
+Info (204019): Generated file proj1_7_1200mv_0c_slow.vho in folder "C:/Users/welly/Documents/GitHub/LT38A/projeto01/quartus/simulation/qsim//" for EDA simulation tool
+Info (204019): Generated file proj1_min_1200mv_0c_fast.vho in folder "C:/Users/welly/Documents/GitHub/LT38A/projeto01/quartus/simulation/qsim//" for EDA simulation tool
 Info (204019): Generated file proj1.vho in folder "C:/Users/welly/Documents/GitHub/LT38A/projeto01/quartus/simulation/qsim//" for EDA simulation tool
+Info (204019): Generated file proj1_7_1200mv_85c_vhd_slow.sdo in folder "C:/Users/welly/Documents/GitHub/LT38A/projeto01/quartus/simulation/qsim//" for EDA simulation tool
+Info (204019): Generated file proj1_7_1200mv_0c_vhd_slow.sdo in folder "C:/Users/welly/Documents/GitHub/LT38A/projeto01/quartus/simulation/qsim//" for EDA simulation tool
+Info (204019): Generated file proj1_min_1200mv_0c_vhd_fast.sdo in folder "C:/Users/welly/Documents/GitHub/LT38A/projeto01/quartus/simulation/qsim//" for EDA simulation tool
+Info (204019): Generated file proj1_vhd.sdo in folder "C:/Users/welly/Documents/GitHub/LT38A/projeto01/quartus/simulation/qsim//" for EDA simulation tool
 Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4637 megabytes
-    Info: Processing ended: Wed Nov 15 18:35:58 2023
-    Info: Elapsed time: 00:00:01
-    Info: Total CPU time (on all processors): 00:00:00
+    Info: Peak virtual memory: 4714 megabytes
+    Info: Processing ended: Thu Nov 16 00:34:01 2023
+    Info: Elapsed time: 00:00:04
+    Info: Total CPU time (on all processors): 00:00:04
 
 Completed successfully. 
 
@@ -79,18 +86,15 @@ c:/intelfpga_lite/17.0/modelsim_ase/win32aloem//vsim -c -do proj1.do
 
 Reading C:/intelFPGA_lite/17.0/modelsim_ase/tcl/vsim/pref.tcl
 
-
 # 10.5b
 
+
 # do proj1.do
-
 # ** Warning: (vlib-34) Library already exists at "work".
-
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 18:36:00 on Nov 15,2023
+# Start time: 00:34:01 on Nov 16,2023
 # vcom -work work proj1.vho 
 # -- Loading package STANDARD
-
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Loading package VITAL_Timing
@@ -101,61 +105,74 @@ Reading C:/intelFPGA_lite/17.0/modelsim_ase/tcl/vsim/pref.tcl
 # -- Compiling architecture structure of hard_block
 # -- Loading package dffeas_pack
 # -- Loading package altera_primitives_components
-# -- Compiling entity testEntrada
-# -- Compiling architecture structure of testEntrada
-# End time: 18:36:00 on Nov 15,2023, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
+# -- Compiling entity testArquitetura
+# -- Compiling architecture structure of testArquitetura
 
+# End time: 00:34:02 on Nov 16,2023, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 18:36:00 on Nov 15,2023
-# vcom -work work Waveform2.vwf.vht 
+# Start time: 00:34:02 on Nov 16,2023
+# vcom -work work Waveform7.vwf.vht 
 # -- Loading package STANDARD
+
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
-# -- Compiling entity testEntrada_vhd_vec_tst
-# -- Compiling architecture testEntrada_arch of testEntrada_vhd_vec_tst
-# End time: 18:36:00 on Nov 15,2023, Elapsed time: 0:00:00
+# -- Compiling entity testArquitetura_vhd_vec_tst
+# -- Compiling architecture testArquitetura_arch of testArquitetura_vhd_vec_tst
+# End time: 00:34:02 on Nov 16,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 
-# vsim -novopt -c -t 1ps -L cycloneive -L altera -L altera_mf -L 220model -L sgate -L altera_lnsim work.testEntrada_vhd_vec_tst 
-# Start time: 18:36:01 on Nov 15,2023
+# vsim -novopt -c -t 1ps -sdfmax testArquitetura_vhd_vec_tst/i1=proj1_vhd.sdo -L cycloneive -L altera -L altera_mf -L 220model -L sgate -L altera_lnsim work.testArquitetura_vhd_vec_tst 
+# Start time: 00:34:02 on Nov 16,2023
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
-# Loading work.testentrada_vhd_vec_tst(testentrada_arch)
+# Loading work.testarquitetura_vhd_vec_tst(testarquitetura_arch)
+# SDF 10.5b Compiler 2016.10 Oct  5 2016
+# 
 # Loading ieee.vital_timing(body)
 # Loading ieee.vital_primitives(body)
 # Loading altera.dffeas_pack
 # Loading altera.altera_primitives_components
 # Loading cycloneive.cycloneive_atom_pack(body)
 # Loading cycloneive.cycloneive_components
-# Loading work.testentrada(structure)
+# Loading work.testarquitetura(structure)
 # Loading work.hard_block(structure)
 # Loading ieee.std_logic_arith(body)
 # Loading cycloneive.cycloneive_io_obuf(arch)
 # Loading cycloneive.cycloneive_io_ibuf(arch)
+# Loading cycloneive.cycloneive_lcell_comb(vital_lcell_comb)
 # Loading cycloneive.cycloneive_clkctrl(vital_clkctrl)
 # Loading cycloneive.cycloneive_ena_reg(behave)
-# Loading cycloneive.cycloneive_lcell_comb(vital_lcell_comb)
 # Loading altera.dffeas(vital_dffeas)
-# ** Warning: Design size of 16293 statements exceeds ModelSim-Intel FPGA Starter Edition recommended capacity.
+# Loading instances from proj1_vhd.sdo
+# Loading timing data from proj1_vhd.sdo
+# ** Warning: Design size of 621928 statements exceeds ModelSim-Intel FPGA Starter Edition recommended capacity.
 # Expect performance to be adversely affected.
+# ** Note: (vsim-3587) SDF Backannotation Successfully Completed.
+#    Time: 0 ps  Iteration: 0  Instance: /testarquitetura_vhd_vec_tst File: Waveform7.vwf.vht
 # after#35
 
-# End time: 18:36:01 on Nov 15,2023, Elapsed time: 0:00:00
+# Simulation time: 194828 ps
+
+# Simulation time: 194828 ps
+
+# Simulation time: 194828 ps
+
+# End time: 00:34:11 on Nov 16,2023, Elapsed time: 0:00:09
 # Errors: 0, Warnings: 1
 
 Completed successfully. 
 
 **** Converting ModelSim VCD to vector waveform ****
 
-Reading C:/Users/welly/Documents/GitHub/LT38A/projeto01/quartus/Waveform2.vwf...
+Reading C:/Users/welly/Documents/GitHub/LT38A/projeto01/quartus/Waveform7.vwf...
 
 Reading C:/Users/welly/Documents/GitHub/LT38A/projeto01/quartus/simulation/qsim/proj1.msim.vcd...
 
 Processing channel transitions... 
 
-Writing the resulting VWF to C:/Users/welly/Documents/GitHub/LT38A/projeto01/quartus/simulation/qsim/proj1_20231115183601.sim.vwf
+Writing the resulting VWF to C:/Users/welly/Documents/GitHub/LT38A/projeto01/quartus/simulation/qsim/proj1_20231116003411.sim.vwf
 
 Finished VCD to VWF conversion.
 
