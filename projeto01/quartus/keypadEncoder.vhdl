@@ -51,6 +51,7 @@ architecture behavior of keypadEncoder is
     signal Freeze: std_logic;
     signal dataIn: std_logic_vector(3 downto 0);
     signal dataOut: std_logic_vector(3 downto 0);
+    signal enabled: std_logic;
 
 begin
 
@@ -61,15 +62,17 @@ begin
 
 	 Freeze <= not (col(2) and col(1) and col(0));
 
-    data <= dataOut when (Freeze and Enable) = '1' else "ZZZZ";
+    enabled <= Freeze when enable = '1' else '0';
 
-    dav <= Freeze;
+    data <= dataOut when enabled = '1' else "ZZZZ";
 
-    --process(clk)
-    --begin
-    --    if(clk'event and clk='1') then
-    --        dav <= Freeze;
-    --    end if;
-    --end process;
+    
+
+    process(clk)
+    begin
+        if(clk'event and clk='1') then
+            dav <= enabled;
+        end if;
+    end process;
 
 end architecture;

@@ -120,6 +120,18 @@
 					"strict" : false
 				},
 				{
+					"name" : "col[2]",
+					"strict" : false
+				},
+				{
+					"name" : "col[1]",
+					"strict" : false
+				},
+				{
+					"name" : "col[0]",
+					"strict" : false
+				},
+				{
 					"name" : "sel[1]",
 					"strict" : false
 				},
@@ -132,15 +144,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "col[2]",
-					"strict" : false
-				},
-				{
-					"name" : "col[1]",
-					"strict" : false
-				},
-				{
-					"name" : "col[0]",
+					"name" : "reset",
 					"strict" : false
 				}
 			]

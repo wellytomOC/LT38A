@@ -4,7 +4,7 @@ use IEEE.numeric_std.ALL;
 
 entity registerSelector is
     port(
-        DAV: in std_logic;
+        DAV, reset: in std_logic;
         sel: out std_logic_vector(5 downto 0);
         enabler: out std_logic
     );
@@ -15,16 +15,19 @@ architecture behavior of registerSelector is
 begin
 
     process(DAV)
-    variable state: std_logic_vector(5 downto 0) := "111110";
+        variable state: std_logic_vector(5 downto 0) := "111110";
     begin
 
-        if(DAV'event and DAV='1') then
+        if reset = '1' then
+            state := "111110";
+
+        elsif(DAV'event and DAV='1') then
             case state is
                 when "111110" =>
                     state := "111101";
                     enabler <= '0';
                 when "111101" =>
-                    state := "111011";
+                    state := "111011";      
                     enabler <= '0';
                 when "111011" =>
                     state := "110111";

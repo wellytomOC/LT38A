@@ -6,7 +6,7 @@ entity arquitetura is
     port(
 		  clk: in std_logic;
         col: in std_logic_vector(2 downto 0);
-        Enable: in std_logic;
+        Enable,reset: in std_logic;
         row: out std_logic_vector(3 downto 0);
 
         strobe: in std_logic;
@@ -23,7 +23,7 @@ architecture behavior of arquitetura is
         port(
             clk: in std_logic;
             col: in std_logic_vector(2 downto 0);
-            Enable: in std_logic;
+            Enable,reset: in std_logic;
             row: out std_logic_vector(3 downto 0);
                 
             --seeDAV: out std_logic;
@@ -58,7 +58,7 @@ architecture behavior of arquitetura is
 
 begin
 
-    ent: entrada port map(clk, col, enable, row, Q1,Q2,Q3,Q4,Q5,Q6, A, B);
+    ent: entrada port map(clk, col, enable, reset, row, Q1,Q2,Q3,Q4,Q5,Q6, A, B);
     sis: sistema port map(A,B,S,R);
     sai: saida port map(enable,strobe,sel,Q1,Q2,Q3,Q4,Q5,Q6,S,R,ss0,ss1,ss2,EnLed,StrobeLed);
 
