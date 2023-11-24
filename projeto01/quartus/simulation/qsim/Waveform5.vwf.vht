@@ -19,9 +19,9 @@
 -- the top level entity of the current Quartus project .The user can use this   
 -- testbench to simulate his design using a third-party simulation tool .       
 -- *****************************************************************************
--- Generated on "11/15/2023 22:33:01"
+-- Generated on "11/20/2023 11:05:18"
                                                              
--- Vhdl Test Bench(with test vectors) for design  :          testEntrada
+-- Vhdl Test Bench(with test vectors) for design  :          testforbitsregister
 -- 
 -- Simulation tool : 3rd Party
 -- 
@@ -29,195 +29,99 @@
 LIBRARY ieee;                                               
 USE ieee.std_logic_1164.all;                                
 
-ENTITY testEntrada_vhd_vec_tst IS
-END testEntrada_vhd_vec_tst;
-ARCHITECTURE testEntrada_arch OF testEntrada_vhd_vec_tst IS
+ENTITY testforbitsregister_vhd_vec_tst IS
+END testforbitsregister_vhd_vec_tst;
+ARCHITECTURE testforbitsregister_arch OF testforbitsregister_vhd_vec_tst IS
 -- constants                                                 
 -- signals                                                   
-SIGNAL A : STD_LOGIC_VECTOR(6 DOWNTO 0);
-SIGNAL B : STD_LOGIC_VECTOR(6 DOWNTO 0);
-SIGNAL clk : STD_LOGIC;
-SIGNAL col : STD_LOGIC_VECTOR(2 DOWNTO 0);
-SIGNAL Enable : STD_LOGIC;
-SIGNAL row : STD_LOGIC_VECTOR(3 DOWNTO 0);
-SIGNAL seeData : STD_LOGIC_VECTOR(3 DOWNTO 0);
-SIGNAL seeDAV : STD_LOGIC;
-SIGNAL seeQ1 : STD_LOGIC_VECTOR(3 DOWNTO 0);
-SIGNAL seeQ2 : STD_LOGIC_VECTOR(3 DOWNTO 0);
-SIGNAL seeQ3 : STD_LOGIC_VECTOR(3 DOWNTO 0);
-SIGNAL seeQ4 : STD_LOGIC_VECTOR(3 DOWNTO 0);
-SIGNAL seeQ5 : STD_LOGIC_VECTOR(3 DOWNTO 0);
-SIGNAL seeQ6 : STD_LOGIC_VECTOR(3 DOWNTO 0);
-SIGNAL strobe : STD_LOGIC;
-COMPONENT testEntrada
+SIGNAL CLK : STD_LOGIC;
+SIGNAL D : STD_LOGIC_VECTOR(3 DOWNTO 0);
+SIGNAL Q : STD_LOGIC_VECTOR(3 DOWNTO 0);
+SIGNAL reset : STD_LOGIC;
+COMPONENT testforbitsregister
 	PORT (
-	A : OUT STD_LOGIC_VECTOR(6 DOWNTO 0);
-	B : OUT STD_LOGIC_VECTOR(6 DOWNTO 0);
-	clk : IN STD_LOGIC;
-	col : IN STD_LOGIC_VECTOR(2 DOWNTO 0);
-	Enable : IN STD_LOGIC;
-	row : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
-	seeData : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
-	seeDAV : OUT STD_LOGIC;
-	seeQ1 : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
-	seeQ2 : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
-	seeQ3 : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
-	seeQ4 : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
-	seeQ5 : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
-	seeQ6 : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
-	strobe : IN STD_LOGIC
+	CLK : IN STD_LOGIC;
+	D : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
+	Q : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
+	reset : IN STD_LOGIC
 	);
 END COMPONENT;
 BEGIN
-	i1 : testEntrada
+	i1 : testforbitsregister
 	PORT MAP (
 -- list connections between master ports and signals
-	A => A,
-	B => B,
-	clk => clk,
-	col => col,
-	Enable => Enable,
-	row => row,
-	seeData => seeData,
-	seeDAV => seeDAV,
-	seeQ1 => seeQ1,
-	seeQ2 => seeQ2,
-	seeQ3 => seeQ3,
-	seeQ4 => seeQ4,
-	seeQ5 => seeQ5,
-	seeQ6 => seeQ6,
-	strobe => strobe
+	CLK => CLK,
+	D => D,
+	Q => Q,
+	reset => reset
 	);
 
--- clk
-t_prcs_clk: PROCESS
+-- CLK
+t_prcs_CLK: PROCESS
 BEGIN
 LOOP
-	clk <= '0';
-	WAIT FOR 5000 ps;
-	clk <= '1';
-	WAIT FOR 5000 ps;
+	CLK <= '0';
+	WAIT FOR 100000 ps;
+	CLK <= '1';
+	WAIT FOR 100000 ps;
 	IF (NOW >= 1000000 ps) THEN WAIT; END IF;
 END LOOP;
-END PROCESS t_prcs_clk;
--- row[3]
-t_prcs_row_3: PROCESS
+END PROCESS t_prcs_CLK;
+-- D[3]
+t_prcs_D_3: PROCESS
 BEGIN
-	row(3) <= '1';
-	WAIT FOR 580000 ps;
-	row(3) <= '0';
-	WAIT FOR 40000 ps;
-	row(3) <= '1';
+	D(3) <= '0';
+	WAIT FOR 400000 ps;
+	D(3) <= '1';
+	WAIT FOR 400000 ps;
+	D(3) <= '0';
 WAIT;
-END PROCESS t_prcs_row_3;
--- row[2]
-t_prcs_row_2: PROCESS
+END PROCESS t_prcs_D_3;
+-- D[2]
+t_prcs_D_2: PROCESS
 BEGIN
-	row(2) <= '1';
+	FOR i IN 1 TO 2
+	LOOP
+		D(2) <= '0';
+		WAIT FOR 200000 ps;
+		D(2) <= '1';
+		WAIT FOR 200000 ps;
+	END LOOP;
+	D(2) <= '0';
 WAIT;
-END PROCESS t_prcs_row_2;
--- row[1]
-t_prcs_row_1: PROCESS
+END PROCESS t_prcs_D_2;
+-- D[1]
+t_prcs_D_1: PROCESS
 BEGIN
-	row(1) <= '1';
-WAIT;
-END PROCESS t_prcs_row_1;
--- row[0]
-t_prcs_row_0: PROCESS
-BEGIN
-	row(0) <= '1';
-	WAIT FOR 30000 ps;
-	row(0) <= '0';
-	WAIT FOR 30000 ps;
-	row(0) <= '1';
-	WAIT FOR 40000 ps;
-	row(0) <= '0';
-	WAIT FOR 30000 ps;
-	row(0) <= '1';
-	WAIT FOR 40000 ps;
-	row(0) <= '0';
-	WAIT FOR 30000 ps;
-	row(0) <= '1';
-	WAIT FOR 60000 ps;
-	row(0) <= '0';
-	WAIT FOR 30000 ps;
-	row(0) <= '1';
-	WAIT FOR 40000 ps;
-	row(0) <= '0';
-	WAIT FOR 30000 ps;
-	row(0) <= '1';
-	WAIT FOR 40000 ps;
-	row(0) <= '0';
-	WAIT FOR 30000 ps;
-	row(0) <= '1';
-	WAIT FOR 40000 ps;
-	row(0) <= '0';
-	WAIT FOR 40000 ps;
-	row(0) <= '1';
-WAIT;
-END PROCESS t_prcs_row_0;
--- col[2]
-t_prcs_col_2: PROCESS
-BEGIN
-	col(2) <= '1';
-	WAIT FOR 170000 ps;
-	col(2) <= '0';
-	WAIT FOR 30000 ps;
-	col(2) <= '1';
-	WAIT FOR 200000 ps;
-	col(2) <= '0';
-	WAIT FOR 30000 ps;
-	col(2) <= '1';
-WAIT;
-END PROCESS t_prcs_col_2;
--- col[1]
-t_prcs_col_1: PROCESS
-BEGIN
-	col(1) <= '1';
+LOOP
+	D(1) <= '0';
 	WAIT FOR 100000 ps;
-	col(1) <= '0';
-	WAIT FOR 30000 ps;
-	col(1) <= '1';
-	WAIT FOR 200000 ps;
-	col(1) <= '0';
-	WAIT FOR 30000 ps;
-	col(1) <= '1';
-	WAIT FOR 220000 ps;
-	col(1) <= '0';
-	WAIT FOR 40000 ps;
-	col(1) <= '1';
-WAIT;
-END PROCESS t_prcs_col_1;
--- col[0]
-t_prcs_col_0: PROCESS
+	D(1) <= '1';
+	WAIT FOR 100000 ps;
+	IF (NOW >= 1000000 ps) THEN WAIT; END IF;
+END LOOP;
+END PROCESS t_prcs_D_1;
+-- D[0]
+t_prcs_D_0: PROCESS
 BEGIN
-	col(0) <= '1';
-	WAIT FOR 30000 ps;
-	col(0) <= '0';
-	WAIT FOR 30000 ps;
-	col(0) <= '1';
-	WAIT FOR 200000 ps;
-	col(0) <= '0';
-	WAIT FOR 30000 ps;
-	col(0) <= '1';
-	WAIT FOR 180000 ps;
-	col(0) <= '0';
-	WAIT FOR 40000 ps;
-	col(0) <= '1';
-WAIT;
-END PROCESS t_prcs_col_0;
+LOOP
+	D(0) <= '0';
+	WAIT FOR 50000 ps;
+	D(0) <= '1';
+	WAIT FOR 50000 ps;
+	IF (NOW >= 1000000 ps) THEN WAIT; END IF;
+END LOOP;
+END PROCESS t_prcs_D_0;
 
--- Enable
-t_prcs_Enable: PROCESS
+-- reset
+t_prcs_reset: PROCESS
 BEGIN
-	Enable <= '1';
-WAIT;
-END PROCESS t_prcs_Enable;
-
--- strobe
-t_prcs_strobe: PROCESS
-BEGIN
-	strobe <= '0';
-WAIT;
-END PROCESS t_prcs_strobe;
-END testEntrada_arch;
+LOOP
+	reset <= '0';
+	WAIT FOR 500000 ps;
+	reset <= '1';
+	WAIT FOR 500000 ps;
+	IF (NOW >= 1000000 ps) THEN WAIT; END IF;
+END LOOP;
+END PROCESS t_prcs_reset;
+END testforbitsregister_arch;

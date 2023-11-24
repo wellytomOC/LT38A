@@ -22,7 +22,7 @@ agreement for further details.
 (header "graphic" (version "1.4"))
 (pin
 	(input)
-	(rect 408 288 576 304)
+	(rect 336 240 504 256)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
 	(text "clk" (rect 5 0 19 12)(font "Arial" ))
 	(pt 168 8)
@@ -38,7 +38,7 @@ agreement for further details.
 )
 (pin
 	(input)
-	(rect 408 304 576 320)
+	(rect 336 256 504 272)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
 	(text "col[2..0]" (rect 5 0 45 12)(font "Arial" ))
 	(pt 168 8)
@@ -54,7 +54,7 @@ agreement for further details.
 )
 (pin
 	(input)
-	(rect 408 320 576 336)
+	(rect 336 272 504 288)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
 	(text "Enable" (rect 5 0 38 12)(font "Arial" ))
 	(pt 168 8)
@@ -70,7 +70,7 @@ agreement for further details.
 )
 (pin
 	(output)
-	(rect 744 288 920 304)
+	(rect 672 240 848 256)
 	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
 	(text "row[3..0]" (rect 90 0 132 12)(font "Arial" ))
 	(pt 0 8)
@@ -86,7 +86,7 @@ agreement for further details.
 )
 (pin
 	(output)
-	(rect 744 304 920 320)
+	(rect 672 256 848 272)
 	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
 	(text "data[3..0]" (rect 90 0 137 12)(font "Arial" ))
 	(pt 0 8)
@@ -102,7 +102,7 @@ agreement for further details.
 )
 (pin
 	(output)
-	(rect 744 320 920 336)
+	(rect 672 272 848 288)
 	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
 	(text "dav" (rect 90 0 108 12)(font "Arial" ))
 	(pt 0 8)
@@ -117,7 +117,7 @@ agreement for further details.
 	)
 )
 (symbol
-	(rect 576 264 744 376)
+	(rect 504 216 672 328)
 	(text "keypadEncoder" (rect 5 0 81 12)(font "Arial" ))
 	(text "inst" (rect 8 96 25 108)(font "Arial" ))
 	(port
@@ -145,21 +145,21 @@ agreement for further details.
 		(pt 168 32)
 		(output)
 		(text "row[3..0]" (rect 0 0 42 12)(font "Arial" ))
-		(text "row[3..0]" (rect 112 27 147 39)(font "Arial" ))
+		(text "row[3..0]" (rect 112 27 154 39)(font "Arial" ))
 		(line (pt 168 32)(pt 152 32)(line_width 3))
 	)
 	(port
 		(pt 168 48)
 		(output)
 		(text "data[3..0]" (rect 0 0 47 12)(font "Arial" ))
-		(text "data[3..0]" (rect 108 43 147 55)(font "Arial" ))
+		(text "data[3..0]" (rect 108 43 155 55)(font "Arial" ))
 		(line (pt 168 48)(pt 152 48)(line_width 3))
 	)
 	(port
 		(pt 168 64)
 		(output)
 		(text "dav" (rect 0 0 18 12)(font "Arial" ))
-		(text "dav" (rect 132 59 147 71)(font "Arial" ))
+		(text "dav" (rect 132 59 150 71)(font "Arial" ))
 		(line (pt 168 64)(pt 152 64))
 	)
 	(drawing

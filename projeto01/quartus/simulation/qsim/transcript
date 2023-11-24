@@ -1,7 +1,7 @@
 # do proj1.do
 # ** Warning: (vlib-34) Library already exists at "work".
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 00:34:01 on Nov 16,2023
+# Start time: 12:15:26 on Nov 20,2023
 # vcom -work work proj1.vho 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -16,20 +16,20 @@
 # -- Loading package altera_primitives_components
 # -- Compiling entity testArquitetura
 # -- Compiling architecture structure of testArquitetura
-# End time: 00:34:02 on Nov 16,2023, Elapsed time: 0:00:01
+# End time: 12:15:27 on Nov 20,2023, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 00:34:02 on Nov 16,2023
-# vcom -work work Waveform7.vwf.vht 
+# Start time: 12:15:27 on Nov 20,2023
+# vcom -work work Waveform10.vwf.vht 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity testArquitetura_vhd_vec_tst
 # -- Compiling architecture testArquitetura_arch of testArquitetura_vhd_vec_tst
-# End time: 00:34:02 on Nov 16,2023, Elapsed time: 0:00:00
+# End time: 12:15:27 on Nov 20,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vsim -novopt -c -t 1ps -sdfmax testArquitetura_vhd_vec_tst/i1=proj1_vhd.sdo -L cycloneive -L altera -L altera_mf -L 220model -L sgate -L altera_lnsim work.testArquitetura_vhd_vec_tst 
-# Start time: 00:34:02 on Nov 16,2023
+# Start time: 12:15:28 on Nov 20,2023
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
@@ -47,19 +47,19 @@
 # Loading ieee.std_logic_arith(body)
 # Loading cycloneive.cycloneive_io_obuf(arch)
 # Loading cycloneive.cycloneive_io_ibuf(arch)
-# Loading cycloneive.cycloneive_lcell_comb(vital_lcell_comb)
 # Loading cycloneive.cycloneive_clkctrl(vital_clkctrl)
 # Loading cycloneive.cycloneive_ena_reg(behave)
+# Loading cycloneive.cycloneive_lcell_comb(vital_lcell_comb)
 # Loading altera.dffeas(vital_dffeas)
 # Loading instances from proj1_vhd.sdo
 # Loading timing data from proj1_vhd.sdo
-# ** Warning: Design size of 621928 statements exceeds ModelSim-Intel FPGA Starter Edition recommended capacity.
+# ** Warning: Design size of 623942 statements exceeds ModelSim-Intel FPGA Starter Edition recommended capacity.
 # Expect performance to be adversely affected.
 # ** Note: (vsim-3587) SDF Backannotation Successfully Completed.
-#    Time: 0 ps  Iteration: 0  Instance: /testarquitetura_vhd_vec_tst File: Waveform7.vwf.vht
+#    Time: 0 ps  Iteration: 0  Instance: /testarquitetura_vhd_vec_tst File: Waveform10.vwf.vht
 # after#35
-# Simulation time: 194828 ps
-# Simulation time: 194828 ps
-# Simulation time: 194828 ps
-# End time: 00:34:11 on Nov 16,2023, Elapsed time: 0:00:09
-# Errors: 0, Warnings: 1
+# ** Warning: */DFFEAS HOLD High VIOLATION ON DATAIN WITH RESPECT TO CLK;
+#   Expected := 0.186 ns; Observed := 0.071 ns; At : 407.717 ns
+#    Time: 407717 ps  Iteration: 1  Instance: /testarquitetura_vhd_vec_tst/i1/\inst|ent|ke|dav\
+# End time: 12:15:30 on Nov 20,2023, Elapsed time: 0:00:02
+# Errors: 0, Warnings: 2

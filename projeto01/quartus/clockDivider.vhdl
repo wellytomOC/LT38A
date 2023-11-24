@@ -20,7 +20,7 @@ begin
 
 		if(clk'event and clk='1') then
 			count <=count+1;
-			if (count = 250000) then -- usar 2500000 na FPGA
+			if (count > 1) then -- usar 250000 na FPGA
 				tmp <= NOT tmp;
 				count <= 1;
 			end if;

@@ -39,7 +39,7 @@
 
 set_global_assignment -name FAMILY "Cyclone IV E"
 set_global_assignment -name DEVICE EP4CE115F29C7
-set_global_assignment -name TOP_LEVEL_ENTITY testArquitetura
+set_global_assignment -name TOP_LEVEL_ENTITY testSuccessiveSubtraction
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 17.0.0
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "21:55:22  NOVEMBER 14, 2023"
 set_global_assignment -name LAST_QUARTUS_VERSION "17.0.0 Lite Edition"
@@ -86,19 +86,8 @@ set_global_assignment -name BDF_FILE testBitConcat.bdf
 set_global_assignment -name BDF_FILE testEntrada.bdf
 set_global_assignment -name VHDL_FILE testRegisters.vhd
 set_global_assignment -name BDF_FILE testememoria.bdf
-set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform.vwf
-set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform1.vwf
-set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform2.vwf
-set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform3.vwf
-set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform4.vwf
-set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform5.vwf
 set_global_assignment -name BDF_FILE testSaida.bdf
-set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform6.vwf
 set_global_assignment -name BDF_FILE testArquitetura.bdf
-set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
-set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
-set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
-set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform7.vwf
 set_location_assignment PIN_J10 -to col[2]
 set_location_assignment PIN_J14 -to col[1]
 set_location_assignment PIN_Y2 -to clk
@@ -135,6 +124,32 @@ set_location_assignment PIN_E10 -to row[1]
 set_location_assignment PIN_F14 -to row[2]
 set_location_assignment PIN_H13 -to col[0]
 set_location_assignment PIN_AA22 -to reset
+set_global_assignment -name BDF_FILE testSevenSegDecoder.bdf
+set_global_assignment -name BDF_FILE testSevenSeg8BitDec.bdf
+set_global_assignment -name BDF_FILE testoutputmultiplexes.bdf
+set_global_assignment -name BDF_FILE testkeypadencoder.bdf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform.vwf
+set_global_assignment -name BDF_FILE testringcounter.bdf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform1.vwf
+set_global_assignment -name BDF_FILE testrowencoder.bdf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform2.vwf
+set_global_assignment -name BDF_FILE testrowandcolencoder.bdf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform3.vwf
+set_global_assignment -name BDF_FILE testregisterselector.bdf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform4.vwf
+set_global_assignment -name BDF_FILE testforbitsregister.bdf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform5.vwf
+set_global_assignment -name BDF_FILE testbitconcat.bdf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform6.vwf
+set_global_assignment -name BDF_FILE testclockdivider.bdf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform7.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform8.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform9.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform10.vwf
+set_global_assignment -name BDF_FILE testSuccessiveSubtraction.bdf
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_instance_assignment -name IO_STANDARD "2.5 V" -to clk
 set_instance_assignment -name IO_STANDARD "2.5 V" -to col[2]
 set_instance_assignment -name IO_STANDARD "2.5 V" -to col[1]

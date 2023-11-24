@@ -1,0 +1,6 @@
+ieeevarnumeric_stdieee.sym/numeric_std/prim.var
+ieeesrcnumeric_stdnumstd.vhd
+ieeevarstd_logic_1164ieee.sym/std_logic_1164/prim.var
+ieeesrcstd_logic_1164stdlogic.vhd
+.varsevenseg8bitdecproj1.sym/sevenseg8bitdec/prim.var
+.srcsevenseg8bitdecsevenseg8bitdec.vhdl

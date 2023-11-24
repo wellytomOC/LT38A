@@ -19,9 +19,9 @@
 -- the top level entity of the current Quartus project .The user can use this   
 -- testbench to simulate his design using a third-party simulation tool .       
 -- *****************************************************************************
--- Generated on "11/15/2023 18:01:05"
+-- Generated on "11/20/2023 10:44:07"
                                                              
--- Vhdl Test Bench(with test vectors) for design  :          testememoria
+-- Vhdl Test Bench(with test vectors) for design  :          testKeypadEncoder
 -- 
 -- Simulation tool : 3rd Party
 -- 
@@ -29,131 +29,99 @@
 LIBRARY ieee;                                               
 USE ieee.std_logic_1164.all;                                
 
-ENTITY testememoria_vhd_vec_tst IS
-END testememoria_vhd_vec_tst;
-ARCHITECTURE testememoria_arch OF testememoria_vhd_vec_tst IS
+ENTITY testKeypadEncoder_vhd_vec_tst IS
+END testKeypadEncoder_vhd_vec_tst;
+ARCHITECTURE testKeypadEncoder_arch OF testKeypadEncoder_vhd_vec_tst IS
 -- constants                                                 
 -- signals                                                   
-SIGNAL A : STD_LOGIC_VECTOR(6 DOWNTO 0);
-SIGNAL B : STD_LOGIC_VECTOR(6 DOWNTO 0);
+SIGNAL clk : STD_LOGIC;
+SIGNAL col : STD_LOGIC_VECTOR(2 DOWNTO 0);
 SIGNAL data : STD_LOGIC_VECTOR(3 DOWNTO 0);
 SIGNAL dav : STD_LOGIC;
-SIGNAL Q1 : STD_LOGIC_VECTOR(3 DOWNTO 0);
-SIGNAL Q2 : STD_LOGIC_VECTOR(3 DOWNTO 0);
-SIGNAL Q3 : STD_LOGIC_VECTOR(3 DOWNTO 0);
-SIGNAL Q4 : STD_LOGIC_VECTOR(3 DOWNTO 0);
-SIGNAL Q5 : STD_LOGIC_VECTOR(3 DOWNTO 0);
-SIGNAL Q6 : STD_LOGIC_VECTOR(3 DOWNTO 0);
-SIGNAL seeSel : STD_LOGIC_VECTOR(5 DOWNTO 0);
-COMPONENT testememoria
+SIGNAL Enable : STD_LOGIC;
+SIGNAL row : STD_LOGIC_VECTOR(3 DOWNTO 0);
+COMPONENT testKeypadEncoder
 	PORT (
-	A : OUT STD_LOGIC_VECTOR(6 DOWNTO 0);
-	B : OUT STD_LOGIC_VECTOR(6 DOWNTO 0);
-	data : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
-	dav : IN STD_LOGIC;
-	Q1 : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
-	Q2 : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
-	Q3 : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
-	Q4 : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
-	Q5 : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
-	Q6 : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
-	seeSel : OUT STD_LOGIC_VECTOR(5 DOWNTO 0)
+	clk : IN STD_LOGIC;
+	col : IN STD_LOGIC_VECTOR(2 DOWNTO 0);
+	data : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
+	dav : OUT STD_LOGIC;
+	Enable : IN STD_LOGIC;
+	row : OUT STD_LOGIC_VECTOR(3 DOWNTO 0)
 	);
 END COMPONENT;
 BEGIN
-	i1 : testememoria
+	i1 : testKeypadEncoder
 	PORT MAP (
 -- list connections between master ports and signals
-	A => A,
-	B => B,
+	clk => clk,
+	col => col,
 	data => data,
 	dav => dav,
-	Q1 => Q1,
-	Q2 => Q2,
-	Q3 => Q3,
-	Q4 => Q4,
-	Q5 => Q5,
-	Q6 => Q6,
-	seeSel => seeSel
+	Enable => Enable,
+	row => row
 	);
--- data[3]
-t_prcs_data_3: PROCESS
-BEGIN
-	data(3) <= '0';
-	WAIT FOR 900000 ps;
-	data(3) <= '1';
-WAIT;
-END PROCESS t_prcs_data_3;
--- data[2]
-t_prcs_data_2: PROCESS
-BEGIN
-	data(2) <= '0';
-	WAIT FOR 200000 ps;
-	data(2) <= '1';
-	WAIT FOR 100000 ps;
-	data(2) <= '0';
-	WAIT FOR 400000 ps;
-	data(2) <= '1';
-	WAIT FOR 200000 ps;
-	data(2) <= '0';
-WAIT;
-END PROCESS t_prcs_data_2;
--- data[1]
-t_prcs_data_1: PROCESS
-BEGIN
-	data(1) <= '0';
-	WAIT FOR 100000 ps;
-	data(1) <= '1';
-	WAIT FOR 50000 ps;
-	data(1) <= '0';
-	WAIT FOR 450000 ps;
-	data(1) <= '1';
-	WAIT FOR 100000 ps;
-	data(1) <= '0';
-	WAIT FOR 100000 ps;
-	data(1) <= '1';
-	WAIT FOR 100000 ps;
-	data(1) <= '0';
-WAIT;
-END PROCESS t_prcs_data_1;
--- data[0]
-t_prcs_data_0: PROCESS
-BEGIN
-	data(0) <= '0';
-	WAIT FOR 50000 ps;
-	data(0) <= '1';
-	WAIT FOR 50000 ps;
-	data(0) <= '0';
-	WAIT FOR 150000 ps;
-	data(0) <= '1';
-	WAIT FOR 50000 ps;
-	data(0) <= '0';
-	WAIT FOR 50000 ps;
-	data(0) <= '1';
-	WAIT FOR 150000 ps;
-	data(0) <= '0';
-	WAIT FOR 50000 ps;
-	data(0) <= '1';
-	WAIT FOR 50000 ps;
-	FOR i IN 1 TO 4
-	LOOP
-		data(0) <= '0';
-		WAIT FOR 50000 ps;
-		data(0) <= '1';
-		WAIT FOR 50000 ps;
-	END LOOP;
-WAIT;
-END PROCESS t_prcs_data_0;
 
--- dav
-t_prcs_dav: PROCESS
+-- clk
+t_prcs_clk: PROCESS
 BEGIN
 LOOP
-	dav <= '0';
-	WAIT FOR 25000 ps;
-	dav <= '1';
-	WAIT FOR 25000 ps;
+	clk <= '0';
+	WAIT FOR 1000 ps;
+	clk <= '1';
+	WAIT FOR 1000 ps;
 	IF (NOW >= 1000000 ps) THEN WAIT; END IF;
 END LOOP;
-END PROCESS t_prcs_dav;
-END testememoria_arch;
+END PROCESS t_prcs_clk;
+-- col[2]
+t_prcs_col_2: PROCESS
+BEGIN
+	col(2) <= '1';
+WAIT;
+END PROCESS t_prcs_col_2;
+-- col[1]
+t_prcs_col_1: PROCESS
+BEGIN
+	col(1) <= '1';
+	WAIT FOR 50000 ps;
+	col(1) <= '0';
+	WAIT FOR 30000 ps;
+	col(1) <= '1';
+	WAIT FOR 40000 ps;
+	col(1) <= '0';
+	WAIT FOR 20000 ps;
+	col(1) <= '1';
+	WAIT FOR 30000 ps;
+	col(1) <= '0';
+	WAIT FOR 30000 ps;
+	col(1) <= '1';
+	WAIT FOR 40000 ps;
+	col(1) <= '0';
+	WAIT FOR 40000 ps;
+	col(1) <= '1';
+	WAIT FOR 40000 ps;
+	col(1) <= '0';
+	WAIT FOR 50000 ps;
+	col(1) <= '1';
+	WAIT FOR 60000 ps;
+	col(1) <= '0';
+	WAIT FOR 30000 ps;
+	col(1) <= '1';
+WAIT;
+END PROCESS t_prcs_col_1;
+-- col[0]
+t_prcs_col_0: PROCESS
+BEGIN
+	col(0) <= '1';
+WAIT;
+END PROCESS t_prcs_col_0;
+
+-- Enable
+t_prcs_Enable: PROCESS
+BEGIN
+	Enable <= '0';
+	WAIT FOR 20000 ps;
+	Enable <= '1';
+WAIT;
+END PROCESS t_prcs_Enable;
+END testKeypadEncoder_arch;

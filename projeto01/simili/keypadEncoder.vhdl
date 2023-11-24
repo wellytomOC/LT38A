@@ -8,7 +8,7 @@ entity keypadEncoder is
         col: in std_logic_vector(2 downto 0);
         Enable: in std_logic;
 
-        row: inout std_logic_vector(3 downto 0);
+        row: buffer std_logic_vector(3 downto 0);
         data: out std_logic_vector(3 downto 0);
         dav: out std_logic
     );
@@ -23,6 +23,7 @@ architecture behavior of keypadEncoder is
             toRow: out std_logic_vector(3 downto 0)
         );
     end component;
+    --signal toRow: std_logic_vector(3 downto 0);
 
     component rowEncoder is
         port(
@@ -50,23 +51,32 @@ architecture behavior of keypadEncoder is
     signal Freeze: std_logic;
     signal dataIn: std_logic_vector(3 downto 0);
     signal dataOut: std_logic_vector(3 downto 0);
+    signal enabled: std_logic;
+    
+    signal rowin: std_logic_vector(3 downto 0);
 
 begin
 
-    RC: ringCounter port map(clk, Freeze, row);
-    RE: rowEncoder port map(row, dataIn(3 downto 2));
+    RC: ringCounter port map(clk, Freeze, rowin);
+    row <= rowin;
+    RE: rowEncoder port map(rowin, dataIn(3 downto 2));
     CE: colEncoder port map(col, dataIn(1 downto 0));
     RaCE: rowAndColEncoder port map(dataIn,dataOut);
 
-    Freeze <= (not col(2)) nand ((not col(1)) nand (not col(0)));
+	 Freeze <= not (col(2) and col(1) and col(0));
 
-    data <= dataOut when (Freeze and Enable) = '1' else "ZZZZ";
+    enabled <= Freeze when enable = '1' else '0';
+
+    data <= dataOut when enabled = '1' else "ZZZZ";
+
+    
 
     process(clk)
     begin
         if(clk'event and clk='1') then
-            dav <= Freeze;
+            dav <= enabled;
         end if;
     end process;
 
 end architecture;
+

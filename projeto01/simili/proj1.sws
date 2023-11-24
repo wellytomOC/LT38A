@@ -103,7 +103,7 @@
 # Begin description of library proj1
 [library]
  name = proj1
- toplevel = testsistema
+ toplevel = saida
   [options]
     [booloption]
      name	= -87
@@ -136,17 +136,7 @@
     []
   []
  [file]
-  name = clockDivider.vhdl
-  [options]
-  []
- []
- [file]
-  name = colEncoder.vhdl
-  [options]
-  []
- []
- [file]
-  name = fullComparator.vhdl
+  name = halfSubtractor.vhdl
   [options]
   []
  []
@@ -156,7 +146,7 @@
   []
  []
  [file]
-  name = halfAdder.vhdl
+  name = sevenBitsSub.vhdl
   [options]
   []
  []
@@ -166,12 +156,57 @@
   []
  []
  [file]
-  name = halfSubtractor.vhdl
+  name = fullComparator.vhdl
+  [options]
+  []
+ []
+ [file]
+  name = sevenBitsComp.vhdl
+  [options]
+  []
+ []
+ [file]
+  name = halfAdder.vhdl
   [options]
   []
  []
  [file]
   name = incrementer.vhdl
+  [options]
+  []
+ []
+ [file]
+  name = successiveSubtraction.vhdl
+  [options]
+  []
+ []
+ [file]
+  name = sistema.vhdl
+  [options]
+  []
+ []
+ [file]
+  name = sevenSegDecoder.vhdl
+  [options]
+  []
+ []
+ [file]
+  name = sevenSeg8bitDec.vhdl
+  [options]
+  []
+ []
+ [file]
+  name = outputMultiplexer.vhdl
+  [options]
+  []
+ []
+ [file]
+  name = saida.vhdl
+  [options]
+  []
+ []
+ [file]
+  name = registerSelector.vhdl
   [options]
   []
  []
@@ -191,42 +226,37 @@
   []
  []
  [file]
+  name = colEncoder.vhdl
+  [options]
+  []
+ []
+ [file]
   name = keypadEncoder.vhdl
   [options]
   []
  []
  [file]
-  name = sevenBitsComp.vhdl
+  name = fourBitsRegister.vhdl
   [options]
   []
  []
  [file]
-  name = sevenBitsSub.vhdl
+  name = clockDivider.vhdl
   [options]
   []
  []
  [file]
-  name = successiveSubtraction.vhdl
+  name = bitConcat.vhdl
   [options]
   []
  []
  [file]
-  name = sistema.vhdl
+  name = entrada.vhdl
   [options]
   []
  []
  [file]
-  name = testSevenBitsComp.vhdl
-  [options]
-  []
- []
- [file]
-  name = testSevenBitsSub.vhdl
-  [options]
-  []
- []
- [file]
-  name = testSistema.vhdl
+  name = arquitetura.vhdl
   [options]
   []
  []

@@ -19,9 +19,9 @@
 -- the top level entity of the current Quartus project .The user can use this   
 -- testbench to simulate his design using a third-party simulation tool .       
 -- *****************************************************************************
--- Generated on "11/16/2023 00:33:57"
+-- Generated on "11/20/2023 11:14:00"
                                                              
--- Vhdl Test Bench(with test vectors) for design  :          testArquitetura
+-- Vhdl Test Bench(with test vectors) for design  :          testclockdivider
 -- 
 -- Simulation tool : 3rd Party
 -- 
@@ -29,52 +29,25 @@
 LIBRARY ieee;                                               
 USE ieee.std_logic_1164.all;                                
 
-ENTITY testArquitetura_vhd_vec_tst IS
-END testArquitetura_vhd_vec_tst;
-ARCHITECTURE testArquitetura_arch OF testArquitetura_vhd_vec_tst IS
+ENTITY testclockdivider_vhd_vec_tst IS
+END testclockdivider_vhd_vec_tst;
+ARCHITECTURE testclockdivider_arch OF testclockdivider_vhd_vec_tst IS
 -- constants                                                 
 -- signals                                                   
 SIGNAL clk : STD_LOGIC;
-SIGNAL col : STD_LOGIC_VECTOR(2 DOWNTO 0);
-SIGNAL Enable : STD_LOGIC;
-SIGNAL EnLed : STD_LOGIC;
-SIGNAL row : STD_LOGIC_VECTOR(3 DOWNTO 0);
-SIGNAL sel : STD_LOGIC_VECTOR(1 DOWNTO 0);
-SIGNAL ss0 : STD_LOGIC_VECTOR(6 DOWNTO 0);
-SIGNAL ss1 : STD_LOGIC_VECTOR(6 DOWNTO 0);
-SIGNAL ss2 : STD_LOGIC_VECTOR(6 DOWNTO 0);
-SIGNAL strobe : STD_LOGIC;
-SIGNAL StrobeLed : STD_LOGIC;
-COMPONENT testArquitetura
+SIGNAL clock_out : STD_LOGIC;
+COMPONENT testclockdivider
 	PORT (
 	clk : IN STD_LOGIC;
-	col : IN STD_LOGIC_VECTOR(2 DOWNTO 0);
-	Enable : IN STD_LOGIC;
-	EnLed : OUT STD_LOGIC;
-	row : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
-	sel : IN STD_LOGIC_VECTOR(1 DOWNTO 0);
-	ss0 : OUT STD_LOGIC_VECTOR(6 DOWNTO 0);
-	ss1 : OUT STD_LOGIC_VECTOR(6 DOWNTO 0);
-	ss2 : OUT STD_LOGIC_VECTOR(6 DOWNTO 0);
-	strobe : IN STD_LOGIC;
-	StrobeLed : OUT STD_LOGIC
+	clock_out : OUT STD_LOGIC
 	);
 END COMPONENT;
 BEGIN
-	i1 : testArquitetura
+	i1 : testclockdivider
 	PORT MAP (
 -- list connections between master ports and signals
 	clk => clk,
-	col => col,
-	Enable => Enable,
-	EnLed => EnLed,
-	row => row,
-	sel => sel,
-	ss0 => ss0,
-	ss1 => ss1,
-	ss2 => ss2,
-	strobe => strobe,
-	StrobeLed => StrobeLed
+	clock_out => clock_out
 	);
 
 -- clk
@@ -82,150 +55,10 @@ t_prcs_clk: PROCESS
 BEGIN
 LOOP
 	clk <= '0';
-	WAIT FOR 2000 ps;
+	WAIT FOR 100000 ps;
 	clk <= '1';
-	WAIT FOR 2000 ps;
+	WAIT FOR 100000 ps;
 	IF (NOW >= 1000000 ps) THEN WAIT; END IF;
 END LOOP;
 END PROCESS t_prcs_clk;
--- row[3]
-t_prcs_row_3: PROCESS
-BEGIN
-	row(3) <= '1';
-WAIT;
-END PROCESS t_prcs_row_3;
--- row[2]
-t_prcs_row_2: PROCESS
-BEGIN
-	row(2) <= '1';
-WAIT;
-END PROCESS t_prcs_row_2;
--- row[1]
-t_prcs_row_1: PROCESS
-BEGIN
-	row(1) <= '1';
-WAIT;
-END PROCESS t_prcs_row_1;
--- row[0]
-t_prcs_row_0: PROCESS
-BEGIN
-	row(0) <= '1';
-	WAIT FOR 30000 ps;
-	row(0) <= '0';
-	WAIT FOR 20000 ps;
-	row(0) <= '1';
-	WAIT FOR 30000 ps;
-	row(0) <= '0';
-	WAIT FOR 20000 ps;
-	row(0) <= '1';
-	WAIT FOR 30000 ps;
-	row(0) <= '0';
-	WAIT FOR 20000 ps;
-	row(0) <= '1';
-	WAIT FOR 30000 ps;
-	row(0) <= '0';
-	WAIT FOR 30000 ps;
-	row(0) <= '1';
-	WAIT FOR 30000 ps;
-	row(0) <= '0';
-	WAIT FOR 20000 ps;
-	row(0) <= '1';
-	WAIT FOR 30000 ps;
-	row(0) <= '0';
-	WAIT FOR 20000 ps;
-	row(0) <= '1';
-	WAIT FOR 20000 ps;
-	row(0) <= '0';
-	WAIT FOR 30000 ps;
-	row(0) <= '1';
-WAIT;
-END PROCESS t_prcs_row_0;
--- col[2]
-t_prcs_col_2: PROCESS
-BEGIN
-	col(2) <= '1';
-	WAIT FOR 130000 ps;
-	col(2) <= '0';
-	WAIT FOR 20000 ps;
-	col(2) <= '1';
-	WAIT FOR 140000 ps;
-	col(2) <= '0';
-	WAIT FOR 20000 ps;
-	col(2) <= '1';
-WAIT;
-END PROCESS t_prcs_col_2;
--- col[1]
-t_prcs_col_1: PROCESS
-BEGIN
-	col(1) <= '1';
-	WAIT FOR 80000 ps;
-	col(1) <= '0';
-	WAIT FOR 20000 ps;
-	col(1) <= '1';
-	WAIT FOR 140000 ps;
-	col(1) <= '0';
-	WAIT FOR 20000 ps;
-	col(1) <= '1';
-WAIT;
-END PROCESS t_prcs_col_1;
--- col[0]
-t_prcs_col_0: PROCESS
-BEGIN
-	col(0) <= '1';
-	WAIT FOR 30000 ps;
-	col(0) <= '0';
-	WAIT FOR 20000 ps;
-	col(0) <= '1';
-	WAIT FOR 130000 ps;
-	col(0) <= '0';
-	WAIT FOR 30000 ps;
-	col(0) <= '1';
-	WAIT FOR 120000 ps;
-	col(0) <= '0';
-	WAIT FOR 30000 ps;
-	col(0) <= '1';
-WAIT;
-END PROCESS t_prcs_col_0;
-
--- Enable
-t_prcs_Enable: PROCESS
-BEGIN
-	Enable <= '0';
-	WAIT FOR 20000 ps;
-	Enable <= '1';
-WAIT;
-END PROCESS t_prcs_Enable;
--- sel[1]
-t_prcs_sel_1: PROCESS
-BEGIN
-LOOP
-	sel(1) <= '0';
-	WAIT FOR 250000 ps;
-	sel(1) <= '1';
-	WAIT FOR 250000 ps;
-	IF (NOW >= 1000000 ps) THEN WAIT; END IF;
-END LOOP;
-END PROCESS t_prcs_sel_1;
--- sel[0]
-t_prcs_sel_0: PROCESS
-BEGIN
-LOOP
-	sel(0) <= '0';
-	WAIT FOR 125000 ps;
-	sel(0) <= '1';
-	WAIT FOR 125000 ps;
-	IF (NOW >= 1000000 ps) THEN WAIT; END IF;
-END LOOP;
-END PROCESS t_prcs_sel_0;
-
--- strobe
-t_prcs_strobe: PROCESS
-BEGIN
-	strobe <= '0';
-	WAIT FOR 160000 ps;
-	strobe <= '1';
-	WAIT FOR 40000 ps;
-	strobe <= '0';
-WAIT;
-END PROCESS t_prcs_strobe;
-END testArquitetura_arch;
+END testclockdivider_arch;

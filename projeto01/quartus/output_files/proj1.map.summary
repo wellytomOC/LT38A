@@ -1,13 +1,13 @@
-Analysis & Synthesis Status : Successful - Fri Nov 17 14:03:53 2023
+Analysis & Synthesis Status : Successful - Mon Nov 20 21:04:32 2023
 Quartus Prime Version : 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 Revision Name : proj1
-Top-level Entity Name : testArquitetura
+Top-level Entity Name : testSuccessiveSubtraction
 Family : Cyclone IV E
-Total logic elements : 5,821
-    Total combinational functions : 5,801
-    Dedicated logic registers : 68
-Total registers : 68
-Total pins : 36
+Total logic elements : 28
+    Total combinational functions : 28
+    Dedicated logic registers : 0
+Total registers : 0
+Total pins : 35
 Total virtual pins : 0
 Total memory bits : 0
 Embedded Multiplier 9-bit elements : 0

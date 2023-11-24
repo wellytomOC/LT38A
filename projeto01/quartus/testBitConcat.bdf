@@ -22,7 +22,7 @@ agreement for further details.
 (header "graphic" (version "1.4"))
 (pin
 	(input)
-	(rect 312 272 512 288)
+	(rect 288 256 488 272)
 	(text "INPUT" (rect 157 0 185 10)(font "Arial" (font_size 6)))
 	(text "input_hundreds[3..0]" (rect 5 0 105 12)(font "Arial" ))
 	(pt 200 8)
@@ -38,7 +38,7 @@ agreement for further details.
 )
 (pin
 	(input)
-	(rect 336 288 512 304)
+	(rect 312 272 488 288)
 	(text "INPUT" (rect 133 0 161 10)(font "Arial" (font_size 6)))
 	(text "input_tens[3..0]" (rect 5 0 81 12)(font "Arial" ))
 	(pt 176 8)
@@ -54,7 +54,7 @@ agreement for further details.
 )
 (pin
 	(input)
-	(rect 336 304 512 320)
+	(rect 312 288 488 304)
 	(text "INPUT" (rect 133 0 161 10)(font "Arial" (font_size 6)))
 	(text "input_units[3..0]" (rect 5 0 84 12)(font "Arial" ))
 	(pt 176 8)
@@ -70,7 +70,7 @@ agreement for further details.
 )
 (pin
 	(output)
-	(rect 768 272 953 288)
+	(rect 744 256 929 272)
 	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
 	(text "output_result[6..0]" (rect 90 0 179 12)(font "Arial" ))
 	(pt 0 8)
@@ -85,7 +85,7 @@ agreement for further details.
 	)
 )
 (symbol
-	(rect 512 248 768 360)
+	(rect 488 232 744 344)
 	(text "bitConcat" (rect 5 0 52 12)(font "Arial" ))
 	(text "inst" (rect 8 96 25 108)(font "Arial" ))
 	(port
@@ -113,7 +113,7 @@ agreement for further details.
 		(pt 256 32)
 		(output)
 		(text "output_result[6..0]" (rect 0 0 89 12)(font "Arial" ))
-		(text "output_result[6..0]" (rect 160 27 235 39)(font "Arial" ))
+		(text "output_result[6..0]" (rect 160 27 249 39)(font "Arial" ))
 		(line (pt 256 32)(pt 240 32)(line_width 3))
 	)
 	(drawing

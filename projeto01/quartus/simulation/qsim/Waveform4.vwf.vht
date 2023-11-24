@@ -19,9 +19,9 @@
 -- the top level entity of the current Quartus project .The user can use this   
 -- testbench to simulate his design using a third-party simulation tool .       
 -- *****************************************************************************
--- Generated on "11/15/2023 21:42:40"
+-- Generated on "11/20/2023 11:00:36"
                                                              
--- Vhdl Test Bench(with test vectors) for design  :          testEntrada
+-- Vhdl Test Bench(with test vectors) for design  :          testregisterselector
 -- 
 -- Simulation tool : 3rd Party
 -- 
@@ -29,161 +29,51 @@
 LIBRARY ieee;                                               
 USE ieee.std_logic_1164.all;                                
 
-ENTITY testEntrada_vhd_vec_tst IS
-END testEntrada_vhd_vec_tst;
-ARCHITECTURE testEntrada_arch OF testEntrada_vhd_vec_tst IS
+ENTITY testregisterselector_vhd_vec_tst IS
+END testregisterselector_vhd_vec_tst;
+ARCHITECTURE testregisterselector_arch OF testregisterselector_vhd_vec_tst IS
 -- constants                                                 
 -- signals                                                   
-SIGNAL A : STD_LOGIC_VECTOR(6 DOWNTO 0);
-SIGNAL B : STD_LOGIC_VECTOR(6 DOWNTO 0);
-SIGNAL clk : STD_LOGIC;
-SIGNAL col : STD_LOGIC_VECTOR(2 DOWNTO 0);
-SIGNAL Enable : STD_LOGIC;
-SIGNAL row : STD_LOGIC_VECTOR(3 DOWNTO 0);
-SIGNAL seeData : STD_LOGIC_VECTOR(3 DOWNTO 0);
-SIGNAL seeDAV : STD_LOGIC;
-SIGNAL seeQ1 : STD_LOGIC_VECTOR(3 DOWNTO 0);
-SIGNAL seeQ2 : STD_LOGIC_VECTOR(3 DOWNTO 0);
-SIGNAL seeQ3 : STD_LOGIC_VECTOR(3 DOWNTO 0);
-SIGNAL seeQ4 : STD_LOGIC_VECTOR(3 DOWNTO 0);
-SIGNAL seeQ5 : STD_LOGIC_VECTOR(3 DOWNTO 0);
-SIGNAL seeQ6 : STD_LOGIC_VECTOR(3 DOWNTO 0);
-SIGNAL strobe : STD_LOGIC;
-COMPONENT testEntrada
+SIGNAL DAV : STD_LOGIC;
+SIGNAL enabler : STD_LOGIC;
+SIGNAL reset : STD_LOGIC;
+SIGNAL sel : STD_LOGIC_VECTOR(5 DOWNTO 0);
+COMPONENT testregisterselector
 	PORT (
-	A : OUT STD_LOGIC_VECTOR(6 DOWNTO 0);
-	B : OUT STD_LOGIC_VECTOR(6 DOWNTO 0);
-	clk : IN STD_LOGIC;
-	col : IN STD_LOGIC_VECTOR(2 DOWNTO 0);
-	Enable : IN STD_LOGIC;
-	row : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
-	seeData : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
-	seeDAV : OUT STD_LOGIC;
-	seeQ1 : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
-	seeQ2 : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
-	seeQ3 : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
-	seeQ4 : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
-	seeQ5 : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
-	seeQ6 : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
-	strobe : IN STD_LOGIC
+	DAV : IN STD_LOGIC;
+	enabler : OUT STD_LOGIC;
+	reset : IN STD_LOGIC;
+	sel : OUT STD_LOGIC_VECTOR(5 DOWNTO 0)
 	);
 END COMPONENT;
 BEGIN
-	i1 : testEntrada
+	i1 : testregisterselector
 	PORT MAP (
 -- list connections between master ports and signals
-	A => A,
-	B => B,
-	clk => clk,
-	col => col,
-	Enable => Enable,
-	row => row,
-	seeData => seeData,
-	seeDAV => seeDAV,
-	seeQ1 => seeQ1,
-	seeQ2 => seeQ2,
-	seeQ3 => seeQ3,
-	seeQ4 => seeQ4,
-	seeQ5 => seeQ5,
-	seeQ6 => seeQ6,
-	strobe => strobe
+	DAV => DAV,
+	enabler => enabler,
+	reset => reset,
+	sel => sel
 	);
 
--- clk
-t_prcs_clk: PROCESS
+-- DAV
+t_prcs_DAV: PROCESS
 BEGIN
-	FOR i IN 1 TO 166
-	LOOP
-		clk <= '0';
-		WAIT FOR 3000 ps;
-		clk <= '1';
-		WAIT FOR 3000 ps;
-	END LOOP;
-	clk <= '0';
-	WAIT FOR 3000 ps;
-	clk <= '1';
-WAIT;
-END PROCESS t_prcs_clk;
+LOOP
+	DAV <= '0';
+	WAIT FOR 100000 ps;
+	DAV <= '1';
+	WAIT FOR 100000 ps;
+	IF (NOW >= 1000000 ps) THEN WAIT; END IF;
+END LOOP;
+END PROCESS t_prcs_DAV;
 
--- strobe
-t_prcs_strobe: PROCESS
+-- reset
+t_prcs_reset: PROCESS
 BEGIN
-	strobe <= '0';
+	reset <= '0';
+	WAIT FOR 680000 ps;
+	reset <= '1';
 WAIT;
-END PROCESS t_prcs_strobe;
-
--- Enable
-t_prcs_Enable: PROCESS
-BEGIN
-	Enable <= '0';
-	WAIT FOR 20000 ps;
-	Enable <= '1';
-WAIT;
-END PROCESS t_prcs_Enable;
--- row[3]
-t_prcs_row_3: PROCESS
-BEGIN
-	row(3) <= '1';
-WAIT;
-END PROCESS t_prcs_row_3;
--- row[2]
-t_prcs_row_2: PROCESS
-BEGIN
-	row(2) <= '1';
-WAIT;
-END PROCESS t_prcs_row_2;
--- row[1]
-t_prcs_row_1: PROCESS
-BEGIN
-	row(1) <= '1';
-WAIT;
-END PROCESS t_prcs_row_1;
--- row[0]
-t_prcs_row_0: PROCESS
-BEGIN
-	row(0) <= '1';
-	WAIT FOR 50000 ps;
-	row(0) <= '0';
-	WAIT FOR 30000 ps;
-	row(0) <= '1';
-	WAIT FOR 40000 ps;
-	row(0) <= '0';
-	WAIT FOR 30000 ps;
-	row(0) <= '1';
-	WAIT FOR 40000 ps;
-	row(0) <= '0';
-	WAIT FOR 40000 ps;
-	row(0) <= '1';
-WAIT;
-END PROCESS t_prcs_row_0;
--- col[2]
-t_prcs_col_2: PROCESS
-BEGIN
-	col(2) <= '1';
-	WAIT FOR 190000 ps;
-	col(2) <= '0';
-	WAIT FOR 40000 ps;
-	col(2) <= '1';
-WAIT;
-END PROCESS t_prcs_col_2;
--- col[1]
-t_prcs_col_1: PROCESS
-BEGIN
-	col(1) <= '1';
-	WAIT FOR 120000 ps;
-	col(1) <= '0';
-	WAIT FOR 30000 ps;
-	col(1) <= '1';
-WAIT;
-END PROCESS t_prcs_col_1;
--- col[0]
-t_prcs_col_0: PROCESS
-BEGIN
-	col(0) <= '1';
-	WAIT FOR 50000 ps;
-	col(0) <= '0';
-	WAIT FOR 30000 ps;
-	col(0) <= '1';
-WAIT;
-END PROCESS t_prcs_col_0;
-END testEntrada_arch;
+END PROCESS t_prcs_reset;
+END testregisterselector_arch;
