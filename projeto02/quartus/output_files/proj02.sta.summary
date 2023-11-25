@@ -1,0 +1,485 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'entrada:ent|ClockDivider10Hz:cd10|tmp'
+Slack : -46.924
+TNS   : -1272.726
+
+Type  : Slow 1200mV 85C Model Setup 'entrada:ent|ClockDivider100kHz:cd100k|tmp'
+Slack : -11.627
+TNS   : -101.071
+
+Type  : Slow 1200mV 85C Model Setup 'clk'
+Slack : -5.014
+TNS   : -302.966
+
+Type  : Slow 1200mV 85C Model Setup 'entrada:ent|registerSelector:rs|enabler'
+Slack : -3.968
+TNS   : -31.809
+
+Type  : Slow 1200mV 85C Model Setup 'entrada:ent|keypadEncoder:ke|dav'
+Slack : -3.609
+TNS   : -14.444
+
+Type  : Slow 1200mV 85C Model Setup 'encoderC1'
+Slack : -2.434
+TNS   : -14.480
+
+Type  : Slow 1200mV 85C Model Setup 'entrada:ent|registerSelector:rs|state[1]'
+Slack : -1.603
+TNS   : -6.298
+
+Type  : Slow 1200mV 85C Model Setup 'entrada:ent|registerSelector:rs|state[2]'
+Slack : -1.549
+TNS   : -5.671
+
+Type  : Slow 1200mV 85C Model Setup 'entrada:ent|registerSelector:rs|state[0]'
+Slack : -1.406
+TNS   : -5.392
+
+Type  : Slow 1200mV 85C Model Setup 'entrada:ent|ClockDivider100Hz:cd100|tmp'
+Slack : -0.328
+TNS   : -1.050
+
+Type  : Slow 1200mV 85C Model Hold 'clk'
+Slack : 0.386
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'encoderC1'
+Slack : 0.402
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'entrada:ent|ClockDivider100Hz:cd100|tmp'
+Slack : 0.403
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'entrada:ent|ClockDivider100kHz:cd100k|tmp'
+Slack : 0.404
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'entrada:ent|keypadEncoder:ke|dav'
+Slack : 0.504
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'entrada:ent|ClockDivider10Hz:cd10|tmp'
+Slack : 0.564
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'entrada:ent|registerSelector:rs|state[0]'
+Slack : 1.108
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'entrada:ent|registerSelector:rs|state[2]'
+Slack : 1.110
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'entrada:ent|registerSelector:rs|state[1]'
+Slack : 1.351
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'entrada:ent|registerSelector:rs|enabler'
+Slack : 1.399
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Recovery 'entrada:ent|ClockDivider10Hz:cd10|tmp'
+Slack : -9.189
+TNS   : -285.380
+
+Type  : Slow 1200mV 85C Model Recovery 'encoderC1'
+Slack : -1.241
+TNS   : -14.654
+
+Type  : Slow 1200mV 85C Model Recovery 'entrada:ent|registerSelector:rs|state[1]'
+Slack : -0.908
+TNS   : -3.632
+
+Type  : Slow 1200mV 85C Model Recovery 'entrada:ent|registerSelector:rs|state[2]'
+Slack : -0.799
+TNS   : -3.168
+
+Type  : Slow 1200mV 85C Model Recovery 'entrada:ent|registerSelector:rs|state[0]'
+Slack : -0.652
+TNS   : -2.594
+
+Type  : Slow 1200mV 85C Model Removal 'entrada:ent|registerSelector:rs|state[0]'
+Slack : 0.996
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Removal 'entrada:ent|registerSelector:rs|state[2]'
+Slack : 1.130
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Removal 'encoderC1'
+Slack : 1.191
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Removal 'entrada:ent|registerSelector:rs|state[1]'
+Slack : 1.250
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Removal 'entrada:ent|ClockDivider10Hz:cd10|tmp'
+Slack : 1.880
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clk'
+Slack : -3.000
+TNS   : -130.215
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'encoderC1'
+Slack : -3.000
+TNS   : -20.990
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'entrada:ent|ClockDivider10Hz:cd10|tmp'
+Slack : -1.285
+TNS   : -110.510
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'entrada:ent|ClockDivider100kHz:cd100k|tmp'
+Slack : -1.285
+TNS   : -42.405
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'entrada:ent|registerSelector:rs|enabler'
+Slack : -1.285
+TNS   : -12.850
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'entrada:ent|ClockDivider100Hz:cd100|tmp'
+Slack : -1.285
+TNS   : -6.425
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'entrada:ent|keypadEncoder:ke|dav'
+Slack : -1.285
+TNS   : -6.425
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'entrada:ent|registerSelector:rs|state[0]'
+Slack : -1.285
+TNS   : -5.140
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'entrada:ent|registerSelector:rs|state[1]'
+Slack : -1.285
+TNS   : -5.140
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'entrada:ent|registerSelector:rs|state[2]'
+Slack : -1.285
+TNS   : -5.140
+
+Type  : Slow 1200mV 0C Model Setup 'entrada:ent|ClockDivider10Hz:cd10|tmp'
+Slack : -42.292
+TNS   : -1142.520
+
+Type  : Slow 1200mV 0C Model Setup 'entrada:ent|ClockDivider100kHz:cd100k|tmp'
+Slack : -10.406
+TNS   : -90.187
+
+Type  : Slow 1200mV 0C Model Setup 'clk'
+Slack : -4.615
+TNS   : -266.592
+
+Type  : Slow 1200mV 0C Model Setup 'entrada:ent|registerSelector:rs|enabler'
+Slack : -3.403
+TNS   : -27.423
+
+Type  : Slow 1200mV 0C Model Setup 'entrada:ent|keypadEncoder:ke|dav'
+Slack : -3.258
+TNS   : -12.816
+
+Type  : Slow 1200mV 0C Model Setup 'encoderC1'
+Slack : -2.105
+TNS   : -11.724
+
+Type  : Slow 1200mV 0C Model Setup 'entrada:ent|registerSelector:rs|state[1]'
+Slack : -1.479
+TNS   : -5.791
+
+Type  : Slow 1200mV 0C Model Setup 'entrada:ent|registerSelector:rs|state[2]'
+Slack : -1.429
+TNS   : -5.191
+
+Type  : Slow 1200mV 0C Model Setup 'entrada:ent|registerSelector:rs|state[0]'
+Slack : -1.167
+TNS   : -4.445
+
+Type  : Slow 1200mV 0C Model Setup 'entrada:ent|ClockDivider100Hz:cd100|tmp'
+Slack : -0.185
+TNS   : -0.535
+
+Type  : Slow 1200mV 0C Model Hold 'clk'
+Slack : 0.340
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'encoderC1'
+Slack : 0.353
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'entrada:ent|ClockDivider100kHz:cd100k|tmp'
+Slack : 0.353
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'entrada:ent|ClockDivider100Hz:cd100|tmp'
+Slack : 0.354
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'entrada:ent|ClockDivider10Hz:cd10|tmp'
+Slack : 0.507
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'entrada:ent|keypadEncoder:ke|dav'
+Slack : 0.517
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'entrada:ent|registerSelector:rs|state[0]'
+Slack : 0.998
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'entrada:ent|registerSelector:rs|state[2]'
+Slack : 1.122
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'entrada:ent|registerSelector:rs|enabler'
+Slack : 1.219
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'entrada:ent|registerSelector:rs|state[1]'
+Slack : 1.347
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Recovery 'entrada:ent|ClockDivider10Hz:cd10|tmp'
+Slack : -8.285
+TNS   : -257.136
+
+Type  : Slow 1200mV 0C Model Recovery 'encoderC1'
+Slack : -1.002
+TNS   : -11.668
+
+Type  : Slow 1200mV 0C Model Recovery 'entrada:ent|registerSelector:rs|state[1]'
+Slack : -0.850
+TNS   : -3.400
+
+Type  : Slow 1200mV 0C Model Recovery 'entrada:ent|registerSelector:rs|state[2]'
+Slack : -0.724
+TNS   : -2.868
+
+Type  : Slow 1200mV 0C Model Recovery 'entrada:ent|registerSelector:rs|state[0]'
+Slack : -0.491
+TNS   : -1.944
+
+Type  : Slow 1200mV 0C Model Removal 'entrada:ent|registerSelector:rs|state[0]'
+Slack : 0.854
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Removal 'encoderC1'
+Slack : 1.072
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Removal 'entrada:ent|registerSelector:rs|state[2]'
+Slack : 1.108
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Removal 'entrada:ent|registerSelector:rs|state[1]'
+Slack : 1.205
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Removal 'entrada:ent|ClockDivider10Hz:cd10|tmp'
+Slack : 1.719
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clk'
+Slack : -3.000
+TNS   : -130.215
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'encoderC1'
+Slack : -3.000
+TNS   : -20.990
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'entrada:ent|ClockDivider10Hz:cd10|tmp'
+Slack : -1.285
+TNS   : -110.510
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'entrada:ent|ClockDivider100kHz:cd100k|tmp'
+Slack : -1.285
+TNS   : -42.405
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'entrada:ent|registerSelector:rs|enabler'
+Slack : -1.285
+TNS   : -12.850
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'entrada:ent|ClockDivider100Hz:cd100|tmp'
+Slack : -1.285
+TNS   : -6.425
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'entrada:ent|keypadEncoder:ke|dav'
+Slack : -1.285
+TNS   : -6.425
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'entrada:ent|registerSelector:rs|state[0]'
+Slack : -1.285
+TNS   : -5.140
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'entrada:ent|registerSelector:rs|state[1]'
+Slack : -1.285
+TNS   : -5.140
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'entrada:ent|registerSelector:rs|state[2]'
+Slack : -1.285
+TNS   : -5.140
+
+Type  : Fast 1200mV 0C Model Setup 'entrada:ent|ClockDivider10Hz:cd10|tmp'
+Slack : -22.546
+TNS   : -577.407
+
+Type  : Fast 1200mV 0C Model Setup 'entrada:ent|ClockDivider100kHz:cd100k|tmp'
+Slack : -5.104
+TNS   : -31.054
+
+Type  : Fast 1200mV 0C Model Setup 'clk'
+Slack : -2.028
+TNS   : -100.994
+
+Type  : Fast 1200mV 0C Model Setup 'entrada:ent|registerSelector:rs|enabler'
+Slack : -1.805
+TNS   : -14.220
+
+Type  : Fast 1200mV 0C Model Setup 'entrada:ent|keypadEncoder:ke|dav'
+Slack : -1.347
+TNS   : -4.804
+
+Type  : Fast 1200mV 0C Model Setup 'encoderC1'
+Slack : -0.666
+TNS   : -1.085
+
+Type  : Fast 1200mV 0C Model Setup 'entrada:ent|registerSelector:rs|state[1]'
+Slack : -0.393
+TNS   : -1.484
+
+Type  : Fast 1200mV 0C Model Setup 'entrada:ent|registerSelector:rs|state[2]'
+Slack : -0.391
+TNS   : -1.279
+
+Type  : Fast 1200mV 0C Model Setup 'entrada:ent|registerSelector:rs|state[0]'
+Slack : -0.177
+TNS   : -0.572
+
+Type  : Fast 1200mV 0C Model Setup 'entrada:ent|ClockDivider100Hz:cd100|tmp'
+Slack : 0.340
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'clk'
+Slack : 0.175
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'entrada:ent|keypadEncoder:ke|dav'
+Slack : 0.175
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'encoderC1'
+Slack : 0.181
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'entrada:ent|ClockDivider100Hz:cd100|tmp'
+Slack : 0.181
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'entrada:ent|ClockDivider100kHz:cd100k|tmp'
+Slack : 0.182
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'entrada:ent|ClockDivider10Hz:cd10|tmp'
+Slack : 0.256
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'entrada:ent|registerSelector:rs|state[0]'
+Slack : 0.480
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'entrada:ent|registerSelector:rs|enabler'
+Slack : 0.599
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'entrada:ent|registerSelector:rs|state[2]'
+Slack : 0.617
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'entrada:ent|registerSelector:rs|state[1]'
+Slack : 0.709
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Recovery 'entrada:ent|ClockDivider10Hz:cd10|tmp'
+Slack : -3.877
+TNS   : -119.980
+
+Type  : Fast 1200mV 0C Model Recovery 'encoderC1'
+Slack : -0.105
+TNS   : -0.933
+
+Type  : Fast 1200mV 0C Model Recovery 'entrada:ent|registerSelector:rs|state[1]'
+Slack : -0.091
+TNS   : -0.364
+
+Type  : Fast 1200mV 0C Model Recovery 'entrada:ent|registerSelector:rs|state[2]'
+Slack : -0.038
+TNS   : -0.136
+
+Type  : Fast 1200mV 0C Model Recovery 'entrada:ent|registerSelector:rs|state[0]'
+Slack : 0.151
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'entrada:ent|registerSelector:rs|state[0]'
+Slack : 0.408
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'encoderC1'
+Slack : 0.517
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'entrada:ent|registerSelector:rs|state[2]'
+Slack : 0.605
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'entrada:ent|registerSelector:rs|state[1]'
+Slack : 0.640
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'entrada:ent|ClockDivider10Hz:cd10|tmp'
+Slack : 0.876
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clk'
+Slack : -3.000
+TNS   : -108.177
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'encoderC1'
+Slack : -3.000
+TNS   : -17.924
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'entrada:ent|ClockDivider10Hz:cd10|tmp'
+Slack : -1.000
+TNS   : -86.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'entrada:ent|ClockDivider100kHz:cd100k|tmp'
+Slack : -1.000
+TNS   : -33.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'entrada:ent|registerSelector:rs|enabler'
+Slack : -1.000
+TNS   : -10.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'entrada:ent|ClockDivider100Hz:cd100|tmp'
+Slack : -1.000
+TNS   : -5.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'entrada:ent|keypadEncoder:ke|dav'
+Slack : -1.000
+TNS   : -5.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'entrada:ent|registerSelector:rs|state[0]'
+Slack : -1.000
+TNS   : -4.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'entrada:ent|registerSelector:rs|state[1]'
+Slack : -1.000
+TNS   : -4.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'entrada:ent|registerSelector:rs|state[2]'
+Slack : -1.000
+TNS   : -4.000
+
+------------------------------------------------------------

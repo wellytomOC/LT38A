@@ -1,0 +1,33 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.std_logic_unsigned.all;
+
+entity sistema is 
+    Port(
+        clock: in std_logic;
+
+        vel_ref,vel_actual: in unsigned(9 downto 0);
+        direction_ref,direction_actual: in std_logic;
+
+        in1,in2: out std_logic;
+    );
+end entity;
+
+architecture behavior of sistema is 
+
+    signal E0,U0: unsigned := (others => '0');
+
+begin
+
+    process(clock)
+
+    begin
+
+    if(clock'event and clock='1') then
+
+        E0 := 
+
+    end if;
+
+
+end architecture;

@@ -40,6 +40,7 @@ void setup() {
   pinMode(IN2,OUTPUT);
 
   digitalWrite(IN2,LOW);
+  analogWrite(PWM_Pin,255);
 }
 
 void loop() {
@@ -61,6 +62,7 @@ void loop() {
   E0 = (float)(REF - RPM);
   U0 = U0 + Kp*E0;
 
+  // saturacoes
   if(U0 <=30)
     U0=30;
   if(U0 >=255)

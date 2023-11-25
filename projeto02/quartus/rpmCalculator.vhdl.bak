@@ -1,0 +1,48 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.std_logic_unsigned.all;
+use ieee.numeric_std.all;
+
+entity rpmCalculator is 
+    Port(
+        clock: in std_logic;
+
+        encoderC1,encoderC2: in std_logic;
+
+        rpm: out unsigned(9 downto 0);
+        direction_actual: out std_logic
+    );
+end entity;
+
+architecture behavior of rpmCalculator is 
+
+    signal calcRPM,PulseCount: unsigned := (others => '0');
+
+begin
+
+    process(clock,encoderC1,encoderC2)
+
+    begin
+
+        if(encoderC1'event and EncoderC1='1') then
+
+            PulseCount := PulseCount + 1;
+
+            if(encoderC2 = '1') then
+                direction_actual <= '1';
+            else
+                direction_actual <= '0';
+            end if;
+
+        end if;
+        
+        if(clock'event and clock='1') then
+            calcRPM := (PulseCount*600)/(400);
+            PulseCount := 0;
+        end if;
+
+         rpm <= calcRPM;
+        
+    end process;
+
+end architecture;
