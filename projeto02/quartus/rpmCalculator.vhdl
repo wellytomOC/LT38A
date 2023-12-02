@@ -16,8 +16,7 @@ end entity;
 
 architecture behavior of rpmCalculator is 
 
-    signal calcRPM: integer := 0;
-    signal count: integer :=0;
+    signal calcRPM: integer;
 
 begin
 		 
@@ -25,15 +24,13 @@ begin
     begin
         
         if(clock'event and clock='1') then
-            count <= count+1;
-            if(count>1) then
+            if(resetCount = '0') then
                 calcRPM <= (pulseCount*600)/(400);
-                count <= 0;
+  
+                rpm <= to_unsigned(calcRPM,10);
             end if;
             resetCount <= not resetCount;
         end if;
-
-         rpm <= to_unsigned(calcRPM,10);
         
     end process;
 

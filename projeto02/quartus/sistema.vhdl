@@ -18,7 +18,7 @@ architecture behavior of sistema is
 
     signal E0,U0: integer := 0;
     signal KPnum: integer := 1;
-    signal KPden: integer := 10;
+    signal KPden: integer := 12;
     signal count: integer := 0;
 	 signal pwm: std_logic;
 
@@ -31,28 +31,32 @@ begin
         -- control law
         if(clock10hz'event and clock10hz='1') then
             E0 <= to_integer(vel_ref) - to_integer(vel_actual);
-            U0 <= U0 + E0*KPnum/KPden;				
+            U0 <= U0 + (E0/KPden);	
+
+                -- saturations
+            if(U0 > 99) then
+                U0 <= 99;
+            end if;
+            if(U0 <20) then
+                U0 <= 20;
+            end if;			
         end if;
 		
-		-- saturations
-        if(U0 >= 99) then
-            U0 <= 99;
-        end if;
-        if(U0 <=30) then
-            U0 <= 30;
-        end if;
+		
 
         -- pwm generator
         if(clock100khz'event and clock100khz='1') then
 
             count <= count+1;
-				
-            if(count >= U0) then
-                pwm <= '0';
-            end if;
-            if(count >= 100) then
+
+			if(count < 100) then
+                if(count <= U0) then
+                    pwm <= '1';
+                else
+                    pwm <= '0';
+                end if;
+            else
                 count <= 0;
-                pwm <= '1';
             end if;
         end if;
 

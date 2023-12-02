@@ -1,5 +1,5 @@
 Analysis & Synthesis report for proj02
-Fri Nov 24 21:25:48 2023
+Fri Dec 01 14:00:18 2023
 Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 
 
@@ -22,10 +22,10 @@ Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
  14. Parameter Settings for Inferred Entity Instance: saida:sai|sevenSeg10bitDec:ss10dActual|lpm_divide:Div1
  15. Parameter Settings for Inferred Entity Instance: saida:sai|sevenSeg10bitDec:ss10dActual|lpm_divide:Div0
  16. Parameter Settings for Inferred Entity Instance: saida:sai|sevenSeg10bitDec:ss10dRef|lpm_mult:Mult0
- 17. Parameter Settings for Inferred Entity Instance: entrada:ent|rpmCalculator:rpmCalc|lpm_mult:Mult0
- 18. Parameter Settings for Inferred Entity Instance: entrada:ent|rpmCalculator:rpmCalc|lpm_divide:Div0
- 19. Parameter Settings for Inferred Entity Instance: saida:sai|sevenSeg10bitDec:ss10dActual|lpm_mult:Mult0
- 20. Parameter Settings for Inferred Entity Instance: entrada:ent|bitConcat:bcA|lpm_mult:Mult0
+ 17. Parameter Settings for Inferred Entity Instance: saida:sai|sevenSeg10bitDec:ss10dActual|lpm_mult:Mult0
+ 18. Parameter Settings for Inferred Entity Instance: entrada:ent|bitConcat:bcA|lpm_mult:Mult0
+ 19. Parameter Settings for Inferred Entity Instance: entrada:ent|rpmCalculator:rpmCalc|lpm_mult:Mult0
+ 20. Parameter Settings for Inferred Entity Instance: entrada:ent|rpmCalculator:rpmCalc|lpm_divide:Div0
  21. Parameter Settings for Inferred Entity Instance: sistema:sis|lpm_divide:Div0
  22. lpm_mult Parameter Settings by Entity Instance
  23. Post-Synthesis Netlist Statistics for Top Partition
@@ -57,15 +57,15 @@ agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Fri Nov 24 21:25:48 2023       ;
+; Analysis & Synthesis Status        ; Successful - Fri Dec 01 14:00:18 2023       ;
 ; Quartus Prime Version              ; 17.0.0 Build 595 04/25/2017 SJ Lite Edition ;
 ; Revision Name                      ; proj02                                      ;
 ; Top-level Entity Name              ; arquitetura                                 ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 1,639                                       ;
-;     Total combinational functions  ; 1,630                                       ;
-;     Dedicated logic registers      ; 264                                         ;
-; Total registers                    ; 264                                         ;
+; Total logic elements               ; 1,596                                       ;
+;     Total combinational functions  ; 1,577                                       ;
+;     Dedicated logic registers      ; 242                                         ;
+; Total registers                    ; 242                                         ;
 ; Total pins                         ; 62                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
@@ -257,20 +257,20 @@ agreement for further details.
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 1,639     ;
+; Estimated Total logic elements              ; 1,596     ;
 ;                                             ;           ;
-; Total combinational functions               ; 1630      ;
+; Total combinational functions               ; 1577      ;
 ; Logic element usage by number of LUT inputs ;           ;
-;     -- 4 input functions                    ; 471       ;
-;     -- 3 input functions                    ; 445       ;
-;     -- <=2 input functions                  ; 714       ;
+;     -- 4 input functions                    ; 446       ;
+;     -- 3 input functions                    ; 478       ;
+;     -- <=2 input functions                  ; 653       ;
 ;                                             ;           ;
 ; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 1051      ;
-;     -- arithmetic mode                      ; 579       ;
+;     -- normal mode                          ; 1040      ;
+;     -- arithmetic mode                      ; 537       ;
 ;                                             ;           ;
-; Total registers                             ; 264       ;
-;     -- Dedicated logic registers            ; 264       ;
+; Total registers                             ; 242       ;
+;     -- Dedicated logic registers            ; 242       ;
 ;     -- I/O registers                        ; 0         ;
 ;                                             ;           ;
 ; I/O pins                                    ; 62        ;
@@ -279,8 +279,8 @@ agreement for further details.
 ;                                             ;           ;
 ; Maximum fan-out node                        ; clk~input ;
 ; Maximum fan-out                             ; 99        ;
-; Total fan-out                               ; 5342      ;
-; Average fan-out                             ; 2.65      ;
+; Total fan-out                               ; 5126      ;
+; Average fan-out                             ; 2.64      ;
 +---------------------------------------------+-----------+
 
 
@@ -289,10 +289,10 @@ agreement for further details.
 +------------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
 ; Compilation Hierarchy Node                           ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                                   ; Entity Name         ; Library Name ;
 +------------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
-; |arquitetura                                         ; 1630 (0)            ; 264 (0)                   ; 0           ; 0            ; 0       ; 0         ; 62   ; 0            ; |arquitetura                                                                                                                                                          ; arquitetura         ; work         ;
-;    |entrada:ent|                                     ; 752 (1)             ; 188 (0)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |arquitetura|entrada:ent                                                                                                                                              ; entrada             ; work         ;
+; |arquitetura                                         ; 1577 (0)            ; 242 (0)                   ; 0           ; 0            ; 0       ; 0         ; 62   ; 0            ; |arquitetura                                                                                                                                                          ; arquitetura         ; work         ;
+;    |entrada:ent|                                     ; 709 (1)             ; 166 (0)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |arquitetura|entrada:ent                                                                                                                                              ; entrada             ; work         ;
 ;       |ClockDivider100Hz:cd100|                      ; 75 (75)             ; 33 (33)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |arquitetura|entrada:ent|ClockDivider100Hz:cd100                                                                                                                      ; ClockDivider100Hz   ; work         ;
-;       |ClockDivider100kHz:cd100k|                    ; 76 (76)             ; 33 (33)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |arquitetura|entrada:ent|ClockDivider100kHz:cd100k                                                                                                                    ; ClockDivider100kHz  ; work         ;
+;       |ClockDivider100kHz:cd100k|                    ; 75 (75)             ; 33 (33)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |arquitetura|entrada:ent|ClockDivider100kHz:cd100k                                                                                                                    ; ClockDivider100kHz  ; work         ;
 ;       |ClockDivider10Hz:cd10|                        ; 76 (76)             ; 33 (33)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |arquitetura|entrada:ent|ClockDivider10Hz:cd10                                                                                                                        ; ClockDivider10Hz    ; work         ;
 ;       |Register_10Bits:R4|                           ; 9 (9)               ; 10 (10)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |arquitetura|entrada:ent|Register_10Bits:R4                                                                                                                           ; Register_10Bits     ; work         ;
 ;       |Register_4Bits:R1|                            ; 0 (0)               ; 4 (4)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |arquitetura|entrada:ent|Register_4Bits:R1                                                                                                                            ; Register_4Bits      ; work         ;
@@ -301,18 +301,18 @@ agreement for further details.
 ;       |bitConcat:bcA|                                ; 18 (13)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |arquitetura|entrada:ent|bitConcat:bcA                                                                                                                                ; bitConcat           ; work         ;
 ;          |lpm_mult:Mult0|                            ; 5 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |arquitetura|entrada:ent|bitConcat:bcA|lpm_mult:Mult0                                                                                                                 ; lpm_mult            ; work         ;
 ;             |multcore:mult_core|                     ; 5 (5)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |arquitetura|entrada:ent|bitConcat:bcA|lpm_mult:Mult0|multcore:mult_core                                                                                              ; multcore            ; work         ;
-;       |encoderCounter:ec|                            ; 14 (14)             ; 14 (14)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |arquitetura|entrada:ent|encoderCounter:ec                                                                                                                            ; encoderCounter      ; work         ;
+;       |encoderCounter:ec|                            ; 13 (13)             ; 14 (14)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |arquitetura|entrada:ent|encoderCounter:ec                                                                                                                            ; encoderCounter      ; work         ;
 ;       |keypadEncoder:ke|                             ; 14 (2)              ; 5 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |arquitetura|entrada:ent|keypadEncoder:ke                                                                                                                             ; keypadEncoder       ; work         ;
 ;          |colEncoder:CE|                             ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |arquitetura|entrada:ent|keypadEncoder:ke|colEncoder:CE                                                                                                               ; colEncoder          ; work         ;
 ;          |ringCounter:RC|                            ; 4 (4)               ; 4 (4)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |arquitetura|entrada:ent|keypadEncoder:ke|ringCounter:RC                                                                                                              ; ringCounter         ; work         ;
 ;          |rowAndColEncoder:RaCE|                     ; 4 (4)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |arquitetura|entrada:ent|keypadEncoder:ke|rowAndColEncoder:RaCE                                                                                                       ; rowAndColEncoder    ; work         ;
 ;          |rowEncoder:RE|                             ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |arquitetura|entrada:ent|keypadEncoder:ke|rowEncoder:RE                                                                                                               ; rowEncoder          ; work         ;
 ;       |registerSelector:rs|                          ; 5 (5)               ; 5 (5)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |arquitetura|entrada:ent|registerSelector:rs                                                                                                                          ; registerSelector    ; work         ;
-;       |rpmCalculator:rpmCalc|                        ; 464 (59)            ; 43 (43)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |arquitetura|entrada:ent|rpmCalculator:rpmCalc                                                                                                                        ; rpmCalculator       ; work         ;
-;          |lpm_divide:Div0|                           ; 345 (0)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |arquitetura|entrada:ent|rpmCalculator:rpmCalc|lpm_divide:Div0                                                                                                        ; lpm_divide          ; work         ;
-;             |lpm_divide_5jm:auto_generated|          ; 345 (0)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |arquitetura|entrada:ent|rpmCalculator:rpmCalc|lpm_divide:Div0|lpm_divide_5jm:auto_generated                                                                          ; lpm_divide_5jm      ; work         ;
-;                |sign_div_unsign_tlh:divider|         ; 345 (0)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |arquitetura|entrada:ent|rpmCalculator:rpmCalc|lpm_divide:Div0|lpm_divide_5jm:auto_generated|sign_div_unsign_tlh:divider                                              ; sign_div_unsign_tlh ; work         ;
-;                   |alt_u_div_e7f:divider|            ; 345 (345)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |arquitetura|entrada:ent|rpmCalculator:rpmCalc|lpm_divide:Div0|lpm_divide_5jm:auto_generated|sign_div_unsign_tlh:divider|alt_u_div_e7f:divider                        ; alt_u_div_e7f       ; work         ;
+;       |rpmCalculator:rpmCalc|                        ; 423 (11)            ; 21 (21)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |arquitetura|entrada:ent|rpmCalculator:rpmCalc                                                                                                                        ; rpmCalculator       ; work         ;
+;          |lpm_divide:Div0|                           ; 352 (0)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |arquitetura|entrada:ent|rpmCalculator:rpmCalc|lpm_divide:Div0                                                                                                        ; lpm_divide          ; work         ;
+;             |lpm_divide_5jm:auto_generated|          ; 352 (0)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |arquitetura|entrada:ent|rpmCalculator:rpmCalc|lpm_divide:Div0|lpm_divide_5jm:auto_generated                                                                          ; lpm_divide_5jm      ; work         ;
+;                |sign_div_unsign_tlh:divider|         ; 352 (0)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |arquitetura|entrada:ent|rpmCalculator:rpmCalc|lpm_divide:Div0|lpm_divide_5jm:auto_generated|sign_div_unsign_tlh:divider                                              ; sign_div_unsign_tlh ; work         ;
+;                   |alt_u_div_e7f:divider|            ; 352 (352)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |arquitetura|entrada:ent|rpmCalculator:rpmCalc|lpm_divide:Div0|lpm_divide_5jm:auto_generated|sign_div_unsign_tlh:divider|alt_u_div_e7f:divider                        ; alt_u_div_e7f       ; work         ;
 ;          |lpm_mult:Mult0|                            ; 60 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |arquitetura|entrada:ent|rpmCalculator:rpmCalc|lpm_mult:Mult0                                                                                                         ; lpm_mult            ; work         ;
 ;             |multcore:mult_core|                     ; 60 (29)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |arquitetura|entrada:ent|rpmCalculator:rpmCalc|lpm_mult:Mult0|multcore:mult_core                                                                                      ; multcore            ; work         ;
 ;                |mpar_add:padder|                     ; 31 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |arquitetura|entrada:ent|rpmCalculator:rpmCalc|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder                                                                      ; mpar_add            ; work         ;
@@ -323,7 +323,7 @@ agreement for further details.
 ;                   |mpar_add:sub_par_add|             ; 12 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |arquitetura|entrada:ent|rpmCalculator:rpmCalc|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add                                                 ; mpar_add            ; work         ;
 ;                      |lpm_add_sub:adder[0]|          ; 12 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |arquitetura|entrada:ent|rpmCalculator:rpmCalc|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]                            ; lpm_add_sub         ; work         ;
 ;                         |add_sub_rgh:auto_generated| ; 12 (12)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |arquitetura|entrada:ent|rpmCalculator:rpmCalc|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]|add_sub_rgh:auto_generated ; add_sub_rgh         ; work         ;
-;    |saida:sai|                                       ; 570 (48)            ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |arquitetura|saida:sai                                                                                                                                                ; saida               ; work         ;
+;    |saida:sai|                                       ; 572 (50)            ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |arquitetura|saida:sai                                                                                                                                                ; saida               ; work         ;
 ;       |sevenSeg10bitDec:ss10dActual|                 ; 261 (35)            ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |arquitetura|saida:sai|sevenSeg10bitDec:ss10dActual                                                                                                                   ; sevenSeg10bitDec    ; work         ;
 ;          |lpm_divide:Div0|                           ; 69 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |arquitetura|saida:sai|sevenSeg10bitDec:ss10dActual|lpm_divide:Div0                                                                                                   ; lpm_divide          ; work         ;
 ;             |lpm_divide_vim:auto_generated|          ; 69 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |arquitetura|saida:sai|sevenSeg10bitDec:ss10dActual|lpm_divide:Div0|lpm_divide_vim:auto_generated                                                                     ; lpm_divide_vim      ; work         ;
@@ -351,12 +351,12 @@ agreement for further details.
 ;       |sevenSegDecoder:ssdAQ1|                       ; 4 (4)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |arquitetura|saida:sai|sevenSegDecoder:ssdAQ1                                                                                                                         ; sevenSegDecoder     ; work         ;
 ;       |sevenSegDecoder:ssdAQ2|                       ; 4 (4)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |arquitetura|saida:sai|sevenSegDecoder:ssdAQ2                                                                                                                         ; sevenSegDecoder     ; work         ;
 ;       |sevenSegDecoder:ssdAQ3|                       ; 4 (4)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |arquitetura|saida:sai|sevenSegDecoder:ssdAQ3                                                                                                                         ; sevenSegDecoder     ; work         ;
-;    |sistema:sis|                                     ; 308 (154)           ; 76 (76)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |arquitetura|sistema:sis                                                                                                                                              ; sistema             ; work         ;
-;       |lpm_divide:Div0|                              ; 154 (0)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |arquitetura|sistema:sis|lpm_divide:Div0                                                                                                                              ; lpm_divide          ; work         ;
-;          |lpm_divide_q0p:auto_generated|             ; 154 (0)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |arquitetura|sistema:sis|lpm_divide:Div0|lpm_divide_q0p:auto_generated                                                                                                ; lpm_divide_q0p      ; work         ;
-;             |abs_divider_lbg:divider|                ; 154 (24)            ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |arquitetura|sistema:sis|lpm_divide:Div0|lpm_divide_q0p:auto_generated|abs_divider_lbg:divider                                                                        ; abs_divider_lbg     ; work         ;
-;                |alt_u_div_67f:divider|               ; 117 (117)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |arquitetura|sistema:sis|lpm_divide:Div0|lpm_divide_q0p:auto_generated|abs_divider_lbg:divider|alt_u_div_67f:divider                                                  ; alt_u_div_67f       ; work         ;
-;                |lpm_abs_i0a:my_abs_num|              ; 13 (13)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |arquitetura|sistema:sis|lpm_divide:Div0|lpm_divide_q0p:auto_generated|abs_divider_lbg:divider|lpm_abs_i0a:my_abs_num                                                 ; lpm_abs_i0a         ; work         ;
+;    |sistema:sis|                                     ; 296 (171)           ; 76 (76)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |arquitetura|sistema:sis                                                                                                                                              ; sistema             ; work         ;
+;       |lpm_divide:Div0|                              ; 125 (0)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |arquitetura|sistema:sis|lpm_divide:Div0                                                                                                                              ; lpm_divide          ; work         ;
+;          |lpm_divide_q0p:auto_generated|             ; 125 (0)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |arquitetura|sistema:sis|lpm_divide:Div0|lpm_divide_q0p:auto_generated                                                                                                ; lpm_divide_q0p      ; work         ;
+;             |abs_divider_lbg:divider|                ; 125 (20)            ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |arquitetura|sistema:sis|lpm_divide:Div0|lpm_divide_q0p:auto_generated|abs_divider_lbg:divider                                                                        ; abs_divider_lbg     ; work         ;
+;                |alt_u_div_67f:divider|               ; 93 (93)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |arquitetura|sistema:sis|lpm_divide:Div0|lpm_divide_q0p:auto_generated|abs_divider_lbg:divider|alt_u_div_67f:divider                                                  ; alt_u_div_67f       ; work         ;
+;                |lpm_abs_i0a:my_abs_num|              ; 12 (12)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |arquitetura|sistema:sis|lpm_divide:Div0|lpm_divide_q0p:auto_generated|abs_divider_lbg:divider|lpm_abs_i0a:my_abs_num                                                 ; lpm_abs_i0a         ; work         ;
 +------------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -377,12 +377,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 264   ;
-; Number of registers using Synchronous Clear  ; 64    ;
+; Total registers                              ; 242   ;
+; Number of registers using Synchronous Clear  ; 32    ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 70    ;
+; Number of registers using Asynchronous Clear ; 38    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 16    ;
+; Number of registers using Clock Enable       ; 27    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -392,11 +392,11 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +------------------------------------------------+---------+
 ; Inverted Register                              ; Fan out ;
 +------------------------------------------------+---------+
-; sistema:sis|U0[1]                              ; 4       ;
 ; entrada:ent|ClockDivider100Hz:cd100|count[0]   ; 2       ;
 ; entrada:ent|ClockDivider100kHz:cd100k|count[0] ; 2       ;
 ; entrada:ent|registerSelector:rs|state[2]       ; 6       ;
 ; entrada:ent|registerSelector:rs|state[1]       ; 6       ;
+; entrada:ent|rpmCalculator:rpmCalc|calcRPM[0]   ; 1       ;
 ; entrada:ent|ClockDivider10Hz:cd10|count[0]     ; 2       ;
 ; Total number of inverted registers = 6         ;         ;
 +------------------------------------------------+---------+
@@ -407,9 +407,10 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                  ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------+
+; 3:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; Yes        ; |arquitetura|sistema:sis|U0[30]                             ;
 ; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |arquitetura|entrada:ent|registerSelector:rs|state[2]       ;
 ; 5:1                ; 3 bits    ; 9 LEs         ; 6 LEs                ; 3 LEs                  ; No         ; |arquitetura|saida:sai|sevenSeg10bitDec:ss10dActual|ssA0[5] ;
-; 5:1                ; 3 bits    ; 9 LEs         ; 6 LEs                ; 3 LEs                  ; No         ; |arquitetura|saida:sai|sevenSeg10bitDec:ss10dActual|ssA1[5] ;
+; 5:1                ; 3 bits    ; 9 LEs         ; 6 LEs                ; 3 LEs                  ; No         ; |arquitetura|saida:sai|sevenSeg10bitDec:ss10dActual|ssA1[0] ;
 ; 5:1                ; 3 bits    ; 9 LEs         ; 6 LEs                ; 3 LEs                  ; No         ; |arquitetura|saida:sai|sevenSeg10bitDec:ss10dActual|ssA2[0] ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------+
 
@@ -541,64 +542,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+---------------------------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: entrada:ent|rpmCalculator:rpmCalc|lpm_mult:Mult0 ;
-+------------------------------------------------+--------------+-----------------------------------+
-; Parameter Name                                 ; Value        ; Type                              ;
-+------------------------------------------------+--------------+-----------------------------------+
-; AUTO_CARRY_CHAINS                              ; ON           ; AUTO_CARRY                        ;
-; IGNORE_CARRY_BUFFERS                           ; OFF          ; IGNORE_CARRY                      ;
-; AUTO_CASCADE_CHAINS                            ; ON           ; AUTO_CASCADE                      ;
-; IGNORE_CASCADE_BUFFERS                         ; OFF          ; IGNORE_CASCADE                    ;
-; LPM_WIDTHA                                     ; 13           ; Untyped                           ;
-; LPM_WIDTHB                                     ; 10           ; Untyped                           ;
-; LPM_WIDTHP                                     ; 23           ; Untyped                           ;
-; LPM_WIDTHR                                     ; 23           ; Untyped                           ;
-; LPM_WIDTHS                                     ; 1            ; Untyped                           ;
-; LPM_REPRESENTATION                             ; UNSIGNED     ; Untyped                           ;
-; LPM_PIPELINE                                   ; 0            ; Untyped                           ;
-; LATENCY                                        ; 0            ; Untyped                           ;
-; INPUT_A_IS_CONSTANT                            ; NO           ; Untyped                           ;
-; INPUT_B_IS_CONSTANT                            ; YES          ; Untyped                           ;
-; USE_EAB                                        ; OFF          ; Untyped                           ;
-; MAXIMIZE_SPEED                                 ; 6            ; Untyped                           ;
-; DEVICE_FAMILY                                  ; Cyclone IV E ; Untyped                           ;
-; CARRY_CHAIN                                    ; MANUAL       ; Untyped                           ;
-; APEX20K_TECHNOLOGY_MAPPER                      ; LUT          ; TECH_MAPPER_APEX20K               ;
-; DEDICATED_MULTIPLIER_CIRCUITRY                 ; AUTO         ; Untyped                           ;
-; DEDICATED_MULTIPLIER_MIN_INPUT_WIDTH_FOR_AUTO  ; 0            ; Untyped                           ;
-; DEDICATED_MULTIPLIER_MIN_OUTPUT_WIDTH_FOR_AUTO ; 0            ; Untyped                           ;
-; CBXI_PARAMETER                                 ; NOTHING      ; Untyped                           ;
-; INPUT_A_FIXED_VALUE                            ; Bx           ; Untyped                           ;
-; INPUT_B_FIXED_VALUE                            ; Bx           ; Untyped                           ;
-; USE_AHDL_IMPLEMENTATION                        ; OFF          ; Untyped                           ;
-+------------------------------------------------+--------------+-----------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+----------------------------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: entrada:ent|rpmCalculator:rpmCalc|lpm_divide:Div0 ;
-+------------------------+----------------+----------------------------------------------------------+
-; Parameter Name         ; Value          ; Type                                                     ;
-+------------------------+----------------+----------------------------------------------------------+
-; LPM_WIDTHN             ; 23             ; Untyped                                                  ;
-; LPM_WIDTHD             ; 9              ; Untyped                                                  ;
-; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                                  ;
-; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                                  ;
-; LPM_PIPELINE           ; 0              ; Untyped                                                  ;
-; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                                  ;
-; MAXIMIZE_SPEED         ; 5              ; Untyped                                                  ;
-; CBXI_PARAMETER         ; lpm_divide_5jm ; Untyped                                                  ;
-; CARRY_CHAIN            ; MANUAL         ; Untyped                                                  ;
-; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                                  ;
-; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                               ;
-; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                             ;
-; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                             ;
-; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                           ;
-+------------------------+----------------+----------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
 +--------------------------------------------------------------------------------------------------------+
 ; Parameter Settings for Inferred Entity Instance: saida:sai|sevenSeg10bitDec:ss10dActual|lpm_mult:Mult0 ;
 +------------------------------------------------+--------------+----------------------------------------+
@@ -669,6 +612,64 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
++---------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: entrada:ent|rpmCalculator:rpmCalc|lpm_mult:Mult0 ;
++------------------------------------------------+--------------+-----------------------------------+
+; Parameter Name                                 ; Value        ; Type                              ;
++------------------------------------------------+--------------+-----------------------------------+
+; AUTO_CARRY_CHAINS                              ; ON           ; AUTO_CARRY                        ;
+; IGNORE_CARRY_BUFFERS                           ; OFF          ; IGNORE_CARRY                      ;
+; AUTO_CASCADE_CHAINS                            ; ON           ; AUTO_CASCADE                      ;
+; IGNORE_CASCADE_BUFFERS                         ; OFF          ; IGNORE_CASCADE                    ;
+; LPM_WIDTHA                                     ; 13           ; Untyped                           ;
+; LPM_WIDTHB                                     ; 10           ; Untyped                           ;
+; LPM_WIDTHP                                     ; 23           ; Untyped                           ;
+; LPM_WIDTHR                                     ; 23           ; Untyped                           ;
+; LPM_WIDTHS                                     ; 1            ; Untyped                           ;
+; LPM_REPRESENTATION                             ; UNSIGNED     ; Untyped                           ;
+; LPM_PIPELINE                                   ; 0            ; Untyped                           ;
+; LATENCY                                        ; 0            ; Untyped                           ;
+; INPUT_A_IS_CONSTANT                            ; NO           ; Untyped                           ;
+; INPUT_B_IS_CONSTANT                            ; YES          ; Untyped                           ;
+; USE_EAB                                        ; OFF          ; Untyped                           ;
+; MAXIMIZE_SPEED                                 ; 6            ; Untyped                           ;
+; DEVICE_FAMILY                                  ; Cyclone IV E ; Untyped                           ;
+; CARRY_CHAIN                                    ; MANUAL       ; Untyped                           ;
+; APEX20K_TECHNOLOGY_MAPPER                      ; LUT          ; TECH_MAPPER_APEX20K               ;
+; DEDICATED_MULTIPLIER_CIRCUITRY                 ; AUTO         ; Untyped                           ;
+; DEDICATED_MULTIPLIER_MIN_INPUT_WIDTH_FOR_AUTO  ; 0            ; Untyped                           ;
+; DEDICATED_MULTIPLIER_MIN_OUTPUT_WIDTH_FOR_AUTO ; 0            ; Untyped                           ;
+; CBXI_PARAMETER                                 ; NOTHING      ; Untyped                           ;
+; INPUT_A_FIXED_VALUE                            ; Bx           ; Untyped                           ;
+; INPUT_B_FIXED_VALUE                            ; Bx           ; Untyped                           ;
+; USE_AHDL_IMPLEMENTATION                        ; OFF          ; Untyped                           ;
++------------------------------------------------+--------------+-----------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: entrada:ent|rpmCalculator:rpmCalc|lpm_divide:Div0 ;
++------------------------+----------------+----------------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                                     ;
++------------------------+----------------+----------------------------------------------------------+
+; LPM_WIDTHN             ; 23             ; Untyped                                                  ;
+; LPM_WIDTHD             ; 9              ; Untyped                                                  ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                                  ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                                  ;
+; LPM_PIPELINE           ; 0              ; Untyped                                                  ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                                  ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                                  ;
+; CBXI_PARAMETER         ; lpm_divide_5jm ; Untyped                                                  ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                                  ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                                  ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                               ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                             ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                             ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                           ;
++------------------------+----------------+----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
 +------------------------------------------------------------------------------+
 ; Parameter Settings for Inferred Entity Instance: sistema:sis|lpm_divide:Div0 ;
 +------------------------+----------------+------------------------------------+
@@ -709,17 +710,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;     -- DEDICATED_MULTIPLIER_CIRCUITRY ; AUTO                                                  ;
 ;     -- INPUT_A_FIXED_VALUE            ; Bx                                                    ;
 ;     -- INPUT_B_FIXED_VALUE            ; Bx                                                    ;
-; Entity Instance                       ; entrada:ent|rpmCalculator:rpmCalc|lpm_mult:Mult0      ;
-;     -- LPM_WIDTHA                     ; 13                                                    ;
-;     -- LPM_WIDTHB                     ; 10                                                    ;
-;     -- LPM_WIDTHP                     ; 23                                                    ;
-;     -- LPM_REPRESENTATION             ; UNSIGNED                                              ;
-;     -- INPUT_A_IS_CONSTANT            ; NO                                                    ;
-;     -- INPUT_B_IS_CONSTANT            ; YES                                                   ;
-;     -- USE_EAB                        ; OFF                                                   ;
-;     -- DEDICATED_MULTIPLIER_CIRCUITRY ; AUTO                                                  ;
-;     -- INPUT_A_FIXED_VALUE            ; Bx                                                    ;
-;     -- INPUT_B_FIXED_VALUE            ; Bx                                                    ;
 ; Entity Instance                       ; saida:sai|sevenSeg10bitDec:ss10dActual|lpm_mult:Mult0 ;
 ;     -- LPM_WIDTHA                     ; 4                                                     ;
 ;     -- LPM_WIDTHB                     ; 7                                                     ;
@@ -742,6 +732,17 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;     -- DEDICATED_MULTIPLIER_CIRCUITRY ; AUTO                                                  ;
 ;     -- INPUT_A_FIXED_VALUE            ; Bx                                                    ;
 ;     -- INPUT_B_FIXED_VALUE            ; Bx                                                    ;
+; Entity Instance                       ; entrada:ent|rpmCalculator:rpmCalc|lpm_mult:Mult0      ;
+;     -- LPM_WIDTHA                     ; 13                                                    ;
+;     -- LPM_WIDTHB                     ; 10                                                    ;
+;     -- LPM_WIDTHP                     ; 23                                                    ;
+;     -- LPM_REPRESENTATION             ; UNSIGNED                                              ;
+;     -- INPUT_A_IS_CONSTANT            ; NO                                                    ;
+;     -- INPUT_B_IS_CONSTANT            ; YES                                                   ;
+;     -- USE_EAB                        ; OFF                                                   ;
+;     -- DEDICATED_MULTIPLIER_CIRCUITRY ; AUTO                                                  ;
+;     -- INPUT_A_FIXED_VALUE            ; Bx                                                    ;
+;     -- INPUT_B_FIXED_VALUE            ; Bx                                                    ;
 +---------------------------------------+-------------------------------------------------------+
 
 
@@ -751,26 +752,26 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 62                          ;
-; cycloneiii_ff         ; 264                         ;
-;     CLR               ; 70                          ;
-;     ENA               ; 16                          ;
-;     SCLR              ; 64                          ;
-;     plain             ; 114                         ;
+; cycloneiii_ff         ; 242                         ;
+;     CLR               ; 38                          ;
+;     ENA               ; 27                          ;
+;     SCLR              ; 32                          ;
+;     plain             ; 145                         ;
 ; cycloneiii_io_obuf    ; 42                          ;
-; cycloneiii_lcell_comb ; 1630                        ;
-;     arith             ; 579                         ;
-;         1 data inputs ; 7                           ;
-;         2 data inputs ; 224                         ;
-;         3 data inputs ; 348                         ;
-;     normal            ; 1051                        ;
+; cycloneiii_lcell_comb ; 1577                        ;
+;     arith             ; 537                         ;
+;         1 data inputs ; 4                           ;
+;         2 data inputs ; 191                         ;
+;         3 data inputs ; 342                         ;
+;     normal            ; 1040                        ;
 ;         0 data inputs ; 54                          ;
-;         1 data inputs ; 23                          ;
-;         2 data inputs ; 406                         ;
-;         3 data inputs ; 97                          ;
-;         4 data inputs ; 471                         ;
+;         1 data inputs ; 22                          ;
+;         2 data inputs ; 382                         ;
+;         3 data inputs ; 136                         ;
+;         4 data inputs ; 446                         ;
 ;                       ;                             ;
 ; Max LUT depth         ; 45.30                       ;
-; Average LUT depth     ; 25.65                       ;
+; Average LUT depth     ; 26.73                       ;
 +-----------------------+-----------------------------+
 
 
@@ -779,7 +780,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:02     ;
+; Top            ; 00:00:01     ;
 +----------------+--------------+
 
 
@@ -789,7 +790,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
-    Info: Processing started: Fri Nov 24 21:25:38 2023
+    Info: Processing started: Fri Dec 01 14:00:09 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off proj02 -c proj02
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
@@ -893,7 +894,6 @@ Info (12128): Elaborating entity "encoderCounter" for hierarchy "entrada:ent|enc
 Warning (10492): VHDL Process Statement warning at encoderCounter.vhdl(25): signal "resetCount" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/welly/Documents/GitHub/LT38A/projeto02/quartus/encoderCounter.vhdl Line: 25
 Warning (10492): VHDL Process Statement warning at encoderCounter.vhdl(38): signal "pulseCount" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/welly/Documents/GitHub/LT38A/projeto02/quartus/encoderCounter.vhdl Line: 38
 Info (12128): Elaborating entity "rpmCalculator" for hierarchy "entrada:ent|rpmCalculator:rpmCalc" File: C:/Users/welly/Documents/GitHub/LT38A/projeto02/quartus/entrada.vhdl Line: 140
-Warning (10492): VHDL Process Statement warning at rpmCalculator.vhdl(36): signal "calcRPM" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/welly/Documents/GitHub/LT38A/projeto02/quartus/rpmCalculator.vhdl Line: 36
 Info (12128): Elaborating entity "ClockDivider100kHz" for hierarchy "entrada:ent|ClockDivider100kHz:cd100k" File: C:/Users/welly/Documents/GitHub/LT38A/projeto02/quartus/entrada.vhdl Line: 142
 Warning (10540): VHDL Signal Declaration warning at clockdivider100kHz.vhdl(15): used explicit default value for signal "oscillator" because signal was never assigned a value File: C:/Users/welly/Documents/GitHub/LT38A/projeto02/quartus/clockdivider100kHz.vhdl Line: 15
 Warning (10540): VHDL Signal Declaration warning at clockdivider100kHz.vhdl(16): used explicit default value for signal "newfrequency" because signal was never assigned a value File: C:/Users/welly/Documents/GitHub/LT38A/projeto02/quartus/clockdivider100kHz.vhdl Line: 16
@@ -902,13 +902,10 @@ Warning (10492): VHDL Process Statement warning at clockdivider100kHz.vhdl(23): 
 Warning (10492): VHDL Process Statement warning at clockdivider100kHz.vhdl(23): signal "newfrequency" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/welly/Documents/GitHub/LT38A/projeto02/quartus/clockdivider100kHz.vhdl Line: 23
 Warning (10492): VHDL Process Statement warning at clockdivider100kHz.vhdl(35): signal "tmp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/welly/Documents/GitHub/LT38A/projeto02/quartus/clockdivider100kHz.vhdl Line: 35
 Info (12128): Elaborating entity "sistema" for hierarchy "sistema:sis" File: C:/Users/welly/Documents/GitHub/LT38A/projeto02/quartus/arquitetura.vhdl Line: 80
-Warning (10540): VHDL Signal Declaration warning at sistema.vhdl(20): used explicit default value for signal "KPnum" because signal was never assigned a value File: C:/Users/welly/Documents/GitHub/LT38A/projeto02/quartus/sistema.vhdl Line: 20
 Warning (10540): VHDL Signal Declaration warning at sistema.vhdl(21): used explicit default value for signal "KPden" because signal was never assigned a value File: C:/Users/welly/Documents/GitHub/LT38A/projeto02/quartus/sistema.vhdl Line: 21
-Warning (10492): VHDL Process Statement warning at sistema.vhdl(38): signal "U0" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/welly/Documents/GitHub/LT38A/projeto02/quartus/sistema.vhdl Line: 38
-Warning (10492): VHDL Process Statement warning at sistema.vhdl(41): signal "U0" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/welly/Documents/GitHub/LT38A/projeto02/quartus/sistema.vhdl Line: 41
-Warning (10492): VHDL Process Statement warning at sistema.vhdl(60): signal "direction_ref" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/welly/Documents/GitHub/LT38A/projeto02/quartus/sistema.vhdl Line: 60
-Warning (10492): VHDL Process Statement warning at sistema.vhdl(61): signal "pwm" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/welly/Documents/GitHub/LT38A/projeto02/quartus/sistema.vhdl Line: 61
-Warning (10492): VHDL Process Statement warning at sistema.vhdl(64): signal "pwm" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/welly/Documents/GitHub/LT38A/projeto02/quartus/sistema.vhdl Line: 64
+Warning (10492): VHDL Process Statement warning at sistema.vhdl(64): signal "direction_ref" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/welly/Documents/GitHub/LT38A/projeto02/quartus/sistema.vhdl Line: 64
+Warning (10492): VHDL Process Statement warning at sistema.vhdl(65): signal "pwm" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/welly/Documents/GitHub/LT38A/projeto02/quartus/sistema.vhdl Line: 65
+Warning (10492): VHDL Process Statement warning at sistema.vhdl(68): signal "pwm" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/welly/Documents/GitHub/LT38A/projeto02/quartus/sistema.vhdl Line: 68
 Info (12128): Elaborating entity "saida" for hierarchy "saida:sai" File: C:/Users/welly/Documents/GitHub/LT38A/projeto02/quartus/arquitetura.vhdl Line: 81
 Info (12128): Elaborating entity "sevenSegDecoder" for hierarchy "saida:sai|sevenSegDecoder:ssdAQ1" File: C:/Users/welly/Documents/GitHub/LT38A/projeto02/quartus/saida.vhdl Line: 44
 Info (12128): Elaborating entity "sevenSeg10bitDec" for hierarchy "saida:sai|sevenSeg10bitDec:ss10dActual" File: C:/Users/welly/Documents/GitHub/LT38A/projeto02/quartus/saida.vhdl Line: 49
@@ -923,10 +920,10 @@ Info (278001): Inferred 10 megafunctions from design logic
     Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "saida:sai|sevenSeg10bitDec:ss10dActual|Div1" File: C:/Users/welly/Documents/GitHub/LT38A/projeto02/quartus/sevenSeg10bitDec.vhdl Line: 22
     Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "saida:sai|sevenSeg10bitDec:ss10dActual|Div0" File: C:/Users/welly/Documents/GitHub/LT38A/projeto02/quartus/sevenSeg10bitDec.vhdl Line: 21
     Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "saida:sai|sevenSeg10bitDec:ss10dRef|Mult0" File: C:/Users/welly/Documents/GitHub/LT38A/projeto02/quartus/sevenSeg10bitDec.vhdl Line: 23
-    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "entrada:ent|rpmCalculator:rpmCalc|Mult0" File: C:/Users/welly/Documents/GitHub/LT38A/projeto02/quartus/rpmCalculator.vhdl Line: 30
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "entrada:ent|rpmCalculator:rpmCalc|Div0" File: C:/Users/welly/Documents/GitHub/LT38A/projeto02/quartus/rpmCalculator.vhdl Line: 30
     Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "saida:sai|sevenSeg10bitDec:ss10dActual|Mult0" File: C:/Users/welly/Documents/GitHub/LT38A/projeto02/quartus/sevenSeg10bitDec.vhdl Line: 23
     Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "entrada:ent|bitConcat:bcA|Mult0" File: C:/Users/welly/Documents/GitHub/LT38A/projeto02/quartus/bitConcat.vhdl Line: 27
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "entrada:ent|rpmCalculator:rpmCalc|Mult0" File: C:/Users/welly/Documents/GitHub/LT38A/projeto02/quartus/rpmCalculator.vhdl Line: 28
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "entrada:ent|rpmCalculator:rpmCalc|Div0" File: C:/Users/welly/Documents/GitHub/LT38A/projeto02/quartus/rpmCalculator.vhdl Line: 28
     Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "sistema:sis|Div0" File: C:/Users/welly/Documents/GitHub/LT38A/projeto02/quartus/sistema.vhdl Line: 34
 Info (12130): Elaborated megafunction instantiation "saida:sai|sevenSeg10bitDec:ss10dRef|lpm_divide:Div1" File: C:/Users/welly/Documents/GitHub/LT38A/projeto02/quartus/sevenSeg10bitDec.vhdl Line: 22
 Info (12133): Instantiated megafunction "saida:sai|sevenSeg10bitDec:ss10dRef|lpm_divide:Div1" with the following parameter: File: C:/Users/welly/Documents/GitHub/LT38A/projeto02/quartus/sevenSeg10bitDec.vhdl Line: 22
@@ -975,8 +972,19 @@ Info (12133): Instantiated megafunction "saida:sai|sevenSeg10bitDec:ss10dRef|lpm
 Info (12131): Elaborated megafunction instantiation "saida:sai|sevenSeg10bitDec:ss10dRef|lpm_mult:Mult0|multcore:mult_core", which is child of megafunction instantiation "saida:sai|sevenSeg10bitDec:ss10dRef|lpm_mult:Mult0" File: c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/lpm_mult.tdf Line: 309
 Info (12131): Elaborated megafunction instantiation "saida:sai|sevenSeg10bitDec:ss10dRef|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder", which is child of megafunction instantiation "saida:sai|sevenSeg10bitDec:ss10dRef|lpm_mult:Mult0" File: c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/multcore.tdf Line: 229
 Info (12131): Elaborated megafunction instantiation "saida:sai|sevenSeg10bitDec:ss10dRef|lpm_mult:Mult0|altshift:external_latency_ffs", which is child of megafunction instantiation "saida:sai|sevenSeg10bitDec:ss10dRef|lpm_mult:Mult0" File: c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/lpm_mult.tdf Line: 352
-Info (12130): Elaborated megafunction instantiation "entrada:ent|rpmCalculator:rpmCalc|lpm_mult:Mult0" File: C:/Users/welly/Documents/GitHub/LT38A/projeto02/quartus/rpmCalculator.vhdl Line: 30
-Info (12133): Instantiated megafunction "entrada:ent|rpmCalculator:rpmCalc|lpm_mult:Mult0" with the following parameter: File: C:/Users/welly/Documents/GitHub/LT38A/projeto02/quartus/rpmCalculator.vhdl Line: 30
+Info (12130): Elaborated megafunction instantiation "entrada:ent|bitConcat:bcA|lpm_mult:Mult0" File: C:/Users/welly/Documents/GitHub/LT38A/projeto02/quartus/bitConcat.vhdl Line: 27
+Info (12133): Instantiated megafunction "entrada:ent|bitConcat:bcA|lpm_mult:Mult0" with the following parameter: File: C:/Users/welly/Documents/GitHub/LT38A/projeto02/quartus/bitConcat.vhdl Line: 27
+    Info (12134): Parameter "LPM_WIDTHA" = "4"
+    Info (12134): Parameter "LPM_WIDTHB" = "7"
+    Info (12134): Parameter "LPM_WIDTHP" = "11"
+    Info (12134): Parameter "LPM_WIDTHR" = "11"
+    Info (12134): Parameter "LPM_WIDTHS" = "1"
+    Info (12134): Parameter "LPM_REPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "INPUT_A_IS_CONSTANT" = "NO"
+    Info (12134): Parameter "INPUT_B_IS_CONSTANT" = "YES"
+    Info (12134): Parameter "MAXIMIZE_SPEED" = "5"
+Info (12130): Elaborated megafunction instantiation "entrada:ent|rpmCalculator:rpmCalc|lpm_mult:Mult0" File: C:/Users/welly/Documents/GitHub/LT38A/projeto02/quartus/rpmCalculator.vhdl Line: 28
+Info (12133): Instantiated megafunction "entrada:ent|rpmCalculator:rpmCalc|lpm_mult:Mult0" with the following parameter: File: C:/Users/welly/Documents/GitHub/LT38A/projeto02/quartus/rpmCalculator.vhdl Line: 28
     Info (12134): Parameter "LPM_WIDTHA" = "13"
     Info (12134): Parameter "LPM_WIDTHB" = "10"
     Info (12134): Parameter "LPM_WIDTHP" = "23"
@@ -996,8 +1004,8 @@ Info (12131): Elaborated megafunction instantiation "entrada:ent|rpmCalculator:r
 Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_rgh.tdf
     Info (12023): Found entity 1: add_sub_rgh File: C:/Users/welly/Documents/GitHub/LT38A/projeto02/quartus/db/add_sub_rgh.tdf Line: 23
 Info (12131): Elaborated megafunction instantiation "entrada:ent|rpmCalculator:rpmCalc|lpm_mult:Mult0|altshift:external_latency_ffs", which is child of megafunction instantiation "entrada:ent|rpmCalculator:rpmCalc|lpm_mult:Mult0" File: c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/lpm_mult.tdf Line: 352
-Info (12130): Elaborated megafunction instantiation "entrada:ent|rpmCalculator:rpmCalc|lpm_divide:Div0" File: C:/Users/welly/Documents/GitHub/LT38A/projeto02/quartus/rpmCalculator.vhdl Line: 30
-Info (12133): Instantiated megafunction "entrada:ent|rpmCalculator:rpmCalc|lpm_divide:Div0" with the following parameter: File: C:/Users/welly/Documents/GitHub/LT38A/projeto02/quartus/rpmCalculator.vhdl Line: 30
+Info (12130): Elaborated megafunction instantiation "entrada:ent|rpmCalculator:rpmCalc|lpm_divide:Div0" File: C:/Users/welly/Documents/GitHub/LT38A/projeto02/quartus/rpmCalculator.vhdl Line: 28
+Info (12133): Instantiated megafunction "entrada:ent|rpmCalculator:rpmCalc|lpm_divide:Div0" with the following parameter: File: C:/Users/welly/Documents/GitHub/LT38A/projeto02/quartus/rpmCalculator.vhdl Line: 28
     Info (12134): Parameter "LPM_WIDTHN" = "23"
     Info (12134): Parameter "LPM_WIDTHD" = "9"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
@@ -1008,17 +1016,6 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/sign
     Info (12023): Found entity 1: sign_div_unsign_tlh File: C:/Users/welly/Documents/GitHub/LT38A/projeto02/quartus/db/sign_div_unsign_tlh.tdf Line: 25
 Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_e7f.tdf
     Info (12023): Found entity 1: alt_u_div_e7f File: C:/Users/welly/Documents/GitHub/LT38A/projeto02/quartus/db/alt_u_div_e7f.tdf Line: 27
-Info (12130): Elaborated megafunction instantiation "entrada:ent|bitConcat:bcA|lpm_mult:Mult0" File: C:/Users/welly/Documents/GitHub/LT38A/projeto02/quartus/bitConcat.vhdl Line: 27
-Info (12133): Instantiated megafunction "entrada:ent|bitConcat:bcA|lpm_mult:Mult0" with the following parameter: File: C:/Users/welly/Documents/GitHub/LT38A/projeto02/quartus/bitConcat.vhdl Line: 27
-    Info (12134): Parameter "LPM_WIDTHA" = "4"
-    Info (12134): Parameter "LPM_WIDTHB" = "7"
-    Info (12134): Parameter "LPM_WIDTHP" = "11"
-    Info (12134): Parameter "LPM_WIDTHR" = "11"
-    Info (12134): Parameter "LPM_WIDTHS" = "1"
-    Info (12134): Parameter "LPM_REPRESENTATION" = "UNSIGNED"
-    Info (12134): Parameter "INPUT_A_IS_CONSTANT" = "NO"
-    Info (12134): Parameter "INPUT_B_IS_CONSTANT" = "YES"
-    Info (12134): Parameter "MAXIMIZE_SPEED" = "5"
 Info (12130): Elaborated megafunction instantiation "sistema:sis|lpm_divide:Div0" File: C:/Users/welly/Documents/GitHub/LT38A/projeto02/quartus/sistema.vhdl Line: 34
 Info (12133): Instantiated megafunction "sistema:sis|lpm_divide:Div0" with the following parameter: File: C:/Users/welly/Documents/GitHub/LT38A/projeto02/quartus/sistema.vhdl Line: 34
     Info (12134): Parameter "LPM_WIDTHN" = "32"
@@ -1038,27 +1035,18 @@ Info (13014): Ignored 32 buffer(s)
     Info (13016): Ignored 32 CARRY_SUM buffer(s)
 Info (13000): Registers with preset signals will power-up high File: C:/Users/welly/Documents/GitHub/LT38A/projeto02/quartus/registerSelector.vhdl Line: 22
 Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
-Warning (13004): Presettable and clearable registers converted to equivalent circuits with latches. Registers power-up to an undefined state, and DEVCLRn places the registers in an undefined state.
-    Warning (13310): Register "sistema:sis|U0[6]" is converted into an equivalent circuit using register "sistema:sis|U0[6]~_emulated" and latch "sistema:sis|U0[6]~1" File: C:/Users/welly/Documents/GitHub/LT38A/projeto02/quartus/sistema.vhdl Line: 32
-    Warning (13310): Register "sistema:sis|U0[5]" is converted into an equivalent circuit using register "sistema:sis|U0[5]~_emulated" and latch "sistema:sis|U0[6]~1" File: C:/Users/welly/Documents/GitHub/LT38A/projeto02/quartus/sistema.vhdl Line: 32
-    Warning (13310): Register "sistema:sis|U0[4]" is converted into an equivalent circuit using register "sistema:sis|U0[4]~_emulated" and latch "sistema:sis|U0[4]~7" File: C:/Users/welly/Documents/GitHub/LT38A/projeto02/quartus/sistema.vhdl Line: 32
-    Warning (13310): Register "sistema:sis|U0[3]" is converted into an equivalent circuit using register "sistema:sis|U0[3]~_emulated" and latch "sistema:sis|U0[4]~7" File: C:/Users/welly/Documents/GitHub/LT38A/projeto02/quartus/sistema.vhdl Line: 32
-    Warning (13310): Register "sistema:sis|U0[2]" is converted into an equivalent circuit using register "sistema:sis|U0[2]~_emulated" and latch "sistema:sis|U0[4]~7" File: C:/Users/welly/Documents/GitHub/LT38A/projeto02/quartus/sistema.vhdl Line: 32
-    Warning (13310): Register "sistema:sis|U0[0]" is converted into an equivalent circuit using register "sistema:sis|U0[0]~_emulated" and latch "sistema:sis|U0[6]~1" File: C:/Users/welly/Documents/GitHub/LT38A/projeto02/quartus/sistema.vhdl Line: 32
 Info (286030): Timing-Driven Synthesis is running
-Critical Warning (18061): Ignored Power-Up Level option on the following registers
-    Critical Warning (18010): Register sistema:sis|U0[1] will power up to High File: C:/Users/welly/Documents/GitHub/LT38A/projeto02/quartus/sistema.vhdl Line: 32
 Info (17049): 19 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 1706 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 1663 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 11 input pins
     Info (21059): Implemented 51 output pins
-    Info (21061): Implemented 1644 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 46 warnings
-    Info: Peak virtual memory: 4870 megabytes
-    Info: Processing ended: Fri Nov 24 21:25:48 2023
-    Info: Elapsed time: 00:00:10
-    Info: Total CPU time (on all processors): 00:00:18
+    Info (21061): Implemented 1601 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 33 warnings
+    Info: Peak virtual memory: 4846 megabytes
+    Info: Processing ended: Fri Dec 01 14:00:18 2023
+    Info: Elapsed time: 00:00:09
+    Info: Total CPU time (on all processors): 00:00:16
 
 
