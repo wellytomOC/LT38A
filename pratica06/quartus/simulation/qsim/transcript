@@ -1,0 +1,54 @@
+# do atv06.do
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 23:03:59 on Dec 04,2023
+# vcom -work work atv06.vho 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package VITAL_Timing
+# -- Loading package VITAL_Primitives
+# -- Loading package cycloneive_atom_pack
+# -- Loading package cycloneive_components
+# -- Compiling entity hard_block
+# -- Compiling architecture structure of hard_block
+# -- Compiling entity atv06
+# -- Compiling architecture structure of atv06
+# End time: 23:03:59 on Dec 04,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 23:03:59 on Dec 04,2023
+# vcom -work work Waveform.vwf.vht 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity atv06_vhd_vec_tst
+# -- Compiling architecture atv06_arch of atv06_vhd_vec_tst
+# End time: 23:03:59 on Dec 04,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -novopt -c -t 1ps -sdfmax atv06_vhd_vec_tst/i1=atv06_vhd.sdo -L cycloneive -L altera -L altera_mf -L 220model -L sgate -L altera_lnsim work.atv06_vhd_vec_tst 
+# Start time: 23:03:59 on Dec 04,2023
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.atv06_vhd_vec_tst(atv06_arch)
+# SDF 10.5b Compiler 2016.10 Oct  5 2016
+# 
+# Loading ieee.vital_timing(body)
+# Loading ieee.vital_primitives(body)
+# Loading cycloneive.cycloneive_atom_pack(body)
+# Loading cycloneive.cycloneive_components
+# Loading work.atv06(structure)
+# Loading work.hard_block(structure)
+# Loading ieee.std_logic_arith(body)
+# Loading cycloneive.cycloneive_io_obuf(arch)
+# Loading cycloneive.cycloneive_io_ibuf(arch)
+# Loading cycloneive.cycloneive_lcell_comb(vital_lcell_comb)
+# Loading instances from atv06_vhd.sdo
+# Loading timing data from atv06_vhd.sdo
+# ** Warning: Design size of 130869 statements exceeds ModelSim-Intel FPGA Starter Edition recommended capacity.
+# Expect performance to be adversely affected.
+# ** Note: (vsim-3587) SDF Backannotation Successfully Completed.
+#    Time: 0 ps  Iteration: 0  Instance: /atv06_vhd_vec_tst File: Waveform.vwf.vht
+# after#31
+# End time: 23:04:00 on Dec 04,2023, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 1

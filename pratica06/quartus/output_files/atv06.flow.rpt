@@ -1,5 +1,5 @@
 Flow report for atv06
-Fri Nov 10 13:49:55 2023
+Mon Dec 04 23:03:58 2023
 Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 
 
@@ -41,7 +41,7 @@ agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Fri Nov 10 13:49:55 2023       ;
+; Flow Status                        ; Successful - Mon Dec 04 23:03:58 2023       ;
 ; Quartus Prime Version              ; 17.0.0 Build 595 04/25/2017 SJ Lite Edition ;
 ; Revision Name                      ; atv06                                       ;
 ; Top-level Entity Name              ; atv06                                       ;
@@ -102,7 +102,9 @@ agreement for further details.
 ; Assembler                 ; 00:00:02     ; 1.0                     ; 4681 MB             ; 00:00:02                           ;
 ; TimeQuest Timing Analyzer ; 00:00:02     ; 1.1                     ; 4865 MB             ; 00:00:01                           ;
 ; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 4660 MB             ; 00:00:01                           ;
-; Total                     ; 00:00:20     ; --                      ; --                  ; 00:00:32                           ;
+; EDA Netlist Writer        ; 00:00:00     ; 1.0                     ; 4632 MB             ; 00:00:00                           ;
+; EDA Netlist Writer        ; 00:00:02     ; 1.0                     ; 4659 MB             ; 00:00:01                           ;
+; Total                     ; 00:00:22     ; --                      ; --                  ; 00:00:33                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -116,6 +118,8 @@ agreement for further details.
 ; Assembler                 ; DESKTOP-CE5UNQD  ; Windows 10 ; 10.0       ; x86_64         ;
 ; TimeQuest Timing Analyzer ; DESKTOP-CE5UNQD  ; Windows 10 ; 10.0       ; x86_64         ;
 ; EDA Netlist Writer        ; DESKTOP-CE5UNQD  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer        ; DESKTOP-CE5UNQD  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer        ; DESKTOP-CE5UNQD  ; Windows 10 ; 10.0       ; x86_64         ;
 +---------------------------+------------------+------------+------------+----------------+
 
 
@@ -127,6 +131,8 @@ quartus_fit --read_settings_files=off --write_settings_files=off atv06 -c atv06
 quartus_asm --read_settings_files=off --write_settings_files=off atv06 -c atv06
 quartus_sta atv06 -c atv06
 quartus_eda --read_settings_files=off --write_settings_files=off atv06 -c atv06
+quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off atv06 -c atv06 --vector_source=C:/Users/welly/Documents/GitHub/LT38A/pratica06/quartus/Waveform.vwf --testbench_file=C:/Users/welly/Documents/GitHub/LT38A/pratica06/quartus/simulation/qsim/Waveform.vwf.vht
+quartus_eda --write_settings_files=off --simulation=on --functional=off --flatten_buses=off --timescale=1ps --tool=modelsim_oem --format=vhdl --output_directory=C:/Users/welly/Documents/GitHub/LT38A/pratica06/quartus/simulation/qsim/ atv06 -c atv06
 
 
 

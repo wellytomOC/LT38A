@@ -103,7 +103,7 @@
 # Begin description of library atv05
 [library]
  name = atv05
- toplevel = testarquitetura
+ toplevel = testinib
   [options]
     [booloption]
      name	= -87

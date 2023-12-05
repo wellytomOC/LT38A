@@ -1,5 +1,5 @@
 Analysis & Synthesis report for proj02
-Fri Dec 01 14:00:18 2023
+Sun Dec 03 23:53:54 2023
 Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 
 
@@ -57,13 +57,13 @@ agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Fri Dec 01 14:00:18 2023       ;
+; Analysis & Synthesis Status        ; Successful - Sun Dec 03 23:53:54 2023       ;
 ; Quartus Prime Version              ; 17.0.0 Build 595 04/25/2017 SJ Lite Edition ;
 ; Revision Name                      ; proj02                                      ;
 ; Top-level Entity Name              ; arquitetura                                 ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 1,596                                       ;
-;     Total combinational functions  ; 1,577                                       ;
+; Total logic elements               ; 1,602                                       ;
+;     Total combinational functions  ; 1,583                                       ;
 ;     Dedicated logic registers      ; 242                                         ;
 ; Total registers                    ; 242                                         ;
 ; Total pins                         ; 62                                          ;
@@ -79,7 +79,6 @@ agreement for further details.
 +----------------------------------------------------------------------------+--------------------+--------------------+
 ; Option                                                                     ; Setting            ; Default Value      ;
 +----------------------------------------------------------------------------+--------------------+--------------------+
-; Device                                                                     ; EP4CE115F29C7      ;                    ;
 ; Top-level entity name                                                      ; arquitetura        ; proj02             ;
 ; Family name                                                                ; Cyclone IV E       ; Cyclone V          ;
 ; Use smart compilation                                                      ; Off                ; Off                ;
@@ -257,16 +256,16 @@ agreement for further details.
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 1,596     ;
+; Estimated Total logic elements              ; 1,602     ;
 ;                                             ;           ;
-; Total combinational functions               ; 1577      ;
+; Total combinational functions               ; 1583      ;
 ; Logic element usage by number of LUT inputs ;           ;
-;     -- 4 input functions                    ; 446       ;
+;     -- 4 input functions                    ; 447       ;
 ;     -- 3 input functions                    ; 478       ;
-;     -- <=2 input functions                  ; 653       ;
+;     -- <=2 input functions                  ; 658       ;
 ;                                             ;           ;
 ; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 1040      ;
+;     -- normal mode                          ; 1046      ;
 ;     -- arithmetic mode                      ; 537       ;
 ;                                             ;           ;
 ; Total registers                             ; 242       ;
@@ -279,7 +278,7 @@ agreement for further details.
 ;                                             ;           ;
 ; Maximum fan-out node                        ; clk~input ;
 ; Maximum fan-out                             ; 99        ;
-; Total fan-out                               ; 5126      ;
+; Total fan-out                               ; 5140      ;
 ; Average fan-out                             ; 2.64      ;
 +---------------------------------------------+-----------+
 
@@ -289,7 +288,7 @@ agreement for further details.
 +------------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
 ; Compilation Hierarchy Node                           ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                                   ; Entity Name         ; Library Name ;
 +------------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
-; |arquitetura                                         ; 1577 (0)            ; 242 (0)                   ; 0           ; 0            ; 0       ; 0         ; 62   ; 0            ; |arquitetura                                                                                                                                                          ; arquitetura         ; work         ;
+; |arquitetura                                         ; 1583 (0)            ; 242 (0)                   ; 0           ; 0            ; 0       ; 0         ; 62   ; 0            ; |arquitetura                                                                                                                                                          ; arquitetura         ; work         ;
 ;    |entrada:ent|                                     ; 709 (1)             ; 166 (0)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |arquitetura|entrada:ent                                                                                                                                              ; entrada             ; work         ;
 ;       |ClockDivider100Hz:cd100|                      ; 75 (75)             ; 33 (33)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |arquitetura|entrada:ent|ClockDivider100Hz:cd100                                                                                                                      ; ClockDivider100Hz   ; work         ;
 ;       |ClockDivider100kHz:cd100k|                    ; 75 (75)             ; 33 (33)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |arquitetura|entrada:ent|ClockDivider100kHz:cd100k                                                                                                                    ; ClockDivider100kHz  ; work         ;
@@ -351,11 +350,11 @@ agreement for further details.
 ;       |sevenSegDecoder:ssdAQ1|                       ; 4 (4)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |arquitetura|saida:sai|sevenSegDecoder:ssdAQ1                                                                                                                         ; sevenSegDecoder     ; work         ;
 ;       |sevenSegDecoder:ssdAQ2|                       ; 4 (4)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |arquitetura|saida:sai|sevenSegDecoder:ssdAQ2                                                                                                                         ; sevenSegDecoder     ; work         ;
 ;       |sevenSegDecoder:ssdAQ3|                       ; 4 (4)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |arquitetura|saida:sai|sevenSegDecoder:ssdAQ3                                                                                                                         ; sevenSegDecoder     ; work         ;
-;    |sistema:sis|                                     ; 296 (171)           ; 76 (76)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |arquitetura|sistema:sis                                                                                                                                              ; sistema             ; work         ;
-;       |lpm_divide:Div0|                              ; 125 (0)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |arquitetura|sistema:sis|lpm_divide:Div0                                                                                                                              ; lpm_divide          ; work         ;
-;          |lpm_divide_q0p:auto_generated|             ; 125 (0)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |arquitetura|sistema:sis|lpm_divide:Div0|lpm_divide_q0p:auto_generated                                                                                                ; lpm_divide_q0p      ; work         ;
-;             |abs_divider_lbg:divider|                ; 125 (20)            ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |arquitetura|sistema:sis|lpm_divide:Div0|lpm_divide_q0p:auto_generated|abs_divider_lbg:divider                                                                        ; abs_divider_lbg     ; work         ;
-;                |alt_u_div_67f:divider|               ; 93 (93)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |arquitetura|sistema:sis|lpm_divide:Div0|lpm_divide_q0p:auto_generated|abs_divider_lbg:divider|alt_u_div_67f:divider                                                  ; alt_u_div_67f       ; work         ;
+;    |sistema:sis|                                     ; 302 (171)           ; 76 (76)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |arquitetura|sistema:sis                                                                                                                                              ; sistema             ; work         ;
+;       |lpm_divide:Div0|                              ; 131 (0)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |arquitetura|sistema:sis|lpm_divide:Div0                                                                                                                              ; lpm_divide          ; work         ;
+;          |lpm_divide_q0p:auto_generated|             ; 131 (0)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |arquitetura|sistema:sis|lpm_divide:Div0|lpm_divide_q0p:auto_generated                                                                                                ; lpm_divide_q0p      ; work         ;
+;             |abs_divider_lbg:divider|                ; 131 (20)            ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |arquitetura|sistema:sis|lpm_divide:Div0|lpm_divide_q0p:auto_generated|abs_divider_lbg:divider                                                                        ; abs_divider_lbg     ; work         ;
+;                |alt_u_div_67f:divider|               ; 99 (99)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |arquitetura|sistema:sis|lpm_divide:Div0|lpm_divide_q0p:auto_generated|abs_divider_lbg:divider|alt_u_div_67f:divider                                                  ; alt_u_div_67f       ; work         ;
 ;                |lpm_abs_i0a:my_abs_num|              ; 12 (12)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |arquitetura|sistema:sis|lpm_divide:Div0|lpm_divide_q0p:auto_generated|abs_divider_lbg:divider|lpm_abs_i0a:my_abs_num                                                 ; lpm_abs_i0a         ; work         ;
 +------------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
@@ -758,20 +757,20 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;     SCLR              ; 32                          ;
 ;     plain             ; 145                         ;
 ; cycloneiii_io_obuf    ; 42                          ;
-; cycloneiii_lcell_comb ; 1577                        ;
+; cycloneiii_lcell_comb ; 1583                        ;
 ;     arith             ; 537                         ;
 ;         1 data inputs ; 4                           ;
 ;         2 data inputs ; 191                         ;
 ;         3 data inputs ; 342                         ;
-;     normal            ; 1040                        ;
+;     normal            ; 1046                        ;
 ;         0 data inputs ; 54                          ;
 ;         1 data inputs ; 22                          ;
-;         2 data inputs ; 382                         ;
+;         2 data inputs ; 387                         ;
 ;         3 data inputs ; 136                         ;
-;         4 data inputs ; 446                         ;
+;         4 data inputs ; 447                         ;
 ;                       ;                             ;
 ; Max LUT depth         ; 45.30                       ;
-; Average LUT depth     ; 26.73                       ;
+; Average LUT depth     ; 26.74                       ;
 +-----------------------+-----------------------------+
 
 
@@ -780,7 +779,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:01     ;
+; Top            ; 00:00:02     ;
 +----------------+--------------+
 
 
@@ -790,7 +789,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
-    Info: Processing started: Fri Dec 01 14:00:09 2023
+    Info: Processing started: Sun Dec 03 23:53:44 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off proj02 -c proj02
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
@@ -862,6 +861,12 @@ Info (12021): Found 2 design units, including 1 entities, in source file bitconc
     Info (12023): Found entity 1: bitConcat File: C:/Users/welly/Documents/GitHub/LT38A/projeto02/quartus/bitConcat.vhdl Line: 7
 Info (12021): Found 1 design units, including 1 entities, in source file testclock20hz.bdf
     Info (12023): Found entity 1: testclock20hz
+Info (12021): Found 1 design units, including 1 entities, in source file testsevenseg10bitdec.bdf
+    Info (12023): Found entity 1: testSevenSeg10bitDec
+Info (12021): Found 1 design units, including 1 entities, in source file testregister_10bits.bdf
+    Info (12023): Found entity 1: testRegister_10Bits
+Info (12021): Found 1 design units, including 1 entities, in source file testregisterselector.bdf
+    Info (12023): Found entity 1: testRegisterSelector
 Info (12127): Elaborating entity "arquitetura" for the top level hierarchy
 Info (12128): Elaborating entity "entrada" for hierarchy "entrada:ent" File: C:/Users/welly/Documents/GitHub/LT38A/projeto02/quartus/arquitetura.vhdl Line: 79
 Info (12128): Elaborating entity "ClockDivider100Hz" for hierarchy "entrada:ent|ClockDivider100Hz:cd100" File: C:/Users/welly/Documents/GitHub/LT38A/projeto02/quartus/entrada.vhdl Line: 126
@@ -1039,14 +1044,14 @@ Info (286030): Timing-Driven Synthesis is running
 Info (17049): 19 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 1663 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 1669 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 11 input pins
     Info (21059): Implemented 51 output pins
-    Info (21061): Implemented 1601 logic cells
+    Info (21061): Implemented 1607 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 33 warnings
-    Info: Peak virtual memory: 4846 megabytes
-    Info: Processing ended: Fri Dec 01 14:00:18 2023
-    Info: Elapsed time: 00:00:09
-    Info: Total CPU time (on all processors): 00:00:16
+    Info: Peak virtual memory: 4865 megabytes
+    Info: Processing ended: Sun Dec 03 23:53:54 2023
+    Info: Elapsed time: 00:00:10
+    Info: Total CPU time (on all processors): 00:00:18
 
 

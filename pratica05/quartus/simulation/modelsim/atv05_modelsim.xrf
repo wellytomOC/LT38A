@@ -7,6 +7,7 @@ source_file = 1, C:/Users/welly/Documents/GitHub/LT38A/pratica05/quartus/display
 source_file = 1, C:/Users/welly/Documents/GitHub/LT38A/pratica05/quartus/arquitetura.vhdl
 source_file = 1, C:/Users/welly/Documents/GitHub/LT38A/pratica05/quartus/atv05.bdf
 source_file = 1, C:/Users/welly/Documents/GitHub/LT38A/pratica05/quartus/Waveform.vwf
+source_file = 1, C:/Users/welly/Documents/GitHub/LT38A/pratica05/quartus/Waveform1.vwf
 source_file = 1, c:/intelfpga_lite/17.0/quartus/libraries/vhdl/ieee/prmtvs_b.vhd
 source_file = 1, c:/intelfpga_lite/17.0/quartus/libraries/vhdl/ieee/prmtvs_p.vhd
 source_file = 1, c:/intelfpga_lite/17.0/quartus/libraries/vhdl/ieee/timing_b.vhd

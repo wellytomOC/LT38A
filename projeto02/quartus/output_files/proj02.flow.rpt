@@ -1,5 +1,5 @@
 Flow report for proj02
-Fri Dec 01 14:00:38 2023
+Sun Dec 03 23:54:09 2023
 Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 
 
@@ -41,22 +41,22 @@ agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Fri Dec 01 14:00:38 2023       ;
+; Flow Status                        ; Successful - Sun Dec 03 23:54:09 2023       ;
 ; Quartus Prime Version              ; 17.0.0 Build 595 04/25/2017 SJ Lite Edition ;
 ; Revision Name                      ; proj02                                      ;
 ; Top-level Entity Name              ; arquitetura                                 ;
 ; Family                             ; Cyclone IV E                                ;
-; Device                             ; EP4CE115F29C7                               ;
-; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 1,597 / 114,480 ( 1 % )                     ;
-;     Total combinational functions  ; 1,577 / 114,480 ( 1 % )                     ;
-;     Dedicated logic registers      ; 242 / 114,480 ( < 1 % )                     ;
+; Total logic elements               ; 1,594 / 6,272 ( 25 % )                      ;
+;     Total combinational functions  ; 1,583 / 6,272 ( 25 % )                      ;
+;     Dedicated logic registers      ; 242 / 6,272 ( 4 % )                         ;
 ; Total registers                    ; 242                                         ;
-; Total pins                         ; 62 / 529 ( 12 % )                           ;
+; Total pins                         ; 62 / 92 ( 67 % )                            ;
 ; Total virtual pins                 ; 0                                           ;
-; Total memory bits                  ; 0 / 3,981,312 ( 0 % )                       ;
-; Embedded Multiplier 9-bit elements ; 0 / 532 ( 0 % )                             ;
-; Total PLLs                         ; 0 / 4 ( 0 % )                               ;
+; Total memory bits                  ; 0 / 276,480 ( 0 % )                         ;
+; Embedded Multiplier 9-bit elements ; 0 / 30 ( 0 % )                              ;
+; Total PLLs                         ; 0 / 2 ( 0 % )                               ;
+; Device                             ; EP4CE6E22C6                                 ;
+; Timing Models                      ; Final                                       ;
 +------------------------------------+---------------------------------------------+
 
 
@@ -65,32 +65,25 @@ agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 12/01/2023 14:00:09 ;
+; Start date & time ; 12/03/2023 23:53:45 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; proj02              ;
 +-------------------+---------------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------+
-; Flow Non-Default Global Settings                                                                                            ;
-+-------------------------------------+----------------------------------------+---------------+-------------+----------------+
-; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id     ;
-+-------------------------------------+----------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 123598314453086.170145000913996        ; --            ; --          ; --             ;
-; EDA_OUTPUT_DATA_FORMAT              ; Vhdl                                   ; --            ; --          ; eda_simulation ;
-; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (VHDL)                 ; <None>        ; --          ; --             ;
-; EDA_TIME_SCALE                      ; 1 ps                                   ; --            ; --          ; eda_simulation ;
-; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --            ; --          ; --             ;
-; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --            ; --          ; --             ;
-; NOMINAL_CORE_SUPPLY_VOLTAGE         ; 1.2V                                   ; --            ; --          ; --             ;
-; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --            ; arquitetura ; Top            ;
-; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family) ; --            ; arquitetura ; Top            ;
-; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family) ; --            ; arquitetura ; Top            ;
-; POWER_BOARD_THERMAL_MODEL           ; None (CONSERVATIVE)                    ; --            ; --          ; --             ;
-; POWER_PRESET_COOLING_SOLUTION       ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW  ; --            ; --          ; --             ;
-; PROJECT_OUTPUT_DIRECTORY            ; output_files                           ; --            ; --          ; --             ;
-; TOP_LEVEL_ENTITY                    ; arquitetura                            ; proj02        ; --          ; --             ;
-+-------------------------------------+----------------------------------------+---------------+-------------+----------------+
++-------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                        ;
++-------------------------------------+----------------------------------------+---------------+-------------+------------+
+; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id ;
++-------------------------------------+----------------------------------------+---------------+-------------+------------+
+; COMPILER_SIGNATURE_ID               ; 123598314453086.170165842519588        ; --            ; --          ; --         ;
+; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (VHDL)                 ; <None>        ; --          ; --         ;
+; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --            ; arquitetura ; Top        ;
+; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family) ; --            ; arquitetura ; Top        ;
+; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family) ; --            ; arquitetura ; Top        ;
+; PROJECT_OUTPUT_DIRECTORY            ; output_files                           ; --            ; --          ; --         ;
+; TOP_LEVEL_ENTITY                    ; arquitetura                            ; proj02        ; --          ; --         ;
++-------------------------------------+----------------------------------------+---------------+-------------+------------+
 
 
 +-------------------------------------------------------------------------------------------------------------------------------+
@@ -98,12 +91,12 @@ agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:09     ; 1.0                     ; 4846 MB             ; 00:00:16                           ;
-; Fitter                    ; 00:00:11     ; 1.0                     ; 5844 MB             ; 00:00:22                           ;
-; Assembler                 ; 00:00:02     ; 1.0                     ; 4683 MB             ; 00:00:02                           ;
-; TimeQuest Timing Analyzer ; 00:00:02     ; 1.1                     ; 4880 MB             ; 00:00:03                           ;
-; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 4668 MB             ; 00:00:01                           ;
-; Total                     ; 00:00:25     ; --                      ; --                  ; 00:00:44                           ;
+; Analysis & Synthesis      ; 00:00:10     ; 1.0                     ; 4865 MB             ; 00:00:18                           ;
+; Fitter                    ; 00:00:07     ; 1.1                     ; 5642 MB             ; 00:00:11                           ;
+; Assembler                 ; 00:00:01     ; 1.0                     ; 4669 MB             ; 00:00:01                           ;
+; TimeQuest Timing Analyzer ; 00:00:02     ; 1.1                     ; 4801 MB             ; 00:00:02                           ;
+; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 4652 MB             ; 00:00:02                           ;
+; Total                     ; 00:00:21     ; --                      ; --                  ; 00:00:34                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

@@ -103,7 +103,7 @@
 # Begin description of library atv06
 [library]
  name = atv06
- toplevel = arquitetura
+ toplevel = testsistema
   [options]
     [booloption]
      name	= -87
@@ -252,6 +252,16 @@
  []
  [file]
   name = testDivisorShift.vhdl
+  [options]
+  []
+ []
+ [file]
+  name = testEntrada.vhdl
+  [options]
+  []
+ []
+ [file]
+  name = testSistema.vhdl
   [options]
   []
  []
